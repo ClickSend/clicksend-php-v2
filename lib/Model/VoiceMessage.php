@@ -64,10 +64,10 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
         'from' => 'string',
         'lang' => 'string',
         'voice' => 'string',
-        'schedule' => 'float',
+        'schedule' => 'string',
         'message_id' => 'string',
-        'message_parts' => 'float',
-        'message_price' => 'float',
+        'message_parts' => 'string',
+        'message_price' => 'string',
         'custom_string' => 'string',
         'user_id' => 'float',
         'subaccount_id' => 'float',
@@ -607,7 +607,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets schedule
      *
-     * @return float|null
+     * @return string|null
      */
     public function getSchedule()
     {
@@ -617,7 +617,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets schedule
      *
-     * @param float|null $schedule The timestamp when the message should be sent.
+     * @param string|null $schedule The timestamp when the message should be sent.
      *
      * @return self
      */
@@ -661,7 +661,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets message_parts
      *
-     * @return float|null
+     * @return string|null
      */
     public function getMessageParts()
     {
@@ -671,7 +671,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets message_parts
      *
-     * @param float|null $message_parts The number of parts in the message.
+     * @param string|null $message_parts The number of parts in the message.
      *
      * @return self
      */
@@ -688,7 +688,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets message_price
      *
-     * @return float|null
+     * @return string|null
      */
     public function getMessagePrice()
     {
@@ -698,7 +698,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets message_price
      *
-     * @param float|null $message_price The price of the message.
+     * @param string|null $message_price The price of the message.
      *
      * @return self
      */

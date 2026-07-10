@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewAvailableNumbersDataInnerTest
+ * ViewSubaccountsDataTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace ClickSend\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ViewAvailableNumbersDataInnerTest Class Doc Comment
+ * ViewSubaccountsDataTest Class Doc Comment
  *
  * @category    Class
- * @description ViewAvailableNumbersDataInner
+ * @description ViewSubaccountsData
  * @package     ClickSend
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ViewAvailableNumbersDataInnerTest extends TestCase
+class ViewSubaccountsDataTest extends TestCase
 {
 
     /**
@@ -71,72 +71,90 @@ class ViewAvailableNumbersDataInnerTest extends TestCase
     }
 
     /**
-     * Test "ViewAvailableNumbersDataInner"
+     * Test "ViewSubaccountsData"
      */
-    public function testViewAvailableNumbersDataInner()
+    public function testViewSubaccountsData()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "country"
+     * Test attribute "total"
      */
-    public function testPropertyCountry()
+    public function testPropertyTotal()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "country_name"
+     * Test attribute "per_page"
      */
-    public function testPropertyCountryName()
+    public function testPropertyPerPage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "dedicated_number"
+     * Test attribute "current_page"
      */
-    public function testPropertyDedicatedNumber()
+    public function testPropertyCurrentPage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "price_setup"
+     * Test attribute "last_page"
      */
-    public function testPropertyPriceSetup()
+    public function testPropertyLastPage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "price_monthly"
+     * Test attribute "next_page_url"
      */
-    public function testPropertyPriceMonthly()
+    public function testPropertyNextPageUrl()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "price_total"
+     * Test attribute "prev_page_url"
      */
-    public function testPropertyPriceTotal()
+    public function testPropertyPrevPageUrl()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "address_requirement"
+     * Test attribute "from"
      */
-    public function testPropertyAddressRequirement()
+    public function testPropertyFrom()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "to"
+     */
+    public function testPropertyTo()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

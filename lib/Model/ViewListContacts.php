@@ -60,7 +60,7 @@ class ViewListContacts implements ModelInterface, ArrayAccess, \JsonSerializable
         'http_code' => 'int',
         'response_code' => 'string',
         'response_msg' => 'string',
-        'data' => '\ClickSend\Model\Contact[]'
+        'data' => '\ClickSend\Model\ViewListContactsData'
     ];
 
     /**
@@ -394,7 +394,7 @@ class ViewListContacts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets data
      *
-     * @return \ClickSend\Model\Contact[]|null
+     * @return \ClickSend\Model\ViewListContactsData|null
      */
     public function getData()
     {
@@ -404,7 +404,7 @@ class ViewListContacts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets data
      *
-     * @param \ClickSend\Model\Contact[]|null $data data
+     * @param \ClickSend\Model\ViewListContactsData|null $data data
      *
      * @return self
      */

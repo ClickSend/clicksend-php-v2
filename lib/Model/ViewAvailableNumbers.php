@@ -60,7 +60,7 @@ class ViewAvailableNumbers implements ModelInterface, ArrayAccess, \JsonSerializ
         'http_code' => 'int',
         'response_code' => 'string',
         'response_msg' => 'string',
-        'data' => '\ClickSend\Model\ViewAvailableNumbersDataInner[]',
+        'data' => '\ClickSend\Model\ViewAvailableNumbersData',
         '_currency' => '\ClickSend\Model\Currency'
     ];
 
@@ -401,7 +401,7 @@ class ViewAvailableNumbers implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets data
      *
-     * @return \ClickSend\Model\ViewAvailableNumbersDataInner[]|null
+     * @return \ClickSend\Model\ViewAvailableNumbersData|null
      */
     public function getData()
     {
@@ -411,7 +411,7 @@ class ViewAvailableNumbers implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets data
      *
-     * @param \ClickSend\Model\ViewAvailableNumbersDataInner[]|null $data data
+     * @param \ClickSend\Model\ViewAvailableNumbersData|null $data data
      *
      * @return self
      */

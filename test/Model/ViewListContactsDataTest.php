@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewVoiceStatisticsDataStatsInnerOutboundTest
+ * ViewListContactsDataTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace ClickSend\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ViewVoiceStatisticsDataStatsInnerOutboundTest Class Doc Comment
+ * ViewListContactsDataTest Class Doc Comment
  *
  * @category    Class
- * @description ViewVoiceStatisticsDataStatsInnerOutbound
+ * @description ViewListContactsData
  * @package     ClickSend
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ViewVoiceStatisticsDataStatsInnerOutboundTest extends TestCase
+class ViewListContactsDataTest extends TestCase
 {
 
     /**
@@ -71,27 +71,90 @@ class ViewVoiceStatisticsDataStatsInnerOutboundTest extends TestCase
     }
 
     /**
-     * Test "ViewVoiceStatisticsDataStatsInnerOutbound"
+     * Test "ViewListContactsData"
      */
-    public function testViewVoiceStatisticsDataStatsInnerOutbound()
+    public function testViewListContactsData()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "count"
+     * Test attribute "total"
      */
-    public function testPropertyCount()
+    public function testPropertyTotal()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "price"
+     * Test attribute "per_page"
      */
-    public function testPropertyPrice()
+    public function testPropertyPerPage()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "current_page"
+     */
+    public function testPropertyCurrentPage()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "last_page"
+     */
+    public function testPropertyLastPage()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "next_page_url"
+     */
+    public function testPropertyNextPageUrl()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "prev_page_url"
+     */
+    public function testPropertyPrevPageUrl()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "from"
+     */
+    public function testPropertyFrom()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "to"
+     */
+    public function testPropertyTo()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

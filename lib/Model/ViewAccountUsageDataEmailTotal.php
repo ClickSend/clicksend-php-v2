@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewSmsStatisticsDataTotal
+ * ViewAccountUsageDataEmailTotal
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \ClickSend\ObjectSerializer;
 
 /**
- * ViewSmsStatisticsDataTotal Class Doc Comment
+ * ViewAccountUsageDataEmailTotal Class Doc Comment
  *
  * @category Class
  * @package  ClickSend
@@ -40,7 +40,7 @@ use \ClickSend\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSerializable
+class ViewAccountUsageDataEmailTotal implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @var string
      */
-    protected static $openAPIModelName = 'view_sms_statistics_data_total';
+    protected static $openAPIModelName = 'view_account_usage_data_email_total';
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,8 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $openAPITypes = [
-        'outbound' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
-        'inbound' => '\ClickSend\Model\CancelAllSmsData',
-        'bounced' => '\ClickSend\Model\CancelAllSmsData'
+        'count' => 'int',
+        'price' => 'string'
     ];
 
     /**
@@ -70,9 +69,8 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'outbound' => null,
-        'inbound' => null,
-        'bounced' => null
+        'count' => null,
+        'price' => null
     ];
 
     /**
@@ -81,9 +79,8 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'outbound' => false,
-        'inbound' => false,
-        'bounced' => false
+        'count' => false,
+        'price' => false
     ];
 
     /**
@@ -172,9 +169,8 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'outbound' => 'outbound',
-        'inbound' => 'inbound',
-        'bounced' => 'bounced'
+        'count' => 'count',
+        'price' => 'price'
     ];
 
     /**
@@ -183,9 +179,8 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'outbound' => 'setOutbound',
-        'inbound' => 'setInbound',
-        'bounced' => 'setBounced'
+        'count' => 'setCount',
+        'price' => 'setPrice'
     ];
 
     /**
@@ -194,9 +189,8 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'outbound' => 'getOutbound',
-        'inbound' => 'getInbound',
-        'bounced' => 'getBounced'
+        'count' => 'getCount',
+        'price' => 'getPrice'
     ];
 
     /**
@@ -256,9 +250,8 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('outbound', $data ?? [], null);
-        $this->setIfExists('inbound', $data ?? [], null);
-        $this->setIfExists('bounced', $data ?? [], null);
+        $this->setIfExists('count', $data ?? [], null);
+        $this->setIfExists('price', $data ?? [], null);
     }
 
     /**
@@ -304,82 +297,55 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets outbound
+     * Gets count
      *
-     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
+     * @return int|null
      */
-    public function getOutbound()
+    public function getCount()
     {
-        return $this->container['outbound'];
+        return $this->container['count'];
     }
 
     /**
-     * Sets outbound
+     * Sets count
      *
-     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $outbound outbound
+     * @param int|null $count The total count of emails.
      *
      * @return self
      */
-    public function setOutbound($outbound)
+    public function setCount($count)
     {
-        if (is_null($outbound)) {
-            throw new \InvalidArgumentException('non-nullable outbound cannot be null');
+        if (is_null($count)) {
+            throw new \InvalidArgumentException('non-nullable count cannot be null');
         }
-        $this->container['outbound'] = $outbound;
+        $this->container['count'] = $count;
 
         return $this;
     }
 
     /**
-     * Gets inbound
+     * Gets price
      *
-     * @return \ClickSend\Model\CancelAllSmsData|null
+     * @return string|null
      */
-    public function getInbound()
+    public function getPrice()
     {
-        return $this->container['inbound'];
+        return $this->container['price'];
     }
 
     /**
-     * Sets inbound
+     * Sets price
      *
-     * @param \ClickSend\Model\CancelAllSmsData|null $inbound inbound
+     * @param string|null $price The total price of emails.
      *
      * @return self
      */
-    public function setInbound($inbound)
+    public function setPrice($price)
     {
-        if (is_null($inbound)) {
-            throw new \InvalidArgumentException('non-nullable inbound cannot be null');
+        if (is_null($price)) {
+            throw new \InvalidArgumentException('non-nullable price cannot be null');
         }
-        $this->container['inbound'] = $inbound;
-
-        return $this;
-    }
-
-    /**
-     * Gets bounced
-     *
-     * @return \ClickSend\Model\CancelAllSmsData|null
-     */
-    public function getBounced()
-    {
-        return $this->container['bounced'];
-    }
-
-    /**
-     * Sets bounced
-     *
-     * @param \ClickSend\Model\CancelAllSmsData|null $bounced bounced
-     *
-     * @return self
-     */
-    public function setBounced($bounced)
-    {
-        if (is_null($bounced)) {
-            throw new \InvalidArgumentException('non-nullable bounced cannot be null');
-        }
-        $this->container['bounced'] = $bounced;
+        $this->container['price'] = $price;
 
         return $this;
     }

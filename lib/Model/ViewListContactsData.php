@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewVoiceStatisticsDataStatsInnerOutbound
+ * ViewListContactsData
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \ClickSend\ObjectSerializer;
 
 /**
- * ViewVoiceStatisticsDataStatsInnerOutbound Class Doc Comment
+ * ViewListContactsData Class Doc Comment
  *
  * @category Class
  * @package  ClickSend
@@ -40,7 +40,7 @@ use \ClickSend\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ViewVoiceStatisticsDataStatsInnerOutbound implements ModelInterface, ArrayAccess, \JsonSerializable
+class ViewListContactsData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ViewVoiceStatisticsDataStatsInnerOutbound implements ModelInterface, Array
      *
      * @var string
      */
-    protected static $openAPIModelName = 'view_voice_statistics_data_stats_inner_outbound';
+    protected static $openAPIModelName = 'view_list_contacts_data';
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,15 @@ class ViewVoiceStatisticsDataStatsInnerOutbound implements ModelInterface, Array
      * @var string[]
      */
     protected static $openAPITypes = [
-        'count' => 'int',
-        'price' => 'float'
+        'total' => 'int',
+        'per_page' => 'int',
+        'current_page' => 'int',
+        'last_page' => 'int',
+        'next_page_url' => 'string',
+        'prev_page_url' => 'string',
+        'from' => 'int',
+        'to' => 'int',
+        'data' => '\ClickSend\Model\Contact[]'
     ];
 
     /**
@@ -69,8 +76,15 @@ class ViewVoiceStatisticsDataStatsInnerOutbound implements ModelInterface, Array
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'count' => null,
-        'price' => null
+        'total' => null,
+        'per_page' => null,
+        'current_page' => null,
+        'last_page' => null,
+        'next_page_url' => null,
+        'prev_page_url' => null,
+        'from' => null,
+        'to' => null,
+        'data' => null
     ];
 
     /**
@@ -79,8 +93,15 @@ class ViewVoiceStatisticsDataStatsInnerOutbound implements ModelInterface, Array
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'count' => false,
-        'price' => false
+        'total' => false,
+        'per_page' => false,
+        'current_page' => false,
+        'last_page' => false,
+        'next_page_url' => true,
+        'prev_page_url' => true,
+        'from' => false,
+        'to' => false,
+        'data' => false
     ];
 
     /**
@@ -169,8 +190,15 @@ class ViewVoiceStatisticsDataStatsInnerOutbound implements ModelInterface, Array
      * @var string[]
      */
     protected static $attributeMap = [
-        'count' => 'count',
-        'price' => 'price'
+        'total' => 'total',
+        'per_page' => 'per_page',
+        'current_page' => 'current_page',
+        'last_page' => 'last_page',
+        'next_page_url' => 'next_page_url',
+        'prev_page_url' => 'prev_page_url',
+        'from' => 'from',
+        'to' => 'to',
+        'data' => 'data'
     ];
 
     /**
@@ -179,8 +207,15 @@ class ViewVoiceStatisticsDataStatsInnerOutbound implements ModelInterface, Array
      * @var string[]
      */
     protected static $setters = [
-        'count' => 'setCount',
-        'price' => 'setPrice'
+        'total' => 'setTotal',
+        'per_page' => 'setPerPage',
+        'current_page' => 'setCurrentPage',
+        'last_page' => 'setLastPage',
+        'next_page_url' => 'setNextPageUrl',
+        'prev_page_url' => 'setPrevPageUrl',
+        'from' => 'setFrom',
+        'to' => 'setTo',
+        'data' => 'setData'
     ];
 
     /**
@@ -189,8 +224,15 @@ class ViewVoiceStatisticsDataStatsInnerOutbound implements ModelInterface, Array
      * @var string[]
      */
     protected static $getters = [
-        'count' => 'getCount',
-        'price' => 'getPrice'
+        'total' => 'getTotal',
+        'per_page' => 'getPerPage',
+        'current_page' => 'getCurrentPage',
+        'last_page' => 'getLastPage',
+        'next_page_url' => 'getNextPageUrl',
+        'prev_page_url' => 'getPrevPageUrl',
+        'from' => 'getFrom',
+        'to' => 'getTo',
+        'data' => 'getData'
     ];
 
     /**
@@ -250,8 +292,15 @@ class ViewVoiceStatisticsDataStatsInnerOutbound implements ModelInterface, Array
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('count', $data ?? [], null);
-        $this->setIfExists('price', $data ?? [], null);
+        $this->setIfExists('total', $data ?? [], null);
+        $this->setIfExists('per_page', $data ?? [], null);
+        $this->setIfExists('current_page', $data ?? [], null);
+        $this->setIfExists('last_page', $data ?? [], null);
+        $this->setIfExists('next_page_url', $data ?? [], null);
+        $this->setIfExists('prev_page_url', $data ?? [], null);
+        $this->setIfExists('from', $data ?? [], null);
+        $this->setIfExists('to', $data ?? [], null);
+        $this->setIfExists('data', $data ?? [], null);
     }
 
     /**
@@ -297,55 +346,258 @@ class ViewVoiceStatisticsDataStatsInnerOutbound implements ModelInterface, Array
 
 
     /**
-     * Gets count
+     * Gets total
      *
      * @return int|null
      */
-    public function getCount()
+    public function getTotal()
     {
-        return $this->container['count'];
+        return $this->container['total'];
     }
 
     /**
-     * Sets count
+     * Sets total
      *
-     * @param int|null $count The count of outbound calls.
+     * @param int|null $total The total number of items available for viewing.
      *
      * @return self
      */
-    public function setCount($count)
+    public function setTotal($total)
     {
-        if (is_null($count)) {
-            throw new \InvalidArgumentException('non-nullable count cannot be null');
+        if (is_null($total)) {
+            throw new \InvalidArgumentException('non-nullable total cannot be null');
         }
-        $this->container['count'] = $count;
+        $this->container['total'] = $total;
 
         return $this;
     }
 
     /**
-     * Gets price
+     * Gets per_page
      *
-     * @return float|null
+     * @return int|null
      */
-    public function getPrice()
+    public function getPerPage()
     {
-        return $this->container['price'];
+        return $this->container['per_page'];
     }
 
     /**
-     * Sets price
+     * Sets per_page
      *
-     * @param float|null $price The price of outbound calls.
+     * @param int|null $per_page The number of items returned per page. This is specified in the limit parameter. You can have 100 items at maximum, and 15 at minimum.
      *
      * @return self
      */
-    public function setPrice($price)
+    public function setPerPage($per_page)
     {
-        if (is_null($price)) {
-            throw new \InvalidArgumentException('non-nullable price cannot be null');
+        if (is_null($per_page)) {
+            throw new \InvalidArgumentException('non-nullable per_page cannot be null');
         }
-        $this->container['price'] = $price;
+        $this->container['per_page'] = $per_page;
+
+        return $this;
+    }
+
+    /**
+     * Gets current_page
+     *
+     * @return int|null
+     */
+    public function getCurrentPage()
+    {
+        return $this->container['current_page'];
+    }
+
+    /**
+     * Sets current_page
+     *
+     * @param int|null $current_page The current page number.
+     *
+     * @return self
+     */
+    public function setCurrentPage($current_page)
+    {
+        if (is_null($current_page)) {
+            throw new \InvalidArgumentException('non-nullable current_page cannot be null');
+        }
+        $this->container['current_page'] = $current_page;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_page
+     *
+     * @return int|null
+     */
+    public function getLastPage()
+    {
+        return $this->container['last_page'];
+    }
+
+    /**
+     * Sets last_page
+     *
+     * @param int|null $last_page The last page number.
+     *
+     * @return self
+     */
+    public function setLastPage($last_page)
+    {
+        if (is_null($last_page)) {
+            throw new \InvalidArgumentException('non-nullable last_page cannot be null');
+        }
+        $this->container['last_page'] = $last_page;
+
+        return $this;
+    }
+
+    /**
+     * Gets next_page_url
+     *
+     * @return string|null
+     */
+    public function getNextPageUrl()
+    {
+        return $this->container['next_page_url'];
+    }
+
+    /**
+     * Sets next_page_url
+     *
+     * @param string|null $next_page_url A URL of the next page. It will return **null** if there’s no next page.
+     *
+     * @return self
+     */
+    public function setNextPageUrl($next_page_url)
+    {
+        if (is_null($next_page_url)) {
+            array_push($this->openAPINullablesSetToNull, 'next_page_url');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('next_page_url', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['next_page_url'] = $next_page_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets prev_page_url
+     *
+     * @return string|null
+     */
+    public function getPrevPageUrl()
+    {
+        return $this->container['prev_page_url'];
+    }
+
+    /**
+     * Sets prev_page_url
+     *
+     * @param string|null $prev_page_url A URL of the previous page. It will return **null** if there’s no previous page.
+     *
+     * @return self
+     */
+    public function setPrevPageUrl($prev_page_url)
+    {
+        if (is_null($prev_page_url)) {
+            array_push($this->openAPINullablesSetToNull, 'prev_page_url');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('prev_page_url', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['prev_page_url'] = $prev_page_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets from
+     *
+     * @return int|null
+     */
+    public function getFrom()
+    {
+        return $this->container['from'];
+    }
+
+    /**
+     * Sets from
+     *
+     * @param int|null $from The number of the first result in the current page.
+     *
+     * @return self
+     */
+    public function setFrom($from)
+    {
+        if (is_null($from)) {
+            throw new \InvalidArgumentException('non-nullable from cannot be null');
+        }
+        $this->container['from'] = $from;
+
+        return $this;
+    }
+
+    /**
+     * Gets to
+     *
+     * @return int|null
+     */
+    public function getTo()
+    {
+        return $this->container['to'];
+    }
+
+    /**
+     * Sets to
+     *
+     * @param int|null $to The number of the last result in the current page.
+     *
+     * @return self
+     */
+    public function setTo($to)
+    {
+        if (is_null($to)) {
+            throw new \InvalidArgumentException('non-nullable to cannot be null');
+        }
+        $this->container['to'] = $to;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     *
+     * @return \ClickSend\Model\Contact[]|null
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     *
+     * @param \ClickSend\Model\Contact[]|null $data data
+     *
+     * @return self
+     */
+    public function setData($data)
+    {
+        if (is_null($data)) {
+            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        }
+        $this->container['data'] = $data;
 
         return $this;
     }

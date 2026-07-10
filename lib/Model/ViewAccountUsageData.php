@@ -58,15 +58,15 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $openAPITypes = [
         'sms' => '\ClickSend\Model\ViewAccountUsageDataSmsInner[]',
-        'voice' => '\ClickSend\Model\ViewAccountUsageDataSmsInner[]',
-        'fax' => '\ClickSend\Model\ViewAccountUsageDataSmsInner[]',
-        'post' => '\ClickSend\Model\ViewAccountUsageDataSmsInner[]',
+        'voice' => '\ClickSend\Model\ViewAccountUsageDataVoiceInner[]',
+        'fax' => '\ClickSend\Model\ViewAccountUsageDataVoiceInner[]',
+        'post' => '\ClickSend\Model\ViewAccountUsageDataVoiceInner[]',
         'email' => '\ClickSend\Model\ViewAccountUsageDataEmailInner[]',
         'sms_total' => '\ClickSend\Model\ViewAccountUsageDataSmsTotal',
         'voice_total' => '\ClickSend\Model\ViewAccountUsageDataSmsTotal',
         'fax_total' => '\ClickSend\Model\ViewAccountUsageDataSmsTotal',
         'post_total' => '\ClickSend\Model\ViewAccountUsageDataSmsTotal',
-        'email_total' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound'
+        'email_total' => '\ClickSend\Model\ViewAccountUsageDataEmailTotal'
     ];
 
     /**
@@ -382,7 +382,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets voice
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null
+     * @return \ClickSend\Model\ViewAccountUsageDataVoiceInner[]|null
      */
     public function getVoice()
     {
@@ -392,7 +392,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets voice
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null $voice voice
+     * @param \ClickSend\Model\ViewAccountUsageDataVoiceInner[]|null $voice voice
      *
      * @return self
      */
@@ -409,7 +409,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets fax
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null
+     * @return \ClickSend\Model\ViewAccountUsageDataVoiceInner[]|null
      */
     public function getFax()
     {
@@ -419,7 +419,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets fax
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null $fax fax
+     * @param \ClickSend\Model\ViewAccountUsageDataVoiceInner[]|null $fax fax
      *
      * @return self
      */
@@ -436,7 +436,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets post
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null
+     * @return \ClickSend\Model\ViewAccountUsageDataVoiceInner[]|null
      */
     public function getPost()
     {
@@ -446,7 +446,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets post
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null $post post
+     * @param \ClickSend\Model\ViewAccountUsageDataVoiceInner[]|null $post post
      *
      * @return self
      */
@@ -598,7 +598,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets email_total
      *
-     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
+     * @return \ClickSend\Model\ViewAccountUsageDataEmailTotal|null
      */
     public function getEmailTotal()
     {
@@ -608,7 +608,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets email_total
      *
-     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $email_total email_total
+     * @param \ClickSend\Model\ViewAccountUsageDataEmailTotal|null $email_total email_total
      *
      * @return self
      */

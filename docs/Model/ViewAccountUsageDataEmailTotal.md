@@ -1,10 +1,10 @@
-# ViewVoiceStatisticsDataStatsInnerOutbound
+# ViewAccountUsageDataEmailTotal
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**count** | **int** | The count of outbound calls. | [optional]
-**price** | **float** | The price of outbound calls. | [optional]
+**count** | **int** | The total count of emails. | [optional]
+**price** | **string** | The total price of emails. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -60,7 +60,7 @@ class ViewAccountUsageDataSmsInner implements ModelInterface, ArrayAccess, \Json
         'subaccount_id' => 'int',
         'username' => 'string',
         'total_count' => 'string',
-        'total_price' => 'string'
+        'total_price' => 'float'
     ];
 
     /**
@@ -394,7 +394,7 @@ class ViewAccountUsageDataSmsInner implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets total_price
      *
-     * @return string|null
+     * @return float|null
      */
     public function getTotalPrice()
     {
@@ -404,7 +404,7 @@ class ViewAccountUsageDataSmsInner implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets total_price
      *
-     * @param string|null $total_price The total price of SMS.
+     * @param float|null $total_price The total price of SMS.
      *
      * @return self
      */

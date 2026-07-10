@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewSmsStatisticsDataTotal
+ * ViewAvailableNumbersDataAllOfDataInner
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \ClickSend\ObjectSerializer;
 
 /**
- * ViewSmsStatisticsDataTotal Class Doc Comment
+ * ViewAvailableNumbersDataAllOfDataInner Class Doc Comment
  *
  * @category Class
  * @package  ClickSend
@@ -40,7 +40,7 @@ use \ClickSend\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSerializable
+class ViewAvailableNumbersDataAllOfDataInner implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @var string
      */
-    protected static $openAPIModelName = 'view_sms_statistics_data_total';
+    protected static $openAPIModelName = 'view_available_numbers_data_allOf_data_inner';
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,13 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $openAPITypes = [
-        'outbound' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
-        'inbound' => '\ClickSend\Model\CancelAllSmsData',
-        'bounced' => '\ClickSend\Model\CancelAllSmsData'
+        'country' => 'string',
+        'country_name' => 'string',
+        'dedicated_number' => 'string',
+        'price_setup' => 'string',
+        'price_monthly' => 'string',
+        'price_total' => 'string',
+        'address_requirement' => 'string'
     ];
 
     /**
@@ -70,9 +74,13 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'outbound' => null,
-        'inbound' => null,
-        'bounced' => null
+        'country' => null,
+        'country_name' => null,
+        'dedicated_number' => null,
+        'price_setup' => null,
+        'price_monthly' => null,
+        'price_total' => null,
+        'address_requirement' => null
     ];
 
     /**
@@ -81,9 +89,13 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'outbound' => false,
-        'inbound' => false,
-        'bounced' => false
+        'country' => false,
+        'country_name' => false,
+        'dedicated_number' => false,
+        'price_setup' => false,
+        'price_monthly' => false,
+        'price_total' => false,
+        'address_requirement' => true
     ];
 
     /**
@@ -172,9 +184,13 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'outbound' => 'outbound',
-        'inbound' => 'inbound',
-        'bounced' => 'bounced'
+        'country' => 'country',
+        'country_name' => 'country_name',
+        'dedicated_number' => 'dedicated_number',
+        'price_setup' => 'price_setup',
+        'price_monthly' => 'price_monthly',
+        'price_total' => 'price_total',
+        'address_requirement' => 'address_requirement'
     ];
 
     /**
@@ -183,9 +199,13 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'outbound' => 'setOutbound',
-        'inbound' => 'setInbound',
-        'bounced' => 'setBounced'
+        'country' => 'setCountry',
+        'country_name' => 'setCountryName',
+        'dedicated_number' => 'setDedicatedNumber',
+        'price_setup' => 'setPriceSetup',
+        'price_monthly' => 'setPriceMonthly',
+        'price_total' => 'setPriceTotal',
+        'address_requirement' => 'setAddressRequirement'
     ];
 
     /**
@@ -194,9 +214,13 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'outbound' => 'getOutbound',
-        'inbound' => 'getInbound',
-        'bounced' => 'getBounced'
+        'country' => 'getCountry',
+        'country_name' => 'getCountryName',
+        'dedicated_number' => 'getDedicatedNumber',
+        'price_setup' => 'getPriceSetup',
+        'price_monthly' => 'getPriceMonthly',
+        'price_total' => 'getPriceTotal',
+        'address_requirement' => 'getAddressRequirement'
     ];
 
     /**
@@ -256,9 +280,13 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('outbound', $data ?? [], null);
-        $this->setIfExists('inbound', $data ?? [], null);
-        $this->setIfExists('bounced', $data ?? [], null);
+        $this->setIfExists('country', $data ?? [], null);
+        $this->setIfExists('country_name', $data ?? [], null);
+        $this->setIfExists('dedicated_number', $data ?? [], null);
+        $this->setIfExists('price_setup', $data ?? [], null);
+        $this->setIfExists('price_monthly', $data ?? [], null);
+        $this->setIfExists('price_total', $data ?? [], null);
+        $this->setIfExists('address_requirement', $data ?? [], null);
     }
 
     /**
@@ -304,82 +332,197 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets outbound
+     * Gets country
      *
-     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
+     * @return string|null
      */
-    public function getOutbound()
+    public function getCountry()
     {
-        return $this->container['outbound'];
+        return $this->container['country'];
     }
 
     /**
-     * Sets outbound
+     * Sets country
      *
-     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $outbound outbound
+     * @param string|null $country The country code of the number.
      *
      * @return self
      */
-    public function setOutbound($outbound)
+    public function setCountry($country)
     {
-        if (is_null($outbound)) {
-            throw new \InvalidArgumentException('non-nullable outbound cannot be null');
+        if (is_null($country)) {
+            throw new \InvalidArgumentException('non-nullable country cannot be null');
         }
-        $this->container['outbound'] = $outbound;
+        $this->container['country'] = $country;
 
         return $this;
     }
 
     /**
-     * Gets inbound
+     * Gets country_name
      *
-     * @return \ClickSend\Model\CancelAllSmsData|null
+     * @return string|null
      */
-    public function getInbound()
+    public function getCountryName()
     {
-        return $this->container['inbound'];
+        return $this->container['country_name'];
     }
 
     /**
-     * Sets inbound
+     * Sets country_name
      *
-     * @param \ClickSend\Model\CancelAllSmsData|null $inbound inbound
+     * @param string|null $country_name The country name of the number.
      *
      * @return self
      */
-    public function setInbound($inbound)
+    public function setCountryName($country_name)
     {
-        if (is_null($inbound)) {
-            throw new \InvalidArgumentException('non-nullable inbound cannot be null');
+        if (is_null($country_name)) {
+            throw new \InvalidArgumentException('non-nullable country_name cannot be null');
         }
-        $this->container['inbound'] = $inbound;
+        $this->container['country_name'] = $country_name;
 
         return $this;
     }
 
     /**
-     * Gets bounced
+     * Gets dedicated_number
      *
-     * @return \ClickSend\Model\CancelAllSmsData|null
+     * @return string|null
      */
-    public function getBounced()
+    public function getDedicatedNumber()
     {
-        return $this->container['bounced'];
+        return $this->container['dedicated_number'];
     }
 
     /**
-     * Sets bounced
+     * Sets dedicated_number
      *
-     * @param \ClickSend\Model\CancelAllSmsData|null $bounced bounced
+     * @param string|null $dedicated_number The dedicated number.
      *
      * @return self
      */
-    public function setBounced($bounced)
+    public function setDedicatedNumber($dedicated_number)
     {
-        if (is_null($bounced)) {
-            throw new \InvalidArgumentException('non-nullable bounced cannot be null');
+        if (is_null($dedicated_number)) {
+            throw new \InvalidArgumentException('non-nullable dedicated_number cannot be null');
         }
-        $this->container['bounced'] = $bounced;
+        $this->container['dedicated_number'] = $dedicated_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets price_setup
+     *
+     * @return string|null
+     */
+    public function getPriceSetup()
+    {
+        return $this->container['price_setup'];
+    }
+
+    /**
+     * Sets price_setup
+     *
+     * @param string|null $price_setup The setup price of the number.
+     *
+     * @return self
+     */
+    public function setPriceSetup($price_setup)
+    {
+        if (is_null($price_setup)) {
+            throw new \InvalidArgumentException('non-nullable price_setup cannot be null');
+        }
+        $this->container['price_setup'] = $price_setup;
+
+        return $this;
+    }
+
+    /**
+     * Gets price_monthly
+     *
+     * @return string|null
+     */
+    public function getPriceMonthly()
+    {
+        return $this->container['price_monthly'];
+    }
+
+    /**
+     * Sets price_monthly
+     *
+     * @param string|null $price_monthly The monthly price of the number.
+     *
+     * @return self
+     */
+    public function setPriceMonthly($price_monthly)
+    {
+        if (is_null($price_monthly)) {
+            throw new \InvalidArgumentException('non-nullable price_monthly cannot be null');
+        }
+        $this->container['price_monthly'] = $price_monthly;
+
+        return $this;
+    }
+
+    /**
+     * Gets price_total
+     *
+     * @return string|null
+     */
+    public function getPriceTotal()
+    {
+        return $this->container['price_total'];
+    }
+
+    /**
+     * Sets price_total
+     *
+     * @param string|null $price_total The total price of the number.
+     *
+     * @return self
+     */
+    public function setPriceTotal($price_total)
+    {
+        if (is_null($price_total)) {
+            throw new \InvalidArgumentException('non-nullable price_total cannot be null');
+        }
+        $this->container['price_total'] = $price_total;
+
+        return $this;
+    }
+
+    /**
+     * Gets address_requirement
+     *
+     * @return string|null
+     */
+    public function getAddressRequirement()
+    {
+        return $this->container['address_requirement'];
+    }
+
+    /**
+     * Sets address_requirement
+     *
+     * @param string|null $address_requirement The address requirement for the number.  <br> `local`: requires an address that corresponds  to the phone number's prefix.
+     *
+     * @return self
+     */
+    public function setAddressRequirement($address_requirement)
+    {
+        if (is_null($address_requirement)) {
+            array_push($this->openAPINullablesSetToNull, 'address_requirement');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('address_requirement', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['address_requirement'] = $address_requirement;
 
         return $this;
     }

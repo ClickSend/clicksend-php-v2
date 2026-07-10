@@ -58,7 +58,7 @@ class ViewRechargePackagesDataPackagesInner implements ModelInterface, ArrayAcce
      */
     protected static $openAPITypes = [
         'package_id' => 'float',
-        'package_price' => 'float',
+        'package_price' => 'string',
         'price_rate' => 'int',
         'sms_price' => 'float',
         'sms_quantity' => 'float',
@@ -487,7 +487,7 @@ class ViewRechargePackagesDataPackagesInner implements ModelInterface, ArrayAcce
     /**
      * Gets package_price
      *
-     * @return float|null
+     * @return string|null
      */
     public function getPackagePrice()
     {
@@ -497,7 +497,7 @@ class ViewRechargePackagesDataPackagesInner implements ModelInterface, ArrayAcce
     /**
      * Sets package_price
      *
-     * @param float|null $package_price The price of the package.
+     * @param string|null $package_price The price of the package.
      *
      * @return self
      */

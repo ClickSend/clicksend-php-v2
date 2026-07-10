@@ -58,7 +58,7 @@ class ViewVoiceStatisticsDataTotalOutbound implements ModelInterface, ArrayAcces
      */
     protected static $openAPITypes = [
         'count' => 'int',
-        'price' => 'string'
+        'price' => 'float'
     ];
 
     /**
@@ -326,7 +326,7 @@ class ViewVoiceStatisticsDataTotalOutbound implements ModelInterface, ArrayAcces
     /**
      * Gets price
      *
-     * @return string|null
+     * @return float|null
      */
     public function getPrice()
     {
@@ -336,7 +336,7 @@ class ViewVoiceStatisticsDataTotalOutbound implements ModelInterface, ArrayAcces
     /**
      * Sets price
      *
-     * @param string|null $price The total price of outbound calls.
+     * @param float|null $price The total price of outbound calls.
      *
      * @return self
      */

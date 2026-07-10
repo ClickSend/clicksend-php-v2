@@ -60,7 +60,7 @@ class ViewSubaccounts implements ModelInterface, ArrayAccess, \JsonSerializable
         'http_code' => 'int',
         'response_code' => 'string',
         'response_msg' => 'string',
-        'data' => '\ClickSend\Model\Subaccount[]'
+        'data' => '\ClickSend\Model\ViewSubaccountsData'
     ];
 
     /**
@@ -394,7 +394,7 @@ class ViewSubaccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets data
      *
-     * @return \ClickSend\Model\Subaccount[]|null
+     * @return \ClickSend\Model\ViewSubaccountsData|null
      */
     public function getData()
     {
@@ -404,7 +404,7 @@ class ViewSubaccounts implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets data
      *
-     * @param \ClickSend\Model\Subaccount[]|null $data data
+     * @param \ClickSend\Model\ViewSubaccountsData|null $data data
      *
      * @return self
      */

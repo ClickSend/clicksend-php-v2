@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewSmsStatisticsDataTotal
+ * ViewAccountUsageDataVoiceInner
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \ClickSend\ObjectSerializer;
 
 /**
- * ViewSmsStatisticsDataTotal Class Doc Comment
+ * ViewAccountUsageDataVoiceInner Class Doc Comment
  *
  * @category Class
  * @package  ClickSend
@@ -40,7 +40,7 @@ use \ClickSend\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSerializable
+class ViewAccountUsageDataVoiceInner implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @var string
      */
-    protected static $openAPIModelName = 'view_sms_statistics_data_total';
+    protected static $openAPIModelName = 'view_account_usage_data_voice_inner';
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,10 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $openAPITypes = [
-        'outbound' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
-        'inbound' => '\ClickSend\Model\CancelAllSmsData',
-        'bounced' => '\ClickSend\Model\CancelAllSmsData'
+        'subaccount_id' => 'int',
+        'username' => 'string',
+        'total_count' => 'string',
+        'total_price' => 'string'
     ];
 
     /**
@@ -70,9 +71,10 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'outbound' => null,
-        'inbound' => null,
-        'bounced' => null
+        'subaccount_id' => null,
+        'username' => null,
+        'total_count' => null,
+        'total_price' => null
     ];
 
     /**
@@ -81,9 +83,10 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'outbound' => false,
-        'inbound' => false,
-        'bounced' => false
+        'subaccount_id' => false,
+        'username' => false,
+        'total_count' => false,
+        'total_price' => false
     ];
 
     /**
@@ -172,9 +175,10 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'outbound' => 'outbound',
-        'inbound' => 'inbound',
-        'bounced' => 'bounced'
+        'subaccount_id' => 'subaccount_id',
+        'username' => 'username',
+        'total_count' => 'total_count',
+        'total_price' => 'total_price'
     ];
 
     /**
@@ -183,9 +187,10 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'outbound' => 'setOutbound',
-        'inbound' => 'setInbound',
-        'bounced' => 'setBounced'
+        'subaccount_id' => 'setSubaccountId',
+        'username' => 'setUsername',
+        'total_count' => 'setTotalCount',
+        'total_price' => 'setTotalPrice'
     ];
 
     /**
@@ -194,9 +199,10 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'outbound' => 'getOutbound',
-        'inbound' => 'getInbound',
-        'bounced' => 'getBounced'
+        'subaccount_id' => 'getSubaccountId',
+        'username' => 'getUsername',
+        'total_count' => 'getTotalCount',
+        'total_price' => 'getTotalPrice'
     ];
 
     /**
@@ -256,9 +262,10 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('outbound', $data ?? [], null);
-        $this->setIfExists('inbound', $data ?? [], null);
-        $this->setIfExists('bounced', $data ?? [], null);
+        $this->setIfExists('subaccount_id', $data ?? [], null);
+        $this->setIfExists('username', $data ?? [], null);
+        $this->setIfExists('total_count', $data ?? [], null);
+        $this->setIfExists('total_price', $data ?? [], null);
     }
 
     /**
@@ -304,82 +311,109 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets outbound
+     * Gets subaccount_id
      *
-     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
+     * @return int|null
      */
-    public function getOutbound()
+    public function getSubaccountId()
     {
-        return $this->container['outbound'];
+        return $this->container['subaccount_id'];
     }
 
     /**
-     * Sets outbound
+     * Sets subaccount_id
      *
-     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $outbound outbound
+     * @param int|null $subaccount_id The subaccount identifier.
      *
      * @return self
      */
-    public function setOutbound($outbound)
+    public function setSubaccountId($subaccount_id)
     {
-        if (is_null($outbound)) {
-            throw new \InvalidArgumentException('non-nullable outbound cannot be null');
+        if (is_null($subaccount_id)) {
+            throw new \InvalidArgumentException('non-nullable subaccount_id cannot be null');
         }
-        $this->container['outbound'] = $outbound;
+        $this->container['subaccount_id'] = $subaccount_id;
 
         return $this;
     }
 
     /**
-     * Gets inbound
+     * Gets username
      *
-     * @return \ClickSend\Model\CancelAllSmsData|null
+     * @return string|null
      */
-    public function getInbound()
+    public function getUsername()
     {
-        return $this->container['inbound'];
+        return $this->container['username'];
     }
 
     /**
-     * Sets inbound
+     * Sets username
      *
-     * @param \ClickSend\Model\CancelAllSmsData|null $inbound inbound
+     * @param string|null $username The username associated with the subaccount.
      *
      * @return self
      */
-    public function setInbound($inbound)
+    public function setUsername($username)
     {
-        if (is_null($inbound)) {
-            throw new \InvalidArgumentException('non-nullable inbound cannot be null');
+        if (is_null($username)) {
+            throw new \InvalidArgumentException('non-nullable username cannot be null');
         }
-        $this->container['inbound'] = $inbound;
+        $this->container['username'] = $username;
 
         return $this;
     }
 
     /**
-     * Gets bounced
+     * Gets total_count
      *
-     * @return \ClickSend\Model\CancelAllSmsData|null
+     * @return string|null
      */
-    public function getBounced()
+    public function getTotalCount()
     {
-        return $this->container['bounced'];
+        return $this->container['total_count'];
     }
 
     /**
-     * Sets bounced
+     * Sets total_count
      *
-     * @param \ClickSend\Model\CancelAllSmsData|null $bounced bounced
+     * @param string|null $total_count The total count of voice calls.
      *
      * @return self
      */
-    public function setBounced($bounced)
+    public function setTotalCount($total_count)
     {
-        if (is_null($bounced)) {
-            throw new \InvalidArgumentException('non-nullable bounced cannot be null');
+        if (is_null($total_count)) {
+            throw new \InvalidArgumentException('non-nullable total_count cannot be null');
         }
-        $this->container['bounced'] = $bounced;
+        $this->container['total_count'] = $total_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_price
+     *
+     * @return string|null
+     */
+    public function getTotalPrice()
+    {
+        return $this->container['total_price'];
+    }
+
+    /**
+     * Sets total_price
+     *
+     * @param string|null $total_price The total price of voice calls.
+     *
+     * @return self
+     */
+    public function setTotalPrice($total_price)
+    {
+        if (is_null($total_price)) {
+            throw new \InvalidArgumentException('non-nullable total_price cannot be null');
+        }
+        $this->container['total_price'] = $total_price;
 
         return $this;
     }

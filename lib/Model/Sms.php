@@ -61,10 +61,10 @@ class Sms implements ModelInterface, ArrayAccess, \JsonSerializable
         'to' => 'string',
         'body' => 'string',
         'from' => 'string',
-        'schedule' => 'int',
+        'schedule' => 'string',
         'message_id' => 'string',
         'message_parts' => 'int',
-        'message_price' => 'float',
+        'message_price' => 'string',
         'custom_string' => 'string',
         'contact_id' => 'string',
         'is_shared_system_number' => 'bool',
@@ -484,7 +484,7 @@ class Sms implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets schedule
      *
-     * @return int|null
+     * @return string|null
      */
     public function getSchedule()
     {
@@ -494,7 +494,7 @@ class Sms implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets schedule
      *
-     * @param int|null $schedule The scheduled date of the message. It is in <a href=\"http://help.clicksend.com/what-is-a-unix-timestamp\" target=\"_blank\">Unix format</a>.
+     * @param string|null $schedule The scheduled date of the message. It is in <a href=\"http://help.clicksend.com/what-is-a-unix-timestamp\" target=\"_blank\">Unix format</a>.
      *
      * @return self
      */
@@ -565,7 +565,7 @@ class Sms implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets message_price
      *
-     * @return float|null
+     * @return string|null
      */
     public function getMessagePrice()
     {
@@ -575,7 +575,7 @@ class Sms implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets message_price
      *
-     * @param float|null $message_price The price of this message. This depends on the total number of parts of the message.
+     * @param string|null $message_price The price of this message. This depends on the total number of parts of the message.
      *
      * @return self
      */

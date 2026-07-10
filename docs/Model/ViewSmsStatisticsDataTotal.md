@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**outbound** | [**\ClickSend\Model\ViewVoiceStatisticsDataStatsInnerOutbound**](ViewVoiceStatisticsDataStatsInnerOutbound.md) |  | [optional]
+**outbound** | [**\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound**](ViewVoiceStatisticsDataTotalOutbound.md) |  | [optional]
 **inbound** | [**\ClickSend\Model\CancelAllSmsData**](CancelAllSmsData.md) |  | [optional]
 **bounced** | [**\ClickSend\Model\CancelAllSmsData**](CancelAllSmsData.md) |  | [optional]
 

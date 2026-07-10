@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewAvailableNumbersDataInner
+ * ViewAvailableNumbersData
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \ClickSend\ObjectSerializer;
 
 /**
- * ViewAvailableNumbersDataInner Class Doc Comment
+ * ViewAvailableNumbersData Class Doc Comment
  *
  * @category Class
  * @package  ClickSend
@@ -40,7 +40,7 @@ use \ClickSend\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ViewAvailableNumbersDataInner implements ModelInterface, ArrayAccess, \JsonSerializable
+class ViewAvailableNumbersData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ViewAvailableNumbersDataInner implements ModelInterface, ArrayAccess, \Jso
      *
      * @var string
      */
-    protected static $openAPIModelName = 'view_available_numbers_data_inner';
+    protected static $openAPIModelName = 'view_available_numbers_data';
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -57,13 +57,15 @@ class ViewAvailableNumbersDataInner implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $openAPITypes = [
-        'country' => 'string',
-        'country_name' => 'string',
-        'dedicated_number' => 'string',
-        'price_setup' => 'string',
-        'price_monthly' => 'string',
-        'price_total' => 'string',
-        'address_requirement' => 'string'
+        'total' => 'int',
+        'per_page' => 'int',
+        'current_page' => 'int',
+        'last_page' => 'int',
+        'next_page_url' => 'string',
+        'prev_page_url' => 'string',
+        'from' => 'int',
+        'to' => 'int',
+        'data' => '\ClickSend\Model\ViewAvailableNumbersDataAllOfDataInner[]'
     ];
 
     /**
@@ -74,13 +76,15 @@ class ViewAvailableNumbersDataInner implements ModelInterface, ArrayAccess, \Jso
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'country' => null,
-        'country_name' => null,
-        'dedicated_number' => null,
-        'price_setup' => null,
-        'price_monthly' => null,
-        'price_total' => null,
-        'address_requirement' => null
+        'total' => null,
+        'per_page' => null,
+        'current_page' => null,
+        'last_page' => null,
+        'next_page_url' => null,
+        'prev_page_url' => null,
+        'from' => null,
+        'to' => null,
+        'data' => null
     ];
 
     /**
@@ -89,13 +93,15 @@ class ViewAvailableNumbersDataInner implements ModelInterface, ArrayAccess, \Jso
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'country' => false,
-        'country_name' => false,
-        'dedicated_number' => false,
-        'price_setup' => false,
-        'price_monthly' => false,
-        'price_total' => false,
-        'address_requirement' => true
+        'total' => false,
+        'per_page' => false,
+        'current_page' => false,
+        'last_page' => false,
+        'next_page_url' => true,
+        'prev_page_url' => true,
+        'from' => false,
+        'to' => false,
+        'data' => false
     ];
 
     /**
@@ -184,13 +190,15 @@ class ViewAvailableNumbersDataInner implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'country' => 'country',
-        'country_name' => 'country_name',
-        'dedicated_number' => 'dedicated_number',
-        'price_setup' => 'price_setup',
-        'price_monthly' => 'price_monthly',
-        'price_total' => 'price_total',
-        'address_requirement' => 'address_requirement'
+        'total' => 'total',
+        'per_page' => 'per_page',
+        'current_page' => 'current_page',
+        'last_page' => 'last_page',
+        'next_page_url' => 'next_page_url',
+        'prev_page_url' => 'prev_page_url',
+        'from' => 'from',
+        'to' => 'to',
+        'data' => 'data'
     ];
 
     /**
@@ -199,13 +207,15 @@ class ViewAvailableNumbersDataInner implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'country' => 'setCountry',
-        'country_name' => 'setCountryName',
-        'dedicated_number' => 'setDedicatedNumber',
-        'price_setup' => 'setPriceSetup',
-        'price_monthly' => 'setPriceMonthly',
-        'price_total' => 'setPriceTotal',
-        'address_requirement' => 'setAddressRequirement'
+        'total' => 'setTotal',
+        'per_page' => 'setPerPage',
+        'current_page' => 'setCurrentPage',
+        'last_page' => 'setLastPage',
+        'next_page_url' => 'setNextPageUrl',
+        'prev_page_url' => 'setPrevPageUrl',
+        'from' => 'setFrom',
+        'to' => 'setTo',
+        'data' => 'setData'
     ];
 
     /**
@@ -214,13 +224,15 @@ class ViewAvailableNumbersDataInner implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'country' => 'getCountry',
-        'country_name' => 'getCountryName',
-        'dedicated_number' => 'getDedicatedNumber',
-        'price_setup' => 'getPriceSetup',
-        'price_monthly' => 'getPriceMonthly',
-        'price_total' => 'getPriceTotal',
-        'address_requirement' => 'getAddressRequirement'
+        'total' => 'getTotal',
+        'per_page' => 'getPerPage',
+        'current_page' => 'getCurrentPage',
+        'last_page' => 'getLastPage',
+        'next_page_url' => 'getNextPageUrl',
+        'prev_page_url' => 'getPrevPageUrl',
+        'from' => 'getFrom',
+        'to' => 'getTo',
+        'data' => 'getData'
     ];
 
     /**
@@ -280,13 +292,15 @@ class ViewAvailableNumbersDataInner implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('country', $data ?? [], null);
-        $this->setIfExists('country_name', $data ?? [], null);
-        $this->setIfExists('dedicated_number', $data ?? [], null);
-        $this->setIfExists('price_setup', $data ?? [], null);
-        $this->setIfExists('price_monthly', $data ?? [], null);
-        $this->setIfExists('price_total', $data ?? [], null);
-        $this->setIfExists('address_requirement', $data ?? [], null);
+        $this->setIfExists('total', $data ?? [], null);
+        $this->setIfExists('per_page', $data ?? [], null);
+        $this->setIfExists('current_page', $data ?? [], null);
+        $this->setIfExists('last_page', $data ?? [], null);
+        $this->setIfExists('next_page_url', $data ?? [], null);
+        $this->setIfExists('prev_page_url', $data ?? [], null);
+        $this->setIfExists('from', $data ?? [], null);
+        $this->setIfExists('to', $data ?? [], null);
+        $this->setIfExists('data', $data ?? [], null);
     }
 
     /**
@@ -332,197 +346,258 @@ class ViewAvailableNumbersDataInner implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets country
+     * Gets total
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getCountry()
+    public function getTotal()
     {
-        return $this->container['country'];
+        return $this->container['total'];
     }
 
     /**
-     * Sets country
+     * Sets total
      *
-     * @param string|null $country The country code of the number.
+     * @param int|null $total The total number of items available for viewing.
      *
      * @return self
      */
-    public function setCountry($country)
+    public function setTotal($total)
     {
-        if (is_null($country)) {
-            throw new \InvalidArgumentException('non-nullable country cannot be null');
+        if (is_null($total)) {
+            throw new \InvalidArgumentException('non-nullable total cannot be null');
         }
-        $this->container['country'] = $country;
+        $this->container['total'] = $total;
 
         return $this;
     }
 
     /**
-     * Gets country_name
+     * Gets per_page
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getCountryName()
+    public function getPerPage()
     {
-        return $this->container['country_name'];
+        return $this->container['per_page'];
     }
 
     /**
-     * Sets country_name
+     * Sets per_page
      *
-     * @param string|null $country_name The country name of the number.
+     * @param int|null $per_page The number of items returned per page. This is specified in the limit parameter. You can have 100 items at maximum, and 15 at minimum.
      *
      * @return self
      */
-    public function setCountryName($country_name)
+    public function setPerPage($per_page)
     {
-        if (is_null($country_name)) {
-            throw new \InvalidArgumentException('non-nullable country_name cannot be null');
+        if (is_null($per_page)) {
+            throw new \InvalidArgumentException('non-nullable per_page cannot be null');
         }
-        $this->container['country_name'] = $country_name;
+        $this->container['per_page'] = $per_page;
 
         return $this;
     }
 
     /**
-     * Gets dedicated_number
+     * Gets current_page
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getDedicatedNumber()
+    public function getCurrentPage()
     {
-        return $this->container['dedicated_number'];
+        return $this->container['current_page'];
     }
 
     /**
-     * Sets dedicated_number
+     * Sets current_page
      *
-     * @param string|null $dedicated_number The dedicated number.
+     * @param int|null $current_page The current page number.
      *
      * @return self
      */
-    public function setDedicatedNumber($dedicated_number)
+    public function setCurrentPage($current_page)
     {
-        if (is_null($dedicated_number)) {
-            throw new \InvalidArgumentException('non-nullable dedicated_number cannot be null');
+        if (is_null($current_page)) {
+            throw new \InvalidArgumentException('non-nullable current_page cannot be null');
         }
-        $this->container['dedicated_number'] = $dedicated_number;
+        $this->container['current_page'] = $current_page;
 
         return $this;
     }
 
     /**
-     * Gets price_setup
+     * Gets last_page
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getPriceSetup()
+    public function getLastPage()
     {
-        return $this->container['price_setup'];
+        return $this->container['last_page'];
     }
 
     /**
-     * Sets price_setup
+     * Sets last_page
      *
-     * @param string|null $price_setup The setup price of the number.
+     * @param int|null $last_page The last page number.
      *
      * @return self
      */
-    public function setPriceSetup($price_setup)
+    public function setLastPage($last_page)
     {
-        if (is_null($price_setup)) {
-            throw new \InvalidArgumentException('non-nullable price_setup cannot be null');
+        if (is_null($last_page)) {
+            throw new \InvalidArgumentException('non-nullable last_page cannot be null');
         }
-        $this->container['price_setup'] = $price_setup;
+        $this->container['last_page'] = $last_page;
 
         return $this;
     }
 
     /**
-     * Gets price_monthly
+     * Gets next_page_url
      *
      * @return string|null
      */
-    public function getPriceMonthly()
+    public function getNextPageUrl()
     {
-        return $this->container['price_monthly'];
+        return $this->container['next_page_url'];
     }
 
     /**
-     * Sets price_monthly
+     * Sets next_page_url
      *
-     * @param string|null $price_monthly The monthly price of the number.
+     * @param string|null $next_page_url A URL of the next page. It will return **null** if there’s no next page.
      *
      * @return self
      */
-    public function setPriceMonthly($price_monthly)
+    public function setNextPageUrl($next_page_url)
     {
-        if (is_null($price_monthly)) {
-            throw new \InvalidArgumentException('non-nullable price_monthly cannot be null');
-        }
-        $this->container['price_monthly'] = $price_monthly;
-
-        return $this;
-    }
-
-    /**
-     * Gets price_total
-     *
-     * @return string|null
-     */
-    public function getPriceTotal()
-    {
-        return $this->container['price_total'];
-    }
-
-    /**
-     * Sets price_total
-     *
-     * @param string|null $price_total The total price of the number.
-     *
-     * @return self
-     */
-    public function setPriceTotal($price_total)
-    {
-        if (is_null($price_total)) {
-            throw new \InvalidArgumentException('non-nullable price_total cannot be null');
-        }
-        $this->container['price_total'] = $price_total;
-
-        return $this;
-    }
-
-    /**
-     * Gets address_requirement
-     *
-     * @return string|null
-     */
-    public function getAddressRequirement()
-    {
-        return $this->container['address_requirement'];
-    }
-
-    /**
-     * Sets address_requirement
-     *
-     * @param string|null $address_requirement The address requirement for the number.  <br> `local`: requires an address that corresponds  to the phone number's prefix.
-     *
-     * @return self
-     */
-    public function setAddressRequirement($address_requirement)
-    {
-        if (is_null($address_requirement)) {
-            array_push($this->openAPINullablesSetToNull, 'address_requirement');
+        if (is_null($next_page_url)) {
+            array_push($this->openAPINullablesSetToNull, 'next_page_url');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('address_requirement', $nullablesSetToNull);
+            $index = array_search('next_page_url', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['address_requirement'] = $address_requirement;
+        $this->container['next_page_url'] = $next_page_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets prev_page_url
+     *
+     * @return string|null
+     */
+    public function getPrevPageUrl()
+    {
+        return $this->container['prev_page_url'];
+    }
+
+    /**
+     * Sets prev_page_url
+     *
+     * @param string|null $prev_page_url A URL of the previous page. It will return **null** if there’s no previous page.
+     *
+     * @return self
+     */
+    public function setPrevPageUrl($prev_page_url)
+    {
+        if (is_null($prev_page_url)) {
+            array_push($this->openAPINullablesSetToNull, 'prev_page_url');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('prev_page_url', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['prev_page_url'] = $prev_page_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets from
+     *
+     * @return int|null
+     */
+    public function getFrom()
+    {
+        return $this->container['from'];
+    }
+
+    /**
+     * Sets from
+     *
+     * @param int|null $from The number of the first result in the current page.
+     *
+     * @return self
+     */
+    public function setFrom($from)
+    {
+        if (is_null($from)) {
+            throw new \InvalidArgumentException('non-nullable from cannot be null');
+        }
+        $this->container['from'] = $from;
+
+        return $this;
+    }
+
+    /**
+     * Gets to
+     *
+     * @return int|null
+     */
+    public function getTo()
+    {
+        return $this->container['to'];
+    }
+
+    /**
+     * Sets to
+     *
+     * @param int|null $to The number of the last result in the current page.
+     *
+     * @return self
+     */
+    public function setTo($to)
+    {
+        if (is_null($to)) {
+            throw new \InvalidArgumentException('non-nullable to cannot be null');
+        }
+        $this->container['to'] = $to;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     *
+     * @return \ClickSend\Model\ViewAvailableNumbersDataAllOfDataInner[]|null
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     *
+     * @param \ClickSend\Model\ViewAvailableNumbersDataAllOfDataInner[]|null $data data
+     *
+     * @return self
+     */
+    public function setData($data)
+    {
+        if (is_null($data)) {
+            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        }
+        $this->container['data'] = $data;
 
         return $this;
     }

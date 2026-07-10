@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewSmsStatisticsDataTotal
+ * ViewSubaccountsData
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \ClickSend\ObjectSerializer;
 
 /**
- * ViewSmsStatisticsDataTotal Class Doc Comment
+ * ViewSubaccountsData Class Doc Comment
  *
  * @category Class
  * @package  ClickSend
@@ -40,7 +40,7 @@ use \ClickSend\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSerializable
+class ViewSubaccountsData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @var string
      */
-    protected static $openAPIModelName = 'view_sms_statistics_data_total';
+    protected static $openAPIModelName = 'view_subaccounts_data';
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,15 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $openAPITypes = [
-        'outbound' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
-        'inbound' => '\ClickSend\Model\CancelAllSmsData',
-        'bounced' => '\ClickSend\Model\CancelAllSmsData'
+        'total' => 'int',
+        'per_page' => 'int',
+        'current_page' => 'int',
+        'last_page' => 'int',
+        'next_page_url' => 'string',
+        'prev_page_url' => 'string',
+        'from' => 'int',
+        'to' => 'int',
+        'data' => '\ClickSend\Model\Subaccount[]'
     ];
 
     /**
@@ -70,9 +76,15 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'outbound' => null,
-        'inbound' => null,
-        'bounced' => null
+        'total' => null,
+        'per_page' => null,
+        'current_page' => null,
+        'last_page' => null,
+        'next_page_url' => null,
+        'prev_page_url' => null,
+        'from' => null,
+        'to' => null,
+        'data' => null
     ];
 
     /**
@@ -81,9 +93,15 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'outbound' => false,
-        'inbound' => false,
-        'bounced' => false
+        'total' => false,
+        'per_page' => false,
+        'current_page' => false,
+        'last_page' => false,
+        'next_page_url' => true,
+        'prev_page_url' => true,
+        'from' => false,
+        'to' => false,
+        'data' => false
     ];
 
     /**
@@ -172,9 +190,15 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'outbound' => 'outbound',
-        'inbound' => 'inbound',
-        'bounced' => 'bounced'
+        'total' => 'total',
+        'per_page' => 'per_page',
+        'current_page' => 'current_page',
+        'last_page' => 'last_page',
+        'next_page_url' => 'next_page_url',
+        'prev_page_url' => 'prev_page_url',
+        'from' => 'from',
+        'to' => 'to',
+        'data' => 'data'
     ];
 
     /**
@@ -183,9 +207,15 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'outbound' => 'setOutbound',
-        'inbound' => 'setInbound',
-        'bounced' => 'setBounced'
+        'total' => 'setTotal',
+        'per_page' => 'setPerPage',
+        'current_page' => 'setCurrentPage',
+        'last_page' => 'setLastPage',
+        'next_page_url' => 'setNextPageUrl',
+        'prev_page_url' => 'setPrevPageUrl',
+        'from' => 'setFrom',
+        'to' => 'setTo',
+        'data' => 'setData'
     ];
 
     /**
@@ -194,9 +224,15 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'outbound' => 'getOutbound',
-        'inbound' => 'getInbound',
-        'bounced' => 'getBounced'
+        'total' => 'getTotal',
+        'per_page' => 'getPerPage',
+        'current_page' => 'getCurrentPage',
+        'last_page' => 'getLastPage',
+        'next_page_url' => 'getNextPageUrl',
+        'prev_page_url' => 'getPrevPageUrl',
+        'from' => 'getFrom',
+        'to' => 'getTo',
+        'data' => 'getData'
     ];
 
     /**
@@ -256,9 +292,15 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('outbound', $data ?? [], null);
-        $this->setIfExists('inbound', $data ?? [], null);
-        $this->setIfExists('bounced', $data ?? [], null);
+        $this->setIfExists('total', $data ?? [], null);
+        $this->setIfExists('per_page', $data ?? [], null);
+        $this->setIfExists('current_page', $data ?? [], null);
+        $this->setIfExists('last_page', $data ?? [], null);
+        $this->setIfExists('next_page_url', $data ?? [], null);
+        $this->setIfExists('prev_page_url', $data ?? [], null);
+        $this->setIfExists('from', $data ?? [], null);
+        $this->setIfExists('to', $data ?? [], null);
+        $this->setIfExists('data', $data ?? [], null);
     }
 
     /**
@@ -304,82 +346,258 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets outbound
+     * Gets total
      *
-     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
+     * @return int|null
      */
-    public function getOutbound()
+    public function getTotal()
     {
-        return $this->container['outbound'];
+        return $this->container['total'];
     }
 
     /**
-     * Sets outbound
+     * Sets total
      *
-     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $outbound outbound
+     * @param int|null $total The total number of items available for viewing.
      *
      * @return self
      */
-    public function setOutbound($outbound)
+    public function setTotal($total)
     {
-        if (is_null($outbound)) {
-            throw new \InvalidArgumentException('non-nullable outbound cannot be null');
+        if (is_null($total)) {
+            throw new \InvalidArgumentException('non-nullable total cannot be null');
         }
-        $this->container['outbound'] = $outbound;
+        $this->container['total'] = $total;
 
         return $this;
     }
 
     /**
-     * Gets inbound
+     * Gets per_page
      *
-     * @return \ClickSend\Model\CancelAllSmsData|null
+     * @return int|null
      */
-    public function getInbound()
+    public function getPerPage()
     {
-        return $this->container['inbound'];
+        return $this->container['per_page'];
     }
 
     /**
-     * Sets inbound
+     * Sets per_page
      *
-     * @param \ClickSend\Model\CancelAllSmsData|null $inbound inbound
+     * @param int|null $per_page The number of items returned per page. This is specified in the limit parameter. You can have 100 items at maximum, and 15 at minimum.
      *
      * @return self
      */
-    public function setInbound($inbound)
+    public function setPerPage($per_page)
     {
-        if (is_null($inbound)) {
-            throw new \InvalidArgumentException('non-nullable inbound cannot be null');
+        if (is_null($per_page)) {
+            throw new \InvalidArgumentException('non-nullable per_page cannot be null');
         }
-        $this->container['inbound'] = $inbound;
+        $this->container['per_page'] = $per_page;
 
         return $this;
     }
 
     /**
-     * Gets bounced
+     * Gets current_page
      *
-     * @return \ClickSend\Model\CancelAllSmsData|null
+     * @return int|null
      */
-    public function getBounced()
+    public function getCurrentPage()
     {
-        return $this->container['bounced'];
+        return $this->container['current_page'];
     }
 
     /**
-     * Sets bounced
+     * Sets current_page
      *
-     * @param \ClickSend\Model\CancelAllSmsData|null $bounced bounced
+     * @param int|null $current_page The current page number.
      *
      * @return self
      */
-    public function setBounced($bounced)
+    public function setCurrentPage($current_page)
     {
-        if (is_null($bounced)) {
-            throw new \InvalidArgumentException('non-nullable bounced cannot be null');
+        if (is_null($current_page)) {
+            throw new \InvalidArgumentException('non-nullable current_page cannot be null');
         }
-        $this->container['bounced'] = $bounced;
+        $this->container['current_page'] = $current_page;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_page
+     *
+     * @return int|null
+     */
+    public function getLastPage()
+    {
+        return $this->container['last_page'];
+    }
+
+    /**
+     * Sets last_page
+     *
+     * @param int|null $last_page The last page number.
+     *
+     * @return self
+     */
+    public function setLastPage($last_page)
+    {
+        if (is_null($last_page)) {
+            throw new \InvalidArgumentException('non-nullable last_page cannot be null');
+        }
+        $this->container['last_page'] = $last_page;
+
+        return $this;
+    }
+
+    /**
+     * Gets next_page_url
+     *
+     * @return string|null
+     */
+    public function getNextPageUrl()
+    {
+        return $this->container['next_page_url'];
+    }
+
+    /**
+     * Sets next_page_url
+     *
+     * @param string|null $next_page_url A URL of the next page. It will return **null** if there’s no next page.
+     *
+     * @return self
+     */
+    public function setNextPageUrl($next_page_url)
+    {
+        if (is_null($next_page_url)) {
+            array_push($this->openAPINullablesSetToNull, 'next_page_url');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('next_page_url', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['next_page_url'] = $next_page_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets prev_page_url
+     *
+     * @return string|null
+     */
+    public function getPrevPageUrl()
+    {
+        return $this->container['prev_page_url'];
+    }
+
+    /**
+     * Sets prev_page_url
+     *
+     * @param string|null $prev_page_url A URL of the previous page. It will return **null** if there’s no previous page.
+     *
+     * @return self
+     */
+    public function setPrevPageUrl($prev_page_url)
+    {
+        if (is_null($prev_page_url)) {
+            array_push($this->openAPINullablesSetToNull, 'prev_page_url');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('prev_page_url', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['prev_page_url'] = $prev_page_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets from
+     *
+     * @return int|null
+     */
+    public function getFrom()
+    {
+        return $this->container['from'];
+    }
+
+    /**
+     * Sets from
+     *
+     * @param int|null $from The number of the first result in the current page.
+     *
+     * @return self
+     */
+    public function setFrom($from)
+    {
+        if (is_null($from)) {
+            throw new \InvalidArgumentException('non-nullable from cannot be null');
+        }
+        $this->container['from'] = $from;
+
+        return $this;
+    }
+
+    /**
+     * Gets to
+     *
+     * @return int|null
+     */
+    public function getTo()
+    {
+        return $this->container['to'];
+    }
+
+    /**
+     * Sets to
+     *
+     * @param int|null $to The number of the last result in the current page.
+     *
+     * @return self
+     */
+    public function setTo($to)
+    {
+        if (is_null($to)) {
+            throw new \InvalidArgumentException('non-nullable to cannot be null');
+        }
+        $this->container['to'] = $to;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     *
+     * @return \ClickSend\Model\Subaccount[]|null
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     *
+     * @param \ClickSend\Model\Subaccount[]|null $data data
+     *
+     * @return self
+     */
+    public function setData($data)
+    {
+        if (is_null($data)) {
+            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        }
+        $this->container['data'] = $data;
 
         return $this;
     }

@@ -63,14 +63,14 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
         'body' => 'string',
         'status' => 'string',
         'from' => 'string',
-        'schedule' => 'int',
-        'status_code' => 'int',
+        'schedule' => 'string',
+        'status_code' => 'string',
         'status_text' => 'string',
-        'error_code' => 'int',
+        'error_code' => 'string',
         'error_text' => 'string',
-        'message_id' => 'int',
-        'message_parts' => 'int',
-        'message_price' => 'float',
+        'message_id' => 'string',
+        'message_parts' => 'string',
+        'message_price' => 'string',
         'from_email' => 'string',
         'list_id' => 'string',
         'custom_string' => 'string',
@@ -622,7 +622,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     /**
      * Gets schedule
      *
-     * @return int|null
+     * @return string|null
      */
     public function getSchedule()
     {
@@ -632,7 +632,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     /**
      * Sets schedule
      *
-     * @param int|null $schedule The scheduled date of the message. It is in <a href=\"http://help.clicksend.com/what-is-a-unix-timestamp\" target=\"_blank\">Unix format</a>.
+     * @param string|null $schedule The scheduled date of the message. It is in <a href=\"http://help.clicksend.com/what-is-a-unix-timestamp\" target=\"_blank\">Unix format</a>.
      *
      * @return self
      */
@@ -649,7 +649,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     /**
      * Gets status_code
      *
-     * @return int|null
+     * @return string|null
      */
     public function getStatusCode()
     {
@@ -659,7 +659,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     /**
      * Sets status_code
      *
-     * @param int|null $status_code The status code sent from the <a href=\"https://en.wikipedia.org/wiki/SMS_gateway\" target=\"_blank\">SMS gateway</a>. Visit <a href=\"https://help.clicksend.com/article/8cc479qlbb-list-of-sms-gateway-error-codes\" target=\"_blank\">this page</a> for more information.
+     * @param string|null $status_code The status code sent from the <a href=\"https://en.wikipedia.org/wiki/SMS_gateway\" target=\"_blank\">SMS gateway</a>. Visit <a href=\"https://help.clicksend.com/article/8cc479qlbb-list-of-sms-gateway-error-codes\" target=\"_blank\">this page</a> for more information.
      *
      * @return self
      */
@@ -703,7 +703,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     /**
      * Gets error_code
      *
-     * @return int|null
+     * @return string|null
      */
     public function getErrorCode()
     {
@@ -713,7 +713,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     /**
      * Sets error_code
      *
-     * @param int|null $error_code The error code of the operation. Visit <a href=\"https://help.clicksend.com/article/8cc479qlbb-list-of-sms-gateway-error-codes\" target=\"_blank\">this page</a> for more information. If no error occurred, the value is **null**.
+     * @param string|null $error_code The error code of the operation. Visit <a href=\"https://help.clicksend.com/article/8cc479qlbb-list-of-sms-gateway-error-codes\" target=\"_blank\">this page</a> for more information. If no error occurred, the value is **null**.
      *
      * @return self
      */
@@ -771,7 +771,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     /**
      * Gets message_id
      *
-     * @return int|null
+     * @return string|null
      */
     public function getMessageId()
     {
@@ -781,7 +781,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     /**
      * Sets message_id
      *
-     * @param int|null $message_id The generated ID of the message.
+     * @param string|null $message_id The generated ID of the message.
      *
      * @return self
      */
@@ -798,7 +798,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     /**
      * Gets message_parts
      *
-     * @return int|null
+     * @return string|null
      */
     public function getMessageParts()
     {
@@ -808,7 +808,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     /**
      * Sets message_parts
      *
-     * @param int|null $message_parts The number of parts the message was broken into. To look at how many parts your message is broken down into, use the <a href=\"http://smscharactercount.com/\" target=\"_blank\"><strong>SMS Character Count</strong></a>.
+     * @param string|null $message_parts The number of parts the message was broken into. To look at how many parts your message is broken down into, use the <a href=\"http://smscharactercount.com/\" target=\"_blank\"><strong>SMS Character Count</strong></a>.
      *
      * @return self
      */
@@ -825,7 +825,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     /**
      * Gets message_price
      *
-     * @return float|null
+     * @return string|null
      */
     public function getMessagePrice()
     {
@@ -835,7 +835,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     /**
      * Sets message_price
      *
-     * @param float|null $message_price The price of this message. This depends on the total number of parts of the message.
+     * @param string|null $message_price The price of this message. This depends on the total number of parts of the message.
      *
      * @return self
      */
