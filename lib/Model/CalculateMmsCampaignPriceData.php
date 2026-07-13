@@ -57,7 +57,7 @@ class CalculateMmsCampaignPriceData implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $openAPITypes = [
-        'total_count' => 'string',
+        'total_count' => 'int',
         'total_price' => 'string',
         'data' => '\ClickSend\Model\CalculateMmsCampaignPriceDataData',
         '_currency' => '\ClickSend\Model\Currency'
@@ -313,7 +313,7 @@ class CalculateMmsCampaignPriceData implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets total_count
      *
-     * @return string|null
+     * @return int|null
      */
     public function getTotalCount()
     {
@@ -323,7 +323,7 @@ class CalculateMmsCampaignPriceData implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets total_count
      *
-     * @param string|null $total_count The total number of records.
+     * @param int|null $total_count The total number of records.
      *
      * @return self
      */

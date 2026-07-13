@@ -57,7 +57,7 @@ class UpdateSmsTemplate implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $openAPITypes = [
-        'http_code' => 'string',
+        'http_code' => 'int',
         'response_code' => 'string',
         'response_msg' => 'string',
         'data' => '\ClickSend\Model\SmsTemplateUpdate'
@@ -313,7 +313,7 @@ class UpdateSmsTemplate implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets http_code
      *
-     * @return string|null
+     * @return int|null
      */
     public function getHttpCode()
     {
@@ -323,7 +323,7 @@ class UpdateSmsTemplate implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets http_code
      *
-     * @param string|null $http_code The HTTP code of the response. Visit [this page](/#status-codes) for more information.
+     * @param int|null $http_code The HTTP code of the response. Visit [this page](/#status-codes) for more information.
      *
      * @return self
      */

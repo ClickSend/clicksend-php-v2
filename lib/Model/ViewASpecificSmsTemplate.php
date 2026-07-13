@@ -57,7 +57,7 @@ class ViewASpecificSmsTemplate implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $openAPITypes = [
-        'http_code' => 'string',
+        'http_code' => 'int',
         'response_code' => 'string',
         'response_msg' => 'string',
         'data' => '\ClickSend\Model\ViewASpecificSmsTemplateData'
@@ -313,7 +313,7 @@ class ViewASpecificSmsTemplate implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets http_code
      *
-     * @return string|null
+     * @return int|null
      */
     public function getHttpCode()
     {
@@ -323,7 +323,7 @@ class ViewASpecificSmsTemplate implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets http_code
      *
-     * @param string|null $http_code The HTTP status code of the response.
+     * @param int|null $http_code The HTTP status code of the response.
      *
      * @return self
      */

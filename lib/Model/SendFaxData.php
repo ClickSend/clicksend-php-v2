@@ -58,8 +58,8 @@ class SendFaxData implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $openAPITypes = [
         'total_price' => 'float',
-        'total_count' => 'string',
-        'queued_count' => 'string',
+        'total_count' => 'int',
+        'queued_count' => 'int',
         'messages' => '\ClickSend\Model\Fax[]',
         '_currency' => '\ClickSend\Model\Currency'
     ];
@@ -347,7 +347,7 @@ class SendFaxData implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets total_count
      *
-     * @return string|null
+     * @return int|null
      */
     public function getTotalCount()
     {
@@ -357,7 +357,7 @@ class SendFaxData implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_count
      *
-     * @param string|null $total_count The total count of the fax.
+     * @param int|null $total_count The total count of the fax.
      *
      * @return self
      */
@@ -374,7 +374,7 @@ class SendFaxData implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets queued_count
      *
-     * @return string|null
+     * @return int|null
      */
     public function getQueuedCount()
     {
@@ -384,7 +384,7 @@ class SendFaxData implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets queued_count
      *
-     * @param string|null $queued_count The count of the queued fax.
+     * @param int|null $queued_count The count of the queued fax.
      *
      * @return self
      */

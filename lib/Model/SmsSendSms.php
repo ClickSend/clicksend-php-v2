@@ -65,7 +65,7 @@ class SmsSendSms implements ModelInterface, ArrayAccess, \JsonSerializable
         'schedule' => 'int',
         'message_id' => 'string',
         'message_parts' => 'int',
-        'message_price' => 'float',
+        'message_price' => 'string',
         'from_email' => 'string',
         'list_id' => 'string',
         'custom_string' => 'string',
@@ -634,7 +634,7 @@ class SmsSendSms implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets message_price
      *
-     * @return float|null
+     * @return string|null
      */
     public function getMessagePrice()
     {
@@ -644,7 +644,7 @@ class SmsSendSms implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets message_price
      *
-     * @param float|null $message_price The price of this message. This depends on the total number of parts of the message.
+     * @param string|null $message_price The price of this message. This depends on the total number of parts of the message.
      *
      * @return self
      */
