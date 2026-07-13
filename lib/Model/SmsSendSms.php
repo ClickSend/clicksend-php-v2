@@ -122,10 +122,10 @@ class SmsSendSms implements ModelInterface, ArrayAccess, \JsonSerializable
         'message_id' => false,
         'message_parts' => false,
         'message_price' => false,
-        'from_email' => false,
-        'list_id' => false,
-        'custom_string' => false,
-        'contact_id' => false,
+        'from_email' => true,
+        'list_id' => true,
+        'custom_string' => true,
+        'contact_id' => true,
         'user_id' => false,
         'subaccount_id' => false,
         'is_shared_system_number' => false,
@@ -678,7 +678,14 @@ class SmsSendSms implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setFromEmail($from_email)
     {
         if (is_null($from_email)) {
-            throw new \InvalidArgumentException('non-nullable from_email cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'from_email');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('from_email', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['from_email'] = $from_email;
 
@@ -705,7 +712,14 @@ class SmsSendSms implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setListId($list_id)
     {
         if (is_null($list_id)) {
-            throw new \InvalidArgumentException('non-nullable list_id cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'list_id');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('list_id', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['list_id'] = $list_id;
 
@@ -732,7 +746,14 @@ class SmsSendSms implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCustomString($custom_string)
     {
         if (is_null($custom_string)) {
-            throw new \InvalidArgumentException('non-nullable custom_string cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'custom_string');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('custom_string', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['custom_string'] = $custom_string;
 
@@ -759,7 +780,14 @@ class SmsSendSms implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setContactId($contact_id)
     {
         if (is_null($contact_id)) {
-            throw new \InvalidArgumentException('non-nullable contact_id cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'contact_id');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('contact_id', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['contact_id'] = $contact_id;
 
