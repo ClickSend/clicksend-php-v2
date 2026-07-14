@@ -58,7 +58,7 @@ class ViewSmsStatisticsData implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $openAPITypes = [
         'total' => '\ClickSend\Model\ViewSmsStatisticsDataTotal',
-        'stat' => '\ClickSend\Model\ViewSmsStatisticsDataStatInner[]',
+        'stats' => '\ClickSend\Model\ViewSmsStatisticsDataStatsInner[]',
         '_currency' => '\ClickSend\Model\Currency'
     ];
 
@@ -71,7 +71,7 @@ class ViewSmsStatisticsData implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $openAPIFormats = [
         'total' => null,
-        'stat' => null,
+        'stats' => null,
         '_currency' => null
     ];
 
@@ -82,7 +82,7 @@ class ViewSmsStatisticsData implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static array $openAPINullables = [
         'total' => false,
-        'stat' => false,
+        'stats' => false,
         '_currency' => false
     ];
 
@@ -173,7 +173,7 @@ class ViewSmsStatisticsData implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $attributeMap = [
         'total' => 'total',
-        'stat' => 'stat',
+        'stats' => 'stats',
         '_currency' => '_currency'
     ];
 
@@ -184,7 +184,7 @@ class ViewSmsStatisticsData implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $setters = [
         'total' => 'setTotal',
-        'stat' => 'setStat',
+        'stats' => 'setStats',
         '_currency' => 'setCurrency'
     ];
 
@@ -195,7 +195,7 @@ class ViewSmsStatisticsData implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $getters = [
         'total' => 'getTotal',
-        'stat' => 'getStat',
+        'stats' => 'getStats',
         '_currency' => 'getCurrency'
     ];
 
@@ -257,7 +257,7 @@ class ViewSmsStatisticsData implements ModelInterface, ArrayAccess, \JsonSeriali
     public function __construct(?array $data = null)
     {
         $this->setIfExists('total', $data ?? [], null);
-        $this->setIfExists('stat', $data ?? [], null);
+        $this->setIfExists('stats', $data ?? [], null);
         $this->setIfExists('_currency', $data ?? [], null);
     }
 
@@ -331,28 +331,28 @@ class ViewSmsStatisticsData implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets stat
+     * Gets stats
      *
-     * @return \ClickSend\Model\ViewSmsStatisticsDataStatInner[]|null
+     * @return \ClickSend\Model\ViewSmsStatisticsDataStatsInner[]|null
      */
-    public function getStat()
+    public function getStats()
     {
-        return $this->container['stat'];
+        return $this->container['stats'];
     }
 
     /**
-     * Sets stat
+     * Sets stats
      *
-     * @param \ClickSend\Model\ViewSmsStatisticsDataStatInner[]|null $stat stat
+     * @param \ClickSend\Model\ViewSmsStatisticsDataStatsInner[]|null $stats stats
      *
      * @return self
      */
-    public function setStat($stat)
+    public function setStats($stats)
     {
-        if (is_null($stat)) {
-            throw new \InvalidArgumentException('non-nullable stat cannot be null');
+        if (is_null($stats)) {
+            throw new \InvalidArgumentException('non-nullable stats cannot be null');
         }
-        $this->container['stat'] = $stat;
+        $this->container['stats'] = $stats;
 
         return $this;
     }

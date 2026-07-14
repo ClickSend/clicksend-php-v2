@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewSmsStatisticsDataStatInnerTest
+ * ViewListsDataLinksInnerTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace ClickSend\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ViewSmsStatisticsDataStatInnerTest Class Doc Comment
+ * ViewListsDataLinksInnerTest Class Doc Comment
  *
  * @category    Class
- * @description ViewSmsStatisticsDataStatInner
+ * @description ViewListsDataLinksInner
  * @package     ClickSend
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ViewSmsStatisticsDataStatInnerTest extends TestCase
+class ViewListsDataLinksInnerTest extends TestCase
 {
 
     /**
@@ -71,45 +71,45 @@ class ViewSmsStatisticsDataStatInnerTest extends TestCase
     }
 
     /**
-     * Test "ViewSmsStatisticsDataStatInner"
+     * Test "ViewListsDataLinksInner"
      */
-    public function testViewSmsStatisticsDataStatInner()
+    public function testViewListsDataLinksInner()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "date"
+     * Test attribute "url"
      */
-    public function testPropertyDate()
+    public function testPropertyUrl()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "outbound"
+     * Test attribute "label"
      */
-    public function testPropertyOutbound()
+    public function testPropertyLabel()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "inbound"
+     * Test attribute "page"
      */
-    public function testPropertyInbound()
+    public function testPropertyPage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "bounced"
+     * Test attribute "active"
      */
-    public function testPropertyBounced()
+    public function testPropertyActive()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewSmsInboundAutomationsDataAllOfLinksInner
+ * ViewListsDataLinksInner
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \ClickSend\ObjectSerializer;
 
 /**
- * ViewSmsInboundAutomationsDataAllOfLinksInner Class Doc Comment
+ * ViewListsDataLinksInner Class Doc Comment
  *
  * @category Class
  * @package  ClickSend
@@ -40,7 +40,7 @@ use \ClickSend\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ViewSmsInboundAutomationsDataAllOfLinksInner implements ModelInterface, ArrayAccess, \JsonSerializable
+class ViewListsDataLinksInner implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ViewSmsInboundAutomationsDataAllOfLinksInner implements ModelInterface, Ar
      *
      * @var string
      */
-    protected static $openAPIModelName = 'view_sms_inbound_automations_data_allOf_links_inner';
+    protected static $openAPIModelName = 'view_lists_data_links_inner';
 
     /**
      * Array of property to type mappings. Used for (de)serialization

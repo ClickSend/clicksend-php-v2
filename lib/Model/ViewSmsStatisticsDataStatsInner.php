@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewSmsStatisticsDataStatInner
+ * ViewSmsStatisticsDataStatsInner
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \ClickSend\ObjectSerializer;
 
 /**
- * ViewSmsStatisticsDataStatInner Class Doc Comment
+ * ViewSmsStatisticsDataStatsInner Class Doc Comment
  *
  * @category Class
  * @package  ClickSend
@@ -40,7 +40,7 @@ use \ClickSend\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ViewSmsStatisticsDataStatInner implements ModelInterface, ArrayAccess, \JsonSerializable
+class ViewSmsStatisticsDataStatsInner implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ViewSmsStatisticsDataStatInner implements ModelInterface, ArrayAccess, \Js
      *
      * @var string
      */
-    protected static $openAPIModelName = 'view_sms_statistics_data_stat_inner';
+    protected static $openAPIModelName = 'view_sms_statistics_data_stats_inner';
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,8 @@ class ViewSmsStatisticsDataStatInner implements ModelInterface, ArrayAccess, \Js
     protected static $openAPITypes = [
         'date' => 'float',
         'outbound' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
-        'inbound' => '\ClickSend\Model\CancelAllSmsData',
-        'bounced' => '\ClickSend\Model\CancelAllSmsData'
+        'inbound' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
+        'bounced' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound'
     ];
 
     /**
@@ -367,7 +367,7 @@ class ViewSmsStatisticsDataStatInner implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets inbound
      *
-     * @return \ClickSend\Model\CancelAllSmsData|null
+     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
      */
     public function getInbound()
     {
@@ -377,7 +377,7 @@ class ViewSmsStatisticsDataStatInner implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets inbound
      *
-     * @param \ClickSend\Model\CancelAllSmsData|null $inbound inbound
+     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $inbound inbound
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class ViewSmsStatisticsDataStatInner implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets bounced
      *
-     * @return \ClickSend\Model\CancelAllSmsData|null
+     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
      */
     public function getBounced()
     {
@@ -404,7 +404,7 @@ class ViewSmsStatisticsDataStatInner implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets bounced
      *
-     * @param \ClickSend\Model\CancelAllSmsData|null $bounced bounced
+     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $bounced bounced
      *
      * @return self
      */

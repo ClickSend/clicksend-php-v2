@@ -152,6 +152,42 @@ class ViewListsDataTest extends TestCase
     }
 
     /**
+     * Test attribute "first_page_url"
+     */
+    public function testPropertyFirstPageUrl()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "last_page_url"
+     */
+    public function testPropertyLastPageUrl()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "path"
+     */
+    public function testPropertyPath()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "data"
      */
     public function testPropertyData()

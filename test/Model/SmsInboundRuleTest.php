@@ -159,4 +159,13 @@ class SmsInboundRuleTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "webhook_type"
+     */
+    public function testPropertyWebhookType()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

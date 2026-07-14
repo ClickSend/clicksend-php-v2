@@ -1,4 +1,4 @@
-# ViewSmsInboundAutomationsDataAllOfLinksInner
+# ViewListsDataLinksInner
 
 ## Properties
 

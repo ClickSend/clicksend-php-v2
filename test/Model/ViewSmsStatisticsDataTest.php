@@ -89,9 +89,9 @@ class ViewSmsStatisticsDataTest extends TestCase
     }
 
     /**
-     * Test attribute "stat"
+     * Test attribute "stats"
      */
-    public function testPropertyStat()
+    public function testPropertyStats()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

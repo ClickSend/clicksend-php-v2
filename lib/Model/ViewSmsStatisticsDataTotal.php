@@ -58,8 +58,8 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
      */
     protected static $openAPITypes = [
         'outbound' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
-        'inbound' => '\ClickSend\Model\CancelAllSmsData',
-        'bounced' => '\ClickSend\Model\CancelAllSmsData'
+        'inbound' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
+        'bounced' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound'
     ];
 
     /**
@@ -333,7 +333,7 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets inbound
      *
-     * @return \ClickSend\Model\CancelAllSmsData|null
+     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
      */
     public function getInbound()
     {
@@ -343,7 +343,7 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets inbound
      *
-     * @param \ClickSend\Model\CancelAllSmsData|null $inbound inbound
+     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $inbound inbound
      *
      * @return self
      */
@@ -360,7 +360,7 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets bounced
      *
-     * @return \ClickSend\Model\CancelAllSmsData|null
+     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
      */
     public function getBounced()
     {
@@ -370,7 +370,7 @@ class ViewSmsStatisticsDataTotal implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets bounced
      *
-     * @param \ClickSend\Model\CancelAllSmsData|null $bounced bounced
+     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $bounced bounced
      *
      * @return self
      */

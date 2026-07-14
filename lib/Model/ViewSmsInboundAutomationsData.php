@@ -68,7 +68,7 @@ class ViewSmsInboundAutomationsData implements ModelInterface, ArrayAccess, \Jso
         'first_page_url' => 'string',
         'last_page_url' => 'string',
         'path' => 'string',
-        'links' => '\ClickSend\Model\ViewSmsInboundAutomationsDataAllOfLinksInner[]',
+        'links' => '\ClickSend\Model\ViewListsDataLinksInner[]',
         'data' => '\ClickSend\Model\SmsInboundRule[]'
     ];
 
@@ -701,7 +701,7 @@ class ViewSmsInboundAutomationsData implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets links
      *
-     * @return \ClickSend\Model\ViewSmsInboundAutomationsDataAllOfLinksInner[]|null
+     * @return \ClickSend\Model\ViewListsDataLinksInner[]|null
      */
     public function getLinks()
     {
@@ -711,7 +711,7 @@ class ViewSmsInboundAutomationsData implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets links
      *
-     * @param \ClickSend\Model\ViewSmsInboundAutomationsDataAllOfLinksInner[]|null $links The list of pagination links.
+     * @param \ClickSend\Model\ViewListsDataLinksInner[]|null $links The list of pagination links.
      *
      * @return self
      */

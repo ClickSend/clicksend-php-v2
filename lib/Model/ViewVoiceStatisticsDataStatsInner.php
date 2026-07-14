@@ -59,7 +59,7 @@ class ViewVoiceStatisticsDataStatsInner implements ModelInterface, ArrayAccess, 
     protected static $openAPITypes = [
         'date' => 'float',
         'outbound' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
-        'bounced' => '\ClickSend\Model\CancelAllSmsData'
+        'bounced' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound'
     ];
 
     /**
@@ -360,7 +360,7 @@ class ViewVoiceStatisticsDataStatsInner implements ModelInterface, ArrayAccess, 
     /**
      * Gets bounced
      *
-     * @return \ClickSend\Model\CancelAllSmsData|null
+     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
      */
     public function getBounced()
     {
@@ -370,7 +370,7 @@ class ViewVoiceStatisticsDataStatsInner implements ModelInterface, ArrayAccess, 
     /**
      * Sets bounced
      *
-     * @param \ClickSend\Model\CancelAllSmsData|null $bounced bounced
+     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $bounced bounced
      *
      * @return self
      */

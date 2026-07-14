@@ -65,6 +65,10 @@ class ViewListsData implements ModelInterface, ArrayAccess, \JsonSerializable
         'prev_page_url' => 'string',
         'from' => 'int',
         'to' => 'int',
+        'first_page_url' => 'string',
+        'last_page_url' => 'string',
+        'path' => 'string',
+        'links' => '\ClickSend\Model\ViewListsDataLinksInner[]',
         'data' => '\ClickSend\Model\ContactList[]'
     ];
 
@@ -84,6 +88,10 @@ class ViewListsData implements ModelInterface, ArrayAccess, \JsonSerializable
         'prev_page_url' => null,
         'from' => null,
         'to' => null,
+        'first_page_url' => null,
+        'last_page_url' => null,
+        'path' => null,
+        'links' => null,
         'data' => null
     ];
 
@@ -101,6 +109,10 @@ class ViewListsData implements ModelInterface, ArrayAccess, \JsonSerializable
         'prev_page_url' => false,
         'from' => false,
         'to' => false,
+        'first_page_url' => true,
+        'last_page_url' => true,
+        'path' => false,
+        'links' => false,
         'data' => false
     ];
 
@@ -198,6 +210,10 @@ class ViewListsData implements ModelInterface, ArrayAccess, \JsonSerializable
         'prev_page_url' => 'prev_page_url',
         'from' => 'from',
         'to' => 'to',
+        'first_page_url' => 'first_page_url',
+        'last_page_url' => 'last_page_url',
+        'path' => 'path',
+        'links' => 'links',
         'data' => 'data'
     ];
 
@@ -215,6 +231,10 @@ class ViewListsData implements ModelInterface, ArrayAccess, \JsonSerializable
         'prev_page_url' => 'setPrevPageUrl',
         'from' => 'setFrom',
         'to' => 'setTo',
+        'first_page_url' => 'setFirstPageUrl',
+        'last_page_url' => 'setLastPageUrl',
+        'path' => 'setPath',
+        'links' => 'setLinks',
         'data' => 'setData'
     ];
 
@@ -232,6 +252,10 @@ class ViewListsData implements ModelInterface, ArrayAccess, \JsonSerializable
         'prev_page_url' => 'getPrevPageUrl',
         'from' => 'getFrom',
         'to' => 'getTo',
+        'first_page_url' => 'getFirstPageUrl',
+        'last_page_url' => 'getLastPageUrl',
+        'path' => 'getPath',
+        'links' => 'getLinks',
         'data' => 'getData'
     ];
 
@@ -300,6 +324,10 @@ class ViewListsData implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('prev_page_url', $data ?? [], null);
         $this->setIfExists('from', $data ?? [], null);
         $this->setIfExists('to', $data ?? [], null);
+        $this->setIfExists('first_page_url', $data ?? [], null);
+        $this->setIfExists('last_page_url', $data ?? [], null);
+        $this->setIfExists('path', $data ?? [], null);
+        $this->setIfExists('links', $data ?? [], null);
         $this->setIfExists('data', $data ?? [], null);
     }
 
@@ -557,6 +585,128 @@ class ViewListsData implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable to cannot be null');
         }
         $this->container['to'] = $to;
+
+        return $this;
+    }
+
+    /**
+     * Gets first_page_url
+     *
+     * @return string|null
+     */
+    public function getFirstPageUrl()
+    {
+        return $this->container['first_page_url'];
+    }
+
+    /**
+     * Sets first_page_url
+     *
+     * @param string|null $first_page_url The URL of the first page of records.
+     *
+     * @return self
+     */
+    public function setFirstPageUrl($first_page_url)
+    {
+        if (is_null($first_page_url)) {
+            array_push($this->openAPINullablesSetToNull, 'first_page_url');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('first_page_url', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['first_page_url'] = $first_page_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_page_url
+     *
+     * @return string|null
+     */
+    public function getLastPageUrl()
+    {
+        return $this->container['last_page_url'];
+    }
+
+    /**
+     * Sets last_page_url
+     *
+     * @param string|null $last_page_url The URL of the last page of records.
+     *
+     * @return self
+     */
+    public function setLastPageUrl($last_page_url)
+    {
+        if (is_null($last_page_url)) {
+            array_push($this->openAPINullablesSetToNull, 'last_page_url');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('last_page_url', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['last_page_url'] = $last_page_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets path
+     *
+     * @return string|null
+     */
+    public function getPath()
+    {
+        return $this->container['path'];
+    }
+
+    /**
+     * Sets path
+     *
+     * @param string|null $path The base URL path used to build pagination links.
+     *
+     * @return self
+     */
+    public function setPath($path)
+    {
+        if (is_null($path)) {
+            throw new \InvalidArgumentException('non-nullable path cannot be null');
+        }
+        $this->container['path'] = $path;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     *
+     * @return \ClickSend\Model\ViewListsDataLinksInner[]|null
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     *
+     * @param \ClickSend\Model\ViewListsDataLinksInner[]|null $links The list of pagination links.
+     *
+     * @return self
+     */
+    public function setLinks($links)
+    {
+        if (is_null($links)) {
+            throw new \InvalidArgumentException('non-nullable links cannot be null');
+        }
+        $this->container['links'] = $links;
 
         return $this;
     }

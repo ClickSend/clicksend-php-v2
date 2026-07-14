@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewSmsInboundAutomationsDataAllOfLinksInnerTest
+ * ViewSmsStatisticsDataStatsInnerTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace ClickSend\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ViewSmsInboundAutomationsDataAllOfLinksInnerTest Class Doc Comment
+ * ViewSmsStatisticsDataStatsInnerTest Class Doc Comment
  *
  * @category    Class
- * @description ViewSmsInboundAutomationsDataAllOfLinksInner
+ * @description ViewSmsStatisticsDataStatsInner
  * @package     ClickSend
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ViewSmsInboundAutomationsDataAllOfLinksInnerTest extends TestCase
+class ViewSmsStatisticsDataStatsInnerTest extends TestCase
 {
 
     /**
@@ -71,45 +71,45 @@ class ViewSmsInboundAutomationsDataAllOfLinksInnerTest extends TestCase
     }
 
     /**
-     * Test "ViewSmsInboundAutomationsDataAllOfLinksInner"
+     * Test "ViewSmsStatisticsDataStatsInner"
      */
-    public function testViewSmsInboundAutomationsDataAllOfLinksInner()
+    public function testViewSmsStatisticsDataStatsInner()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "url"
+     * Test attribute "date"
      */
-    public function testPropertyUrl()
+    public function testPropertyDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "label"
+     * Test attribute "outbound"
      */
-    public function testPropertyLabel()
+    public function testPropertyOutbound()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "page"
+     * Test attribute "inbound"
      */
-    public function testPropertyPage()
+    public function testPropertyInbound()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "active"
+     * Test attribute "bounced"
      */
-    public function testPropertyActive()
+    public function testPropertyBounced()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

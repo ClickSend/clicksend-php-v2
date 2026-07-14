@@ -65,7 +65,8 @@ class SmsInboundRule implements ModelInterface, ArrayAccess, \JsonSerializable
         'action' => 'string',
         'action_address' => 'string',
         'body' => 'string',
-        'enabled' => 'int'
+        'enabled' => 'int',
+        'webhook_type' => 'string'
     ];
 
     /**
@@ -84,7 +85,8 @@ class SmsInboundRule implements ModelInterface, ArrayAccess, \JsonSerializable
         'action' => null,
         'action_address' => null,
         'body' => null,
-        'enabled' => null
+        'enabled' => null,
+        'webhook_type' => null
     ];
 
     /**
@@ -101,7 +103,8 @@ class SmsInboundRule implements ModelInterface, ArrayAccess, \JsonSerializable
         'action' => false,
         'action_address' => false,
         'body' => true,
-        'enabled' => false
+        'enabled' => false,
+        'webhook_type' => true
     ];
 
     /**
@@ -198,7 +201,8 @@ class SmsInboundRule implements ModelInterface, ArrayAccess, \JsonSerializable
         'action' => 'action',
         'action_address' => 'action_address',
         'body' => 'body',
-        'enabled' => 'enabled'
+        'enabled' => 'enabled',
+        'webhook_type' => 'webhook_type'
     ];
 
     /**
@@ -215,7 +219,8 @@ class SmsInboundRule implements ModelInterface, ArrayAccess, \JsonSerializable
         'action' => 'setAction',
         'action_address' => 'setActionAddress',
         'body' => 'setBody',
-        'enabled' => 'setEnabled'
+        'enabled' => 'setEnabled',
+        'webhook_type' => 'setWebhookType'
     ];
 
     /**
@@ -232,7 +237,8 @@ class SmsInboundRule implements ModelInterface, ArrayAccess, \JsonSerializable
         'action' => 'getAction',
         'action_address' => 'getActionAddress',
         'body' => 'getBody',
-        'enabled' => 'getEnabled'
+        'enabled' => 'getEnabled',
+        'webhook_type' => 'getWebhookType'
     ];
 
     /**
@@ -301,6 +307,7 @@ class SmsInboundRule implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('action_address', $data ?? [], null);
         $this->setIfExists('body', $data ?? [], null);
         $this->setIfExists('enabled', $data ?? [], null);
+        $this->setIfExists('webhook_type', $data ?? [], null);
     }
 
     /**
@@ -591,6 +598,40 @@ class SmsInboundRule implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable enabled cannot be null');
         }
         $this->container['enabled'] = $enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets webhook_type
+     *
+     * @return string|null
+     */
+    public function getWebhookType()
+    {
+        return $this->container['webhook_type'];
+    }
+
+    /**
+     * Sets webhook_type
+     *
+     * @param string|null $webhook_type The format used when calling the webhook (e.g. post, json).
+     *
+     * @return self
+     */
+    public function setWebhookType($webhook_type)
+    {
+        if (is_null($webhook_type)) {
+            array_push($this->openAPINullablesSetToNull, 'webhook_type');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('webhook_type', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['webhook_type'] = $webhook_type;
 
         return $this;
     }
