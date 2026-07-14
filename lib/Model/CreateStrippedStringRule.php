@@ -60,7 +60,7 @@ class CreateStrippedStringRule implements ModelInterface, ArrayAccess, \JsonSeri
         'http_code' => 'int',
         'response_code' => 'string',
         'response_msg' => 'string',
-        'data' => '\ClickSend\Model\ViewStrippedStringRulesDataDataInner'
+        'data' => '\ClickSend\Model\ViewStrippedStringRulesDataAllOfDataInner'
     ];
 
     /**
@@ -394,7 +394,7 @@ class CreateStrippedStringRule implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets data
      *
-     * @return \ClickSend\Model\ViewStrippedStringRulesDataDataInner|null
+     * @return \ClickSend\Model\ViewStrippedStringRulesDataAllOfDataInner|null
      */
     public function getData()
     {
@@ -404,7 +404,7 @@ class CreateStrippedStringRule implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets data
      *
-     * @param \ClickSend\Model\ViewStrippedStringRulesDataDataInner|null $data data
+     * @param \ClickSend\Model\ViewStrippedStringRulesDataAllOfDataInner|null $data data
      *
      * @return self
      */

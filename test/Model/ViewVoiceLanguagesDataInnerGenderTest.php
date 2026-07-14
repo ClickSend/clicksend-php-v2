@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewAllMmsCampaignsDataTest
+ * ViewVoiceLanguagesDataInnerGenderTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace ClickSend\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ViewAllMmsCampaignsDataTest Class Doc Comment
+ * ViewVoiceLanguagesDataInnerGenderTest Class Doc Comment
  *
  * @category    Class
- * @description ViewAllMmsCampaignsData
+ * @description The gender(s) available for this language. Returned as a single string when only one gender is available, or an array of strings when more than one is available.
  * @package     ClickSend
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ViewAllMmsCampaignsDataTest extends TestCase
+class ViewVoiceLanguagesDataInnerGenderTest extends TestCase
 {
 
     /**
@@ -71,90 +71,9 @@ class ViewAllMmsCampaignsDataTest extends TestCase
     }
 
     /**
-     * Test "ViewAllMmsCampaignsData"
+     * Test "ViewVoiceLanguagesDataInnerGender"
      */
-    public function testViewAllMmsCampaignsData()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "total"
-     */
-    public function testPropertyTotal()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "per_page"
-     */
-    public function testPropertyPerPage()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "current_page"
-     */
-    public function testPropertyCurrentPage()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "last_page"
-     */
-    public function testPropertyLastPage()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "next_page_url"
-     */
-    public function testPropertyNextPageUrl()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "prev_page_url"
-     */
-    public function testPropertyPrevPageUrl()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "from"
-     */
-    public function testPropertyFrom()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "to"
-     */
-    public function testPropertyTo()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "data"
-     */
-    public function testPropertyData()
+    public function testViewVoiceLanguagesDataInnerGender()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

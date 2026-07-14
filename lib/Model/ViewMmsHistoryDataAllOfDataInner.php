@@ -61,9 +61,13 @@ class ViewMmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
         'date' => 'string',
         'to' => 'string',
         'body' => 'string',
+        'subject' => 'string',
+        'priority' => 'int',
+        '_media_file_url' => 'string',
         'status' => 'string',
         'from' => 'string',
         'schedule' => 'string',
+        'date_added' => 'int',
         'status_code' => 'string',
         'status_text' => 'string',
         'error_code' => 'string',
@@ -96,9 +100,13 @@ class ViewMmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
         'date' => null,
         'to' => null,
         'body' => null,
+        'subject' => null,
+        'priority' => null,
+        '_media_file_url' => null,
         'status' => null,
         'from' => null,
         'schedule' => null,
+        'date_added' => null,
         'status_code' => null,
         'status_text' => null,
         'error_code' => null,
@@ -129,9 +137,13 @@ class ViewMmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
         'date' => false,
         'to' => false,
         'body' => false,
+        'subject' => true,
+        'priority' => false,
+        '_media_file_url' => true,
         'status' => false,
         'from' => false,
         'schedule' => false,
+        'date_added' => false,
         'status_code' => true,
         'status_text' => true,
         'error_code' => true,
@@ -242,9 +254,13 @@ class ViewMmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
         'date' => 'date',
         'to' => 'to',
         'body' => 'body',
+        'subject' => 'subject',
+        'priority' => 'priority',
+        '_media_file_url' => '_media_file_url',
         'status' => 'status',
         'from' => 'from',
         'schedule' => 'schedule',
+        'date_added' => 'date_added',
         'status_code' => 'status_code',
         'status_text' => 'status_text',
         'error_code' => 'error_code',
@@ -275,9 +291,13 @@ class ViewMmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
         'date' => 'setDate',
         'to' => 'setTo',
         'body' => 'setBody',
+        'subject' => 'setSubject',
+        'priority' => 'setPriority',
+        '_media_file_url' => 'setMediaFileUrl',
         'status' => 'setStatus',
         'from' => 'setFrom',
         'schedule' => 'setSchedule',
+        'date_added' => 'setDateAdded',
         'status_code' => 'setStatusCode',
         'status_text' => 'setStatusText',
         'error_code' => 'setErrorCode',
@@ -308,9 +328,13 @@ class ViewMmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
         'date' => 'getDate',
         'to' => 'getTo',
         'body' => 'getBody',
+        'subject' => 'getSubject',
+        'priority' => 'getPriority',
+        '_media_file_url' => 'getMediaFileUrl',
         'status' => 'getStatus',
         'from' => 'getFrom',
         'schedule' => 'getSchedule',
+        'date_added' => 'getDateAdded',
         'status_code' => 'getStatusCode',
         'status_text' => 'getStatusText',
         'error_code' => 'getErrorCode',
@@ -392,9 +416,13 @@ class ViewMmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
         $this->setIfExists('date', $data ?? [], null);
         $this->setIfExists('to', $data ?? [], null);
         $this->setIfExists('body', $data ?? [], null);
+        $this->setIfExists('subject', $data ?? [], null);
+        $this->setIfExists('priority', $data ?? [], null);
+        $this->setIfExists('_media_file_url', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('from', $data ?? [], null);
         $this->setIfExists('schedule', $data ?? [], null);
+        $this->setIfExists('date_added', $data ?? [], null);
         $this->setIfExists('status_code', $data ?? [], null);
         $this->setIfExists('status_text', $data ?? [], null);
         $this->setIfExists('error_code', $data ?? [], null);
@@ -566,6 +594,101 @@ class ViewMmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     }
 
     /**
+     * Gets subject
+     *
+     * @return string|null
+     */
+    public function getSubject()
+    {
+        return $this->container['subject'];
+    }
+
+    /**
+     * Sets subject
+     *
+     * @param string|null $subject The subject of the message.
+     *
+     * @return self
+     */
+    public function setSubject($subject)
+    {
+        if (is_null($subject)) {
+            array_push($this->openAPINullablesSetToNull, 'subject');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('subject', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['subject'] = $subject;
+
+        return $this;
+    }
+
+    /**
+     * Gets priority
+     *
+     * @return int|null
+     */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+     * Sets priority
+     *
+     * @param int|null $priority The priority of the message.
+     *
+     * @return self
+     */
+    public function setPriority($priority)
+    {
+        if (is_null($priority)) {
+            throw new \InvalidArgumentException('non-nullable priority cannot be null');
+        }
+        $this->container['priority'] = $priority;
+
+        return $this;
+    }
+
+    /**
+     * Gets _media_file_url
+     *
+     * @return string|null
+     */
+    public function getMediaFileUrl()
+    {
+        return $this->container['_media_file_url'];
+    }
+
+    /**
+     * Sets _media_file_url
+     *
+     * @param string|null $_media_file_url A temporary, signed URL to download the message's media attachment.
+     *
+     * @return self
+     */
+    public function setMediaFileUrl($_media_file_url)
+    {
+        if (is_null($_media_file_url)) {
+            array_push($this->openAPINullablesSetToNull, '_media_file_url');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('_media_file_url', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['_media_file_url'] = $_media_file_url;
+
+        return $this;
+    }
+
+    /**
      * Gets status
      *
      * @return string|null
@@ -642,6 +765,33 @@ class ViewMmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
             throw new \InvalidArgumentException('non-nullable schedule cannot be null');
         }
         $this->container['schedule'] = $schedule;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_added
+     *
+     * @return int|null
+     */
+    public function getDateAdded()
+    {
+        return $this->container['date_added'];
+    }
+
+    /**
+     * Sets date_added
+     *
+     * @param int|null $date_added The Unix timestamp when the message was added.
+     *
+     * @return self
+     */
+    public function setDateAdded($date_added)
+    {
+        if (is_null($date_added)) {
+            throw new \InvalidArgumentException('non-nullable date_added cannot be null');
+        }
+        $this->container['date_added'] = $date_added;
 
         return $this;
     }

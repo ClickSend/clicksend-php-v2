@@ -89,6 +89,24 @@ class VoiceMessageTest extends TestCase
     }
 
     /**
+     * Test attribute "date_added"
+     */
+    public function testPropertyDateAdded()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "list_id"
+     */
+    public function testPropertyListId()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "to"
      */
     public function testPropertyTo()
@@ -233,9 +251,63 @@ class VoiceMessageTest extends TestCase
     }
 
     /**
+     * Test attribute "machine_detected"
+     */
+    public function testPropertyMachineDetected()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "digits"
+     */
+    public function testPropertyDigits()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "carrier"
+     */
+    public function testPropertyCarrier()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "status_code"
+     */
+    public function testPropertyStatusCode()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "status_text"
+     */
+    public function testPropertyStatusText()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "status"
      */
     public function testPropertyStatus()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "_api_username"
+     */
+    public function testPropertyApiUsername()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

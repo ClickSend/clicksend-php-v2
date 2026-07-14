@@ -61,7 +61,9 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
         'currency_name_short' => 'string',
         'currency_prefix_d' => 'string',
         'currency_prefix_c' => 'string',
-        'currency_name_long' => 'string'
+        'currency_name_long' => 'string',
+        'min_recharge_amount' => 'string',
+        'max_recharge_amount' => 'string'
     ];
 
     /**
@@ -75,7 +77,9 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
         'currency_name_short' => null,
         'currency_prefix_d' => null,
         'currency_prefix_c' => null,
-        'currency_name_long' => null
+        'currency_name_long' => null,
+        'min_recharge_amount' => null,
+        'max_recharge_amount' => null
     ];
 
     /**
@@ -87,7 +91,9 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
         'currency_name_short' => false,
         'currency_prefix_d' => false,
         'currency_prefix_c' => false,
-        'currency_name_long' => false
+        'currency_name_long' => false,
+        'min_recharge_amount' => false,
+        'max_recharge_amount' => false
     ];
 
     /**
@@ -179,7 +185,9 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
         'currency_name_short' => 'currency_name_short',
         'currency_prefix_d' => 'currency_prefix_d',
         'currency_prefix_c' => 'currency_prefix_c',
-        'currency_name_long' => 'currency_name_long'
+        'currency_name_long' => 'currency_name_long',
+        'min_recharge_amount' => 'min_recharge_amount',
+        'max_recharge_amount' => 'max_recharge_amount'
     ];
 
     /**
@@ -191,7 +199,9 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
         'currency_name_short' => 'setCurrencyNameShort',
         'currency_prefix_d' => 'setCurrencyPrefixD',
         'currency_prefix_c' => 'setCurrencyPrefixC',
-        'currency_name_long' => 'setCurrencyNameLong'
+        'currency_name_long' => 'setCurrencyNameLong',
+        'min_recharge_amount' => 'setMinRechargeAmount',
+        'max_recharge_amount' => 'setMaxRechargeAmount'
     ];
 
     /**
@@ -203,7 +213,9 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
         'currency_name_short' => 'getCurrencyNameShort',
         'currency_prefix_d' => 'getCurrencyPrefixD',
         'currency_prefix_c' => 'getCurrencyPrefixC',
-        'currency_name_long' => 'getCurrencyNameLong'
+        'currency_name_long' => 'getCurrencyNameLong',
+        'min_recharge_amount' => 'getMinRechargeAmount',
+        'max_recharge_amount' => 'getMaxRechargeAmount'
     ];
 
     /**
@@ -267,6 +279,8 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('currency_prefix_d', $data ?? [], null);
         $this->setIfExists('currency_prefix_c', $data ?? [], null);
         $this->setIfExists('currency_name_long', $data ?? [], null);
+        $this->setIfExists('min_recharge_amount', $data ?? [], null);
+        $this->setIfExists('max_recharge_amount', $data ?? [], null);
     }
 
     /**
@@ -415,6 +429,60 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable currency_name_long cannot be null');
         }
         $this->container['currency_name_long'] = $currency_name_long;
+
+        return $this;
+    }
+
+    /**
+     * Gets min_recharge_amount
+     *
+     * @return string|null
+     */
+    public function getMinRechargeAmount()
+    {
+        return $this->container['min_recharge_amount'];
+    }
+
+    /**
+     * Sets min_recharge_amount
+     *
+     * @param string|null $min_recharge_amount The minimum amount that can be used to recharge the account, in this currency.
+     *
+     * @return self
+     */
+    public function setMinRechargeAmount($min_recharge_amount)
+    {
+        if (is_null($min_recharge_amount)) {
+            throw new \InvalidArgumentException('non-nullable min_recharge_amount cannot be null');
+        }
+        $this->container['min_recharge_amount'] = $min_recharge_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_recharge_amount
+     *
+     * @return string|null
+     */
+    public function getMaxRechargeAmount()
+    {
+        return $this->container['max_recharge_amount'];
+    }
+
+    /**
+     * Sets max_recharge_amount
+     *
+     * @param string|null $max_recharge_amount The maximum amount that can be used to recharge the account, in this currency.
+     *
+     * @return self
+     */
+    public function setMaxRechargeAmount($max_recharge_amount)
+    {
+        if (is_null($max_recharge_amount)) {
+            throw new \InvalidArgumentException('non-nullable max_recharge_amount cannot be null');
+        }
+        $this->container['max_recharge_amount'] = $max_recharge_amount;
 
         return $this;
     }

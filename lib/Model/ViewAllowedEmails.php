@@ -60,7 +60,7 @@ class ViewAllowedEmails implements ModelInterface, ArrayAccess, \JsonSerializabl
         'http_code' => 'int',
         'response_code' => 'string',
         'response_msg' => 'string',
-        'data' => '\ClickSend\Model\ViewAllowedEmailsDataInner[]'
+        'data' => '\ClickSend\Model\ViewAllowedEmailsData'
     ];
 
     /**
@@ -394,7 +394,7 @@ class ViewAllowedEmails implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets data
      *
-     * @return \ClickSend\Model\ViewAllowedEmailsDataInner[]|null
+     * @return \ClickSend\Model\ViewAllowedEmailsData|null
      */
     public function getData()
     {
@@ -404,7 +404,7 @@ class ViewAllowedEmails implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets data
      *
-     * @param \ClickSend\Model\ViewAllowedEmailsDataInner[]|null $data data
+     * @param \ClickSend\Model\ViewAllowedEmailsData|null $data data
      *
      * @return self
      */

@@ -64,6 +64,7 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'string',
         'last_name' => 'string',
         'api_key' => 'string',
+        'access_smpp' => 'int',
         'access_users' => 'int',
         'access_billing' => 'int',
         'access_reporting' => 'int',
@@ -75,9 +76,13 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'access_fax' => 'int',
         'access_post' => 'int',
         'access_reseller' => 'int',
+        'access_global_sending' => 'int',
         'access_mms' => 'int',
+        'hide_pricing' => 'int',
         'share_campaigns' => 'int',
-        'notes' => 'string'
+        'notes' => 'string',
+        'is_main' => 'int',
+        'sign_up_type' => 'string'
     ];
 
     /**
@@ -95,6 +100,7 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => null,
         'last_name' => null,
         'api_key' => null,
+        'access_smpp' => null,
         'access_users' => null,
         'access_billing' => null,
         'access_reporting' => null,
@@ -106,9 +112,13 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'access_fax' => null,
         'access_post' => null,
         'access_reseller' => null,
+        'access_global_sending' => null,
         'access_mms' => null,
+        'hide_pricing' => null,
         'share_campaigns' => null,
-        'notes' => null
+        'notes' => null,
+        'is_main' => null,
+        'sign_up_type' => null
     ];
 
     /**
@@ -124,6 +134,7 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => false,
         'last_name' => false,
         'api_key' => false,
+        'access_smpp' => false,
         'access_users' => false,
         'access_billing' => false,
         'access_reporting' => false,
@@ -135,9 +146,13 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'access_fax' => false,
         'access_post' => false,
         'access_reseller' => false,
+        'access_global_sending' => false,
         'access_mms' => false,
+        'hide_pricing' => false,
         'share_campaigns' => false,
-        'notes' => true
+        'notes' => true,
+        'is_main' => false,
+        'sign_up_type' => true
     ];
 
     /**
@@ -233,6 +248,7 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'first_name',
         'last_name' => 'last_name',
         'api_key' => 'api_key',
+        'access_smpp' => 'access_smpp',
         'access_users' => 'access_users',
         'access_billing' => 'access_billing',
         'access_reporting' => 'access_reporting',
@@ -244,9 +260,13 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'access_fax' => 'access_fax',
         'access_post' => 'access_post',
         'access_reseller' => 'access_reseller',
+        'access_global_sending' => 'access_global_sending',
         'access_mms' => 'access_mms',
+        'hide_pricing' => 'hide_pricing',
         'share_campaigns' => 'share_campaigns',
-        'notes' => 'notes'
+        'notes' => 'notes',
+        'is_main' => 'is_main',
+        'sign_up_type' => 'sign_up_type'
     ];
 
     /**
@@ -262,6 +282,7 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
         'api_key' => 'setApiKey',
+        'access_smpp' => 'setAccessSmpp',
         'access_users' => 'setAccessUsers',
         'access_billing' => 'setAccessBilling',
         'access_reporting' => 'setAccessReporting',
@@ -273,9 +294,13 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'access_fax' => 'setAccessFax',
         'access_post' => 'setAccessPost',
         'access_reseller' => 'setAccessReseller',
+        'access_global_sending' => 'setAccessGlobalSending',
         'access_mms' => 'setAccessMms',
+        'hide_pricing' => 'setHidePricing',
         'share_campaigns' => 'setShareCampaigns',
-        'notes' => 'setNotes'
+        'notes' => 'setNotes',
+        'is_main' => 'setIsMain',
+        'sign_up_type' => 'setSignUpType'
     ];
 
     /**
@@ -291,6 +316,7 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
         'api_key' => 'getApiKey',
+        'access_smpp' => 'getAccessSmpp',
         'access_users' => 'getAccessUsers',
         'access_billing' => 'getAccessBilling',
         'access_reporting' => 'getAccessReporting',
@@ -302,9 +328,13 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
         'access_fax' => 'getAccessFax',
         'access_post' => 'getAccessPost',
         'access_reseller' => 'getAccessReseller',
+        'access_global_sending' => 'getAccessGlobalSending',
         'access_mms' => 'getAccessMms',
+        'hide_pricing' => 'getHidePricing',
         'share_campaigns' => 'getShareCampaigns',
-        'notes' => 'getNotes'
+        'notes' => 'getNotes',
+        'is_main' => 'getIsMain',
+        'sign_up_type' => 'getSignUpType'
     ];
 
     /**
@@ -371,6 +401,7 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('first_name', $data ?? [], null);
         $this->setIfExists('last_name', $data ?? [], null);
         $this->setIfExists('api_key', $data ?? [], null);
+        $this->setIfExists('access_smpp', $data ?? [], null);
         $this->setIfExists('access_users', $data ?? [], null);
         $this->setIfExists('access_billing', $data ?? [], null);
         $this->setIfExists('access_reporting', $data ?? [], null);
@@ -382,9 +413,13 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('access_fax', $data ?? [], null);
         $this->setIfExists('access_post', $data ?? [], null);
         $this->setIfExists('access_reseller', $data ?? [], null);
+        $this->setIfExists('access_global_sending', $data ?? [], null);
         $this->setIfExists('access_mms', $data ?? [], null);
+        $this->setIfExists('hide_pricing', $data ?? [], null);
         $this->setIfExists('share_campaigns', $data ?? [], null);
         $this->setIfExists('notes', $data ?? [], null);
+        $this->setIfExists('is_main', $data ?? [], null);
+        $this->setIfExists('sign_up_type', $data ?? [], null);
     }
 
     /**
@@ -614,6 +649,33 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable api_key cannot be null');
         }
         $this->container['api_key'] = $api_key;
+
+        return $this;
+    }
+
+    /**
+     * Gets access_smpp
+     *
+     * @return int|null
+     */
+    public function getAccessSmpp()
+    {
+        return $this->container['access_smpp'];
+    }
+
+    /**
+     * Sets access_smpp
+     *
+     * @param int|null $access_smpp Flag indicating if the subaccount has access to SMPP.
+     *
+     * @return self
+     */
+    public function setAccessSmpp($access_smpp)
+    {
+        if (is_null($access_smpp)) {
+            throw new \InvalidArgumentException('non-nullable access_smpp cannot be null');
+        }
+        $this->container['access_smpp'] = $access_smpp;
 
         return $this;
     }
@@ -916,6 +978,33 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets access_global_sending
+     *
+     * @return int|null
+     */
+    public function getAccessGlobalSending()
+    {
+        return $this->container['access_global_sending'];
+    }
+
+    /**
+     * Sets access_global_sending
+     *
+     * @param int|null $access_global_sending Flag indicating if the subaccount has access to global sending.
+     *
+     * @return self
+     */
+    public function setAccessGlobalSending($access_global_sending)
+    {
+        if (is_null($access_global_sending)) {
+            throw new \InvalidArgumentException('non-nullable access_global_sending cannot be null');
+        }
+        $this->container['access_global_sending'] = $access_global_sending;
+
+        return $this;
+    }
+
+    /**
      * Gets access_mms
      *
      * @return int|null
@@ -938,6 +1027,33 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable access_mms cannot be null');
         }
         $this->container['access_mms'] = $access_mms;
+
+        return $this;
+    }
+
+    /**
+     * Gets hide_pricing
+     *
+     * @return int|null
+     */
+    public function getHidePricing()
+    {
+        return $this->container['hide_pricing'];
+    }
+
+    /**
+     * Sets hide_pricing
+     *
+     * @param int|null $hide_pricing Flag indicating if pricing is hidden for the subaccount.
+     *
+     * @return self
+     */
+    public function setHidePricing($hide_pricing)
+    {
+        if (is_null($hide_pricing)) {
+            throw new \InvalidArgumentException('non-nullable hide_pricing cannot be null');
+        }
+        $this->container['hide_pricing'] = $hide_pricing;
 
         return $this;
     }
@@ -999,6 +1115,67 @@ class Subaccount implements ModelInterface, ArrayAccess, \JsonSerializable
             }
         }
         $this->container['notes'] = $notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_main
+     *
+     * @return int|null
+     */
+    public function getIsMain()
+    {
+        return $this->container['is_main'];
+    }
+
+    /**
+     * Sets is_main
+     *
+     * @param int|null $is_main Flag indicating if this is the main account rather than a subaccount.
+     *
+     * @return self
+     */
+    public function setIsMain($is_main)
+    {
+        if (is_null($is_main)) {
+            throw new \InvalidArgumentException('non-nullable is_main cannot be null');
+        }
+        $this->container['is_main'] = $is_main;
+
+        return $this;
+    }
+
+    /**
+     * Gets sign_up_type
+     *
+     * @return string|null
+     */
+    public function getSignUpType()
+    {
+        return $this->container['sign_up_type'];
+    }
+
+    /**
+     * Sets sign_up_type
+     *
+     * @param string|null $sign_up_type The sign-up type used to create the subaccount, if applicable.
+     *
+     * @return self
+     */
+    public function setSignUpType($sign_up_type)
+    {
+        if (is_null($sign_up_type)) {
+            array_push($this->openAPINullablesSetToNull, 'sign_up_type');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('sign_up_type', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['sign_up_type'] = $sign_up_type;
 
         return $this;
     }

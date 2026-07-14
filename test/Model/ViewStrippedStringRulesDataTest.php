@@ -134,6 +134,24 @@ class ViewStrippedStringRulesDataTest extends TestCase
     }
 
     /**
+     * Test attribute "from"
+     */
+    public function testPropertyFrom()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "to"
+     */
+    public function testPropertyTo()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "data"
      */
     public function testPropertyData()

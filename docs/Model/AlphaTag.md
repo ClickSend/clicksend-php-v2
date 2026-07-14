@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **status** | **string** | The status of the record. | [optional]
 **reason** | **string** | The reason for the status. | [optional]
 **countries** | **string[]** | List of country codes where the alpha tag is requested. If not provided, it means a global alpha tag. | [optional]
-**created_timestamp** | **\DateTime** | The timestamp when the record was created. | [optional]
-**updated_timestamp** | **\DateTime** | The timestamp when the record was last updated. | [optional]
+**created_timestamp** | **string** | The timestamp when the record was created. Usually ISO 8601 (e.g. \&quot;2021-05-11T01:00:00.123Z\&quot;), but returned as a plain string rather than a strict date-time since some older records don&#39;t include a UTC offset (e.g. \&quot;2024-01-10T10:55:26.818097\&quot;). | [optional]
+**updated_timestamp** | **string** | The timestamp when the record was last updated. Usually ISO 8601 (e.g. \&quot;2021-05-11T01:05:00.123Z\&quot;), but returned as a plain string rather than a strict date-time since some older records don&#39;t include a UTC offset. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

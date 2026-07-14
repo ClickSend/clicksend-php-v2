@@ -65,7 +65,8 @@ class ViewYourNumbersData implements ModelInterface, ArrayAccess, \JsonSerializa
         'prev_page_url' => 'string',
         'from' => 'int',
         'to' => 'int',
-        'data' => '\ClickSend\Model\ViewYourNumbersDataAllOfDataInner[]'
+        'data' => '\ClickSend\Model\ViewYourNumbersDataAllOfDataInner[]',
+        '_currency' => '\ClickSend\Model\Currency'
     ];
 
     /**
@@ -84,7 +85,8 @@ class ViewYourNumbersData implements ModelInterface, ArrayAccess, \JsonSerializa
         'prev_page_url' => null,
         'from' => null,
         'to' => null,
-        'data' => null
+        'data' => null,
+        '_currency' => null
     ];
 
     /**
@@ -101,7 +103,8 @@ class ViewYourNumbersData implements ModelInterface, ArrayAccess, \JsonSerializa
         'prev_page_url' => true,
         'from' => false,
         'to' => false,
-        'data' => false
+        'data' => false,
+        '_currency' => false
     ];
 
     /**
@@ -198,7 +201,8 @@ class ViewYourNumbersData implements ModelInterface, ArrayAccess, \JsonSerializa
         'prev_page_url' => 'prev_page_url',
         'from' => 'from',
         'to' => 'to',
-        'data' => 'data'
+        'data' => 'data',
+        '_currency' => '_currency'
     ];
 
     /**
@@ -215,7 +219,8 @@ class ViewYourNumbersData implements ModelInterface, ArrayAccess, \JsonSerializa
         'prev_page_url' => 'setPrevPageUrl',
         'from' => 'setFrom',
         'to' => 'setTo',
-        'data' => 'setData'
+        'data' => 'setData',
+        '_currency' => 'setCurrency'
     ];
 
     /**
@@ -232,7 +237,8 @@ class ViewYourNumbersData implements ModelInterface, ArrayAccess, \JsonSerializa
         'prev_page_url' => 'getPrevPageUrl',
         'from' => 'getFrom',
         'to' => 'getTo',
-        'data' => 'getData'
+        'data' => 'getData',
+        '_currency' => 'getCurrency'
     ];
 
     /**
@@ -301,6 +307,7 @@ class ViewYourNumbersData implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->setIfExists('from', $data ?? [], null);
         $this->setIfExists('to', $data ?? [], null);
         $this->setIfExists('data', $data ?? [], null);
+        $this->setIfExists('_currency', $data ?? [], null);
     }
 
     /**
@@ -598,6 +605,33 @@ class ViewYourNumbersData implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable data cannot be null');
         }
         $this->container['data'] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Gets _currency
+     *
+     * @return \ClickSend\Model\Currency|null
+     */
+    public function getCurrency()
+    {
+        return $this->container['_currency'];
+    }
+
+    /**
+     * Sets _currency
+     *
+     * @param \ClickSend\Model\Currency|null $_currency _currency
+     *
+     * @return self
+     */
+    public function setCurrency($_currency)
+    {
+        if (is_null($_currency)) {
+            throw new \InvalidArgumentException('non-nullable _currency cannot be null');
+        }
+        $this->container['_currency'] = $_currency;
 
         return $this;
     }

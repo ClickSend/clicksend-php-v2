@@ -125,6 +125,15 @@ class ViewRechargePackagesDataPackagesInnerTest extends TestCase
     }
 
     /**
+     * Test attribute "price_sms_carrier_fee"
+     */
+    public function testPropertyPriceSmsCarrierFee()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "voice_mobile_price"
      */
     public function testPropertyVoiceMobilePrice()
@@ -155,6 +164,33 @@ class ViewRechargePackagesDataPackagesInnerTest extends TestCase
      * Test attribute "voice_landline_quantity"
      */
     public function testPropertyVoiceLandlineQuantity()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "mms_price"
+     */
+    public function testPropertyMmsPrice()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "mms_quantity"
+     */
+    public function testPropertyMmsQuantity()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "price_mms_carrier_fee"
+     */
+    public function testPropertyPriceMmsCarrierFee()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

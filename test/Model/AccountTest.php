@@ -125,6 +125,15 @@ class AccountTest extends TestCase
     }
 
     /**
+     * Test attribute "date_sign_up"
+     */
+    public function testPropertyDateSignUp()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "balance"
      */
     public function testPropertyBalance()
@@ -215,9 +224,27 @@ class AccountTest extends TestCase
     }
 
     /**
+     * Test attribute "priority"
+     */
+    public function testPropertyPriority()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "country"
      */
     public function testPropertyCountry()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "country_ip"
+     */
+    public function testPropertyCountryIp()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -332,6 +359,69 @@ class AccountTest extends TestCase
     }
 
     /**
+     * Test attribute "private_uploads"
+     */
+    public function testPropertyPrivateUploads()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "fax_quality"
+     */
+    public function testPropertyFaxQuality()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "setting_sms_hide_your_number"
+     */
+    public function testPropertySettingSmsHideYourNumber()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "setting_sms_hide_business_name"
+     */
+    public function testPropertySettingSmsHideBusinessName()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "pricing_variant"
+     */
+    public function testPropertyPricingVariant()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "on_trial"
+     */
+    public function testPropertyOnTrial()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "trial_expiry"
+     */
+    public function testPropertyTrialExpiry()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "_currency"
      */
     public function testPropertyCurrency()
@@ -344,6 +434,15 @@ class AccountTest extends TestCase
      * Test attribute "_subaccount"
      */
     public function testPropertySubaccount()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "_referrer_chosen"
+     */
+    public function testPropertyReferrerChosen()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -80,27 +80,72 @@ class ViewAllMmsCampaignsTest extends TestCase
     }
 
     /**
-     * Test attribute "http_code"
+     * Test attribute "total"
      */
-    public function testPropertyHttpCode()
+    public function testPropertyTotal()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "response_code"
+     * Test attribute "per_page"
      */
-    public function testPropertyResponseCode()
+    public function testPropertyPerPage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "response_msg"
+     * Test attribute "current_page"
      */
-    public function testPropertyResponseMsg()
+    public function testPropertyCurrentPage()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "last_page"
+     */
+    public function testPropertyLastPage()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "next_page_url"
+     */
+    public function testPropertyNextPageUrl()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "prev_page_url"
+     */
+    public function testPropertyPrevPageUrl()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "from"
+     */
+    public function testPropertyFrom()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "to"
+     */
+    public function testPropertyTo()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

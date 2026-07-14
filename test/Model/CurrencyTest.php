@@ -114,4 +114,22 @@ class CurrencyTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "min_recharge_amount"
+     */
+    public function testPropertyMinRechargeAmount()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "max_recharge_amount"
+     */
+    public function testPropertyMaxRechargeAmount()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

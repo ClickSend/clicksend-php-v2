@@ -66,8 +66,8 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'custom_2' => 'string',
         'custom_3' => 'string',
         'custom_4' => 'string',
-        'date_added' => '\DateTime',
-        'date_updated' => '\DateTime',
+        'date_added' => 'string',
+        'date_updated' => 'string',
         'fax_number' => 'string',
         'organization_name' => 'string',
         'email' => 'string',
@@ -97,8 +97,8 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'custom_2' => null,
         'custom_3' => null,
         'custom_4' => null,
-        'date_added' => 'date-time',
-        'date_updated' => 'date-time',
+        'date_added' => null,
+        'date_updated' => null,
         'fax_number' => null,
         'organization_name' => null,
         'email' => null,
@@ -675,7 +675,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets date_added
      *
-     * @return \DateTime|null
+     * @return string|null
      */
     public function getDateAdded()
     {
@@ -685,7 +685,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets date_added
      *
-     * @param \DateTime|null $date_added The date when the contact was added.
+     * @param string|null $date_added The date when the contact was added. Returned as a plain string rather than a strict date-time since the API sometimes returns a raw Unix timestamp (e.g. \"1783997542\") instead of ISO 8601.
      *
      * @return self
      */
@@ -702,7 +702,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets date_updated
      *
-     * @return \DateTime|null
+     * @return string|null
      */
     public function getDateUpdated()
     {
@@ -712,7 +712,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets date_updated
      *
-     * @param \DateTime|null $date_updated The date when the contact was last updated.
+     * @param string|null $date_updated The date when the contact was last updated. Returned as a plain string rather than a strict date-time since the API sometimes returns a raw Unix timestamp (e.g. \"1783997542\") instead of ISO 8601.
      *
      * @return self
      */

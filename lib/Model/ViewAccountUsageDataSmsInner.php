@@ -60,7 +60,8 @@ class ViewAccountUsageDataSmsInner implements ModelInterface, ArrayAccess, \Json
         'subaccount_id' => 'int',
         'username' => 'string',
         'total_count' => 'string',
-        'total_price' => 'float'
+        'total_price' => 'float',
+        'notes' => 'string'
     ];
 
     /**
@@ -74,7 +75,8 @@ class ViewAccountUsageDataSmsInner implements ModelInterface, ArrayAccess, \Json
         'subaccount_id' => null,
         'username' => null,
         'total_count' => null,
-        'total_price' => null
+        'total_price' => null,
+        'notes' => null
     ];
 
     /**
@@ -86,7 +88,8 @@ class ViewAccountUsageDataSmsInner implements ModelInterface, ArrayAccess, \Json
         'subaccount_id' => false,
         'username' => false,
         'total_count' => false,
-        'total_price' => false
+        'total_price' => false,
+        'notes' => true
     ];
 
     /**
@@ -178,7 +181,8 @@ class ViewAccountUsageDataSmsInner implements ModelInterface, ArrayAccess, \Json
         'subaccount_id' => 'subaccount_id',
         'username' => 'username',
         'total_count' => 'total_count',
-        'total_price' => 'total_price'
+        'total_price' => 'total_price',
+        'notes' => 'notes'
     ];
 
     /**
@@ -190,7 +194,8 @@ class ViewAccountUsageDataSmsInner implements ModelInterface, ArrayAccess, \Json
         'subaccount_id' => 'setSubaccountId',
         'username' => 'setUsername',
         'total_count' => 'setTotalCount',
-        'total_price' => 'setTotalPrice'
+        'total_price' => 'setTotalPrice',
+        'notes' => 'setNotes'
     ];
 
     /**
@@ -202,7 +207,8 @@ class ViewAccountUsageDataSmsInner implements ModelInterface, ArrayAccess, \Json
         'subaccount_id' => 'getSubaccountId',
         'username' => 'getUsername',
         'total_count' => 'getTotalCount',
-        'total_price' => 'getTotalPrice'
+        'total_price' => 'getTotalPrice',
+        'notes' => 'getNotes'
     ];
 
     /**
@@ -266,6 +272,7 @@ class ViewAccountUsageDataSmsInner implements ModelInterface, ArrayAccess, \Json
         $this->setIfExists('username', $data ?? [], null);
         $this->setIfExists('total_count', $data ?? [], null);
         $this->setIfExists('total_price', $data ?? [], null);
+        $this->setIfExists('notes', $data ?? [], null);
     }
 
     /**
@@ -414,6 +421,40 @@ class ViewAccountUsageDataSmsInner implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable total_price cannot be null');
         }
         $this->container['total_price'] = $total_price;
+
+        return $this;
+    }
+
+    /**
+     * Gets notes
+     *
+     * @return string|null
+     */
+    public function getNotes()
+    {
+        return $this->container['notes'];
+    }
+
+    /**
+     * Sets notes
+     *
+     * @param string|null $notes Optional notes.
+     *
+     * @return self
+     */
+    public function setNotes($notes)
+    {
+        if (is_null($notes)) {
+            array_push($this->openAPINullablesSetToNull, 'notes');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('notes', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['notes'] = $notes;
 
         return $this;
     }

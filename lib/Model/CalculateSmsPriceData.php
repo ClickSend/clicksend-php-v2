@@ -62,7 +62,7 @@ class CalculateSmsPriceData implements ModelInterface, ArrayAccess, \JsonSeriali
         'total_count' => 'int',
         'queued_count' => 'int',
         'messages' => '\ClickSend\Model\Sms[]',
-        'currency' => '\ClickSend\Model\Currency',
+        '_currency' => '\ClickSend\Model\Currency',
         '_summary' => '\ClickSend\Model\CalculateSmsPriceDataSummary',
         'blocked_count' => 'int'
     ];
@@ -79,7 +79,7 @@ class CalculateSmsPriceData implements ModelInterface, ArrayAccess, \JsonSeriali
         'total_count' => null,
         'queued_count' => null,
         'messages' => null,
-        'currency' => null,
+        '_currency' => null,
         '_summary' => null,
         'blocked_count' => null
     ];
@@ -94,7 +94,7 @@ class CalculateSmsPriceData implements ModelInterface, ArrayAccess, \JsonSeriali
         'total_count' => false,
         'queued_count' => false,
         'messages' => false,
-        'currency' => false,
+        '_currency' => false,
         '_summary' => false,
         'blocked_count' => false
     ];
@@ -189,7 +189,7 @@ class CalculateSmsPriceData implements ModelInterface, ArrayAccess, \JsonSeriali
         'total_count' => 'total_count',
         'queued_count' => 'queued_count',
         'messages' => 'messages',
-        'currency' => 'currency',
+        '_currency' => '_currency',
         '_summary' => '_summary',
         'blocked_count' => 'blocked_count'
     ];
@@ -204,7 +204,7 @@ class CalculateSmsPriceData implements ModelInterface, ArrayAccess, \JsonSeriali
         'total_count' => 'setTotalCount',
         'queued_count' => 'setQueuedCount',
         'messages' => 'setMessages',
-        'currency' => 'setCurrency',
+        '_currency' => 'setCurrency',
         '_summary' => 'setSummary',
         'blocked_count' => 'setBlockedCount'
     ];
@@ -219,7 +219,7 @@ class CalculateSmsPriceData implements ModelInterface, ArrayAccess, \JsonSeriali
         'total_count' => 'getTotalCount',
         'queued_count' => 'getQueuedCount',
         'messages' => 'getMessages',
-        'currency' => 'getCurrency',
+        '_currency' => 'getCurrency',
         '_summary' => 'getSummary',
         'blocked_count' => 'getBlockedCount'
     ];
@@ -285,7 +285,7 @@ class CalculateSmsPriceData implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('total_count', $data ?? [], null);
         $this->setIfExists('queued_count', $data ?? [], null);
         $this->setIfExists('messages', $data ?? [], null);
-        $this->setIfExists('currency', $data ?? [], null);
+        $this->setIfExists('_currency', $data ?? [], null);
         $this->setIfExists('_summary', $data ?? [], null);
         $this->setIfExists('blocked_count', $data ?? [], null);
     }
@@ -441,28 +441,28 @@ class CalculateSmsPriceData implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets currency
+     * Gets _currency
      *
      * @return \ClickSend\Model\Currency|null
      */
     public function getCurrency()
     {
-        return $this->container['currency'];
+        return $this->container['_currency'];
     }
 
     /**
-     * Sets currency
+     * Sets _currency
      *
-     * @param \ClickSend\Model\Currency|null $currency currency
+     * @param \ClickSend\Model\Currency|null $_currency _currency
      *
      * @return self
      */
-    public function setCurrency($currency)
+    public function setCurrency($_currency)
     {
-        if (is_null($currency)) {
-            throw new \InvalidArgumentException('non-nullable currency cannot be null');
+        if (is_null($_currency)) {
+            throw new \InvalidArgumentException('non-nullable _currency cannot be null');
         }
-        $this->container['currency'] = $currency;
+        $this->container['_currency'] = $_currency;
 
         return $this;
     }

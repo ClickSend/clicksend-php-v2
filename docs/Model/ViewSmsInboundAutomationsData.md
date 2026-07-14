@@ -12,6 +12,10 @@ Name | Type | Description | Notes
 **prev_page_url** | **string** | A URL of the previous page. It will return **null** if there’s no previous page. | [optional]
 **from** | **int** | The number of the first result in the current page. | [optional]
 **to** | **int** | The number of the last result in the current page. | [optional]
+**first_page_url** | **string** | The URL of the first page of records. | [optional]
+**last_page_url** | **string** | The URL of the last page of records. | [optional]
+**path** | **string** | The base URL path used to build pagination links. | [optional]
+**links** | [**\ClickSend\Model\ViewSmsInboundAutomationsDataAllOfLinksInner[]**](ViewSmsInboundAutomationsDataAllOfLinksInner.md) | The list of pagination links. | [optional]
 **data** | [**\ClickSend\Model\SmsInboundRule[]**](SmsInboundRule.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

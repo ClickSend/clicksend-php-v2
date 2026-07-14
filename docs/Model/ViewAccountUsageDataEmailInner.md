@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **username** | **string** | The username associated with the subaccount. | [optional]
 **total_count** | **int** | The total count of emails. | [optional]
 **total_price** | **string** |  | [optional]
+**notes** | **string** | Optional notes. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -58,7 +58,7 @@ class ViewRechargePackagesData implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static $openAPITypes = [
         'packages' => '\ClickSend\Model\ViewRechargePackagesDataPackagesInner[]',
-        '_currency' => '\ClickSend\Model\Currency'
+        'currency' => '\ClickSend\Model\Currency'
     ];
 
     /**
@@ -70,7 +70,7 @@ class ViewRechargePackagesData implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static $openAPIFormats = [
         'packages' => null,
-        '_currency' => null
+        'currency' => null
     ];
 
     /**
@@ -80,7 +80,7 @@ class ViewRechargePackagesData implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static array $openAPINullables = [
         'packages' => false,
-        '_currency' => false
+        'currency' => false
     ];
 
     /**
@@ -170,7 +170,7 @@ class ViewRechargePackagesData implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static $attributeMap = [
         'packages' => 'packages',
-        '_currency' => '_currency'
+        'currency' => 'currency'
     ];
 
     /**
@@ -180,7 +180,7 @@ class ViewRechargePackagesData implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static $setters = [
         'packages' => 'setPackages',
-        '_currency' => 'setCurrency'
+        'currency' => 'setCurrency'
     ];
 
     /**
@@ -190,7 +190,7 @@ class ViewRechargePackagesData implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static $getters = [
         'packages' => 'getPackages',
-        '_currency' => 'getCurrency'
+        'currency' => 'getCurrency'
     ];
 
     /**
@@ -251,7 +251,7 @@ class ViewRechargePackagesData implements ModelInterface, ArrayAccess, \JsonSeri
     public function __construct(?array $data = null)
     {
         $this->setIfExists('packages', $data ?? [], null);
-        $this->setIfExists('_currency', $data ?? [], null);
+        $this->setIfExists('currency', $data ?? [], null);
     }
 
     /**
@@ -324,28 +324,28 @@ class ViewRechargePackagesData implements ModelInterface, ArrayAccess, \JsonSeri
     }
 
     /**
-     * Gets _currency
+     * Gets currency
      *
      * @return \ClickSend\Model\Currency|null
      */
     public function getCurrency()
     {
-        return $this->container['_currency'];
+        return $this->container['currency'];
     }
 
     /**
-     * Sets _currency
+     * Sets currency
      *
-     * @param \ClickSend\Model\Currency|null $_currency _currency
+     * @param \ClickSend\Model\Currency|null $currency currency
      *
      * @return self
      */
-    public function setCurrency($_currency)
+    public function setCurrency($currency)
     {
-        if (is_null($_currency)) {
-            throw new \InvalidArgumentException('non-nullable _currency cannot be null');
+        if (is_null($currency)) {
+            throw new \InvalidArgumentException('non-nullable currency cannot be null');
         }
-        $this->container['_currency'] = $_currency;
+        $this->container['currency'] = $currency;
 
         return $this;
     }

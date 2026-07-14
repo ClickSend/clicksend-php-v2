@@ -62,6 +62,7 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'user_email' => 'string',
         'active' => 'int',
         'banned' => 'int',
+        'date_sign_up' => 'int',
         'balance' => 'string',
         'user_phone' => 'string',
         'reply_to' => 'string',
@@ -72,7 +73,9 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'account_name' => 'string',
         'account_billing_email' => 'string',
         'account_billing_mobile' => 'string',
+        'priority' => 'int',
         'country' => 'string',
+        'country_ip' => 'string',
         'default_country_sms' => 'string',
         'auto_recharge' => 'int',
         'auto_recharge_amount' => 'string',
@@ -85,8 +88,16 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'balance_commission' => 'string',
         'timezone' => 'string',
         'price_rate' => 'int',
+        'private_uploads' => 'int',
+        'fax_quality' => 'int',
+        'setting_sms_hide_your_number' => 'int',
+        'setting_sms_hide_business_name' => 'int',
+        'pricing_variant' => 'int',
+        'on_trial' => 'int',
+        'trial_expiry' => 'string',
         '_currency' => '\ClickSend\Model\Currency',
-        '_subaccount' => '\ClickSend\Model\Subaccount'
+        '_subaccount' => '\ClickSend\Model\Subaccount',
+        '_referrer_chosen' => '\ClickSend\Model\AccountReferrerChosen'
     ];
 
     /**
@@ -102,6 +113,7 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'user_email' => 'email',
         'active' => null,
         'banned' => null,
+        'date_sign_up' => null,
         'balance' => null,
         'user_phone' => null,
         'reply_to' => null,
@@ -112,7 +124,9 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'account_name' => null,
         'account_billing_email' => 'email',
         'account_billing_mobile' => null,
+        'priority' => null,
         'country' => null,
+        'country_ip' => null,
         'default_country_sms' => null,
         'auto_recharge' => null,
         'auto_recharge_amount' => null,
@@ -125,8 +139,16 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'balance_commission' => null,
         'timezone' => null,
         'price_rate' => null,
+        'private_uploads' => null,
+        'fax_quality' => null,
+        'setting_sms_hide_your_number' => null,
+        'setting_sms_hide_business_name' => null,
+        'pricing_variant' => null,
+        'on_trial' => null,
+        'trial_expiry' => null,
         '_currency' => null,
-        '_subaccount' => null
+        '_subaccount' => null,
+        '_referrer_chosen' => null
     ];
 
     /**
@@ -140,6 +162,7 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'user_email' => false,
         'active' => false,
         'banned' => false,
+        'date_sign_up' => false,
         'balance' => false,
         'user_phone' => false,
         'reply_to' => false,
@@ -150,7 +173,9 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'account_name' => false,
         'account_billing_email' => false,
         'account_billing_mobile' => false,
+        'priority' => false,
         'country' => false,
+        'country_ip' => false,
         'default_country_sms' => false,
         'auto_recharge' => false,
         'auto_recharge_amount' => false,
@@ -163,8 +188,16 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'balance_commission' => false,
         'timezone' => false,
         'price_rate' => false,
+        'private_uploads' => false,
+        'fax_quality' => false,
+        'setting_sms_hide_your_number' => false,
+        'setting_sms_hide_business_name' => false,
+        'pricing_variant' => false,
+        'on_trial' => false,
+        'trial_expiry' => true,
         '_currency' => false,
-        '_subaccount' => false
+        '_subaccount' => false,
+        '_referrer_chosen' => true
     ];
 
     /**
@@ -258,6 +291,7 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'user_email' => 'user_email',
         'active' => 'active',
         'banned' => 'banned',
+        'date_sign_up' => 'date_sign_up',
         'balance' => 'balance',
         'user_phone' => 'user_phone',
         'reply_to' => 'reply_to',
@@ -268,7 +302,9 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'account_name' => 'account_name',
         'account_billing_email' => 'account_billing_email',
         'account_billing_mobile' => 'account_billing_mobile',
+        'priority' => 'priority',
         'country' => 'country',
+        'country_ip' => 'country_ip',
         'default_country_sms' => 'default_country_sms',
         'auto_recharge' => 'auto_recharge',
         'auto_recharge_amount' => 'auto_recharge_amount',
@@ -281,8 +317,16 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'balance_commission' => 'balance_commission',
         'timezone' => 'timezone',
         'price_rate' => 'price_rate',
+        'private_uploads' => 'private_uploads',
+        'fax_quality' => 'fax_quality',
+        'setting_sms_hide_your_number' => 'setting_sms_hide_your_number',
+        'setting_sms_hide_business_name' => 'setting_sms_hide_business_name',
+        'pricing_variant' => 'pricing_variant',
+        'on_trial' => 'on_trial',
+        'trial_expiry' => 'trial_expiry',
         '_currency' => '_currency',
-        '_subaccount' => '_subaccount'
+        '_subaccount' => '_subaccount',
+        '_referrer_chosen' => '_referrer_chosen'
     ];
 
     /**
@@ -296,6 +340,7 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'user_email' => 'setUserEmail',
         'active' => 'setActive',
         'banned' => 'setBanned',
+        'date_sign_up' => 'setDateSignUp',
         'balance' => 'setBalance',
         'user_phone' => 'setUserPhone',
         'reply_to' => 'setReplyTo',
@@ -306,7 +351,9 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'account_name' => 'setAccountName',
         'account_billing_email' => 'setAccountBillingEmail',
         'account_billing_mobile' => 'setAccountBillingMobile',
+        'priority' => 'setPriority',
         'country' => 'setCountry',
+        'country_ip' => 'setCountryIp',
         'default_country_sms' => 'setDefaultCountrySms',
         'auto_recharge' => 'setAutoRecharge',
         'auto_recharge_amount' => 'setAutoRechargeAmount',
@@ -319,8 +366,16 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'balance_commission' => 'setBalanceCommission',
         'timezone' => 'setTimezone',
         'price_rate' => 'setPriceRate',
+        'private_uploads' => 'setPrivateUploads',
+        'fax_quality' => 'setFaxQuality',
+        'setting_sms_hide_your_number' => 'setSettingSmsHideYourNumber',
+        'setting_sms_hide_business_name' => 'setSettingSmsHideBusinessName',
+        'pricing_variant' => 'setPricingVariant',
+        'on_trial' => 'setOnTrial',
+        'trial_expiry' => 'setTrialExpiry',
         '_currency' => 'setCurrency',
-        '_subaccount' => 'setSubaccount'
+        '_subaccount' => 'setSubaccount',
+        '_referrer_chosen' => 'setReferrerChosen'
     ];
 
     /**
@@ -334,6 +389,7 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'user_email' => 'getUserEmail',
         'active' => 'getActive',
         'banned' => 'getBanned',
+        'date_sign_up' => 'getDateSignUp',
         'balance' => 'getBalance',
         'user_phone' => 'getUserPhone',
         'reply_to' => 'getReplyTo',
@@ -344,7 +400,9 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'account_name' => 'getAccountName',
         'account_billing_email' => 'getAccountBillingEmail',
         'account_billing_mobile' => 'getAccountBillingMobile',
+        'priority' => 'getPriority',
         'country' => 'getCountry',
+        'country_ip' => 'getCountryIp',
         'default_country_sms' => 'getDefaultCountrySms',
         'auto_recharge' => 'getAutoRecharge',
         'auto_recharge_amount' => 'getAutoRechargeAmount',
@@ -357,8 +415,16 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         'balance_commission' => 'getBalanceCommission',
         'timezone' => 'getTimezone',
         'price_rate' => 'getPriceRate',
+        'private_uploads' => 'getPrivateUploads',
+        'fax_quality' => 'getFaxQuality',
+        'setting_sms_hide_your_number' => 'getSettingSmsHideYourNumber',
+        'setting_sms_hide_business_name' => 'getSettingSmsHideBusinessName',
+        'pricing_variant' => 'getPricingVariant',
+        'on_trial' => 'getOnTrial',
+        'trial_expiry' => 'getTrialExpiry',
         '_currency' => 'getCurrency',
-        '_subaccount' => 'getSubaccount'
+        '_subaccount' => 'getSubaccount',
+        '_referrer_chosen' => 'getReferrerChosen'
     ];
 
     /**
@@ -423,6 +489,7 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('user_email', $data ?? [], null);
         $this->setIfExists('active', $data ?? [], null);
         $this->setIfExists('banned', $data ?? [], null);
+        $this->setIfExists('date_sign_up', $data ?? [], null);
         $this->setIfExists('balance', $data ?? [], null);
         $this->setIfExists('user_phone', $data ?? [], null);
         $this->setIfExists('reply_to', $data ?? [], null);
@@ -433,7 +500,9 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('account_name', $data ?? [], null);
         $this->setIfExists('account_billing_email', $data ?? [], null);
         $this->setIfExists('account_billing_mobile', $data ?? [], null);
+        $this->setIfExists('priority', $data ?? [], null);
         $this->setIfExists('country', $data ?? [], null);
+        $this->setIfExists('country_ip', $data ?? [], null);
         $this->setIfExists('default_country_sms', $data ?? [], null);
         $this->setIfExists('auto_recharge', $data ?? [], null);
         $this->setIfExists('auto_recharge_amount', $data ?? [], null);
@@ -446,8 +515,16 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('balance_commission', $data ?? [], null);
         $this->setIfExists('timezone', $data ?? [], null);
         $this->setIfExists('price_rate', $data ?? [], null);
+        $this->setIfExists('private_uploads', $data ?? [], null);
+        $this->setIfExists('fax_quality', $data ?? [], null);
+        $this->setIfExists('setting_sms_hide_your_number', $data ?? [], null);
+        $this->setIfExists('setting_sms_hide_business_name', $data ?? [], null);
+        $this->setIfExists('pricing_variant', $data ?? [], null);
+        $this->setIfExists('on_trial', $data ?? [], null);
+        $this->setIfExists('trial_expiry', $data ?? [], null);
         $this->setIfExists('_currency', $data ?? [], null);
         $this->setIfExists('_subaccount', $data ?? [], null);
+        $this->setIfExists('_referrer_chosen', $data ?? [], null);
     }
 
     /**
@@ -623,6 +700,33 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable banned cannot be null');
         }
         $this->container['banned'] = $banned;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_sign_up
+     *
+     * @return int|null
+     */
+    public function getDateSignUp()
+    {
+        return $this->container['date_sign_up'];
+    }
+
+    /**
+     * Sets date_sign_up
+     *
+     * @param int|null $date_sign_up The Unix timestamp of when the account was created.
+     *
+     * @return self
+     */
+    public function setDateSignUp($date_sign_up)
+    {
+        if (is_null($date_sign_up)) {
+            throw new \InvalidArgumentException('non-nullable date_sign_up cannot be null');
+        }
+        $this->container['date_sign_up'] = $date_sign_up;
 
         return $this;
     }
@@ -905,6 +1009,33 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets priority
+     *
+     * @return int|null
+     */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+     * Sets priority
+     *
+     * @param int|null $priority The account's priority tier.
+     *
+     * @return self
+     */
+    public function setPriority($priority)
+    {
+        if (is_null($priority)) {
+            throw new \InvalidArgumentException('non-nullable priority cannot be null');
+        }
+        $this->container['priority'] = $priority;
+
+        return $this;
+    }
+
+    /**
      * Gets country
      *
      * @return string|null
@@ -927,6 +1058,33 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable country cannot be null');
         }
         $this->container['country'] = $country;
+
+        return $this;
+    }
+
+    /**
+     * Gets country_ip
+     *
+     * @return string|null
+     */
+    public function getCountryIp()
+    {
+        return $this->container['country_ip'];
+    }
+
+    /**
+     * Sets country_ip
+     *
+     * @param string|null $country_ip The country the user is currently connecting from, based on IP address.
+     *
+     * @return self
+     */
+    public function setCountryIp($country_ip)
+    {
+        if (is_null($country_ip)) {
+            throw new \InvalidArgumentException('non-nullable country_ip cannot be null');
+        }
+        $this->container['country_ip'] = $country_ip;
 
         return $this;
     }
@@ -1256,6 +1414,202 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets private_uploads
+     *
+     * @return int|null
+     */
+    public function getPrivateUploads()
+    {
+        return $this->container['private_uploads'];
+    }
+
+    /**
+     * Sets private_uploads
+     *
+     * @param int|null $private_uploads Flag indicating if uploaded media is kept private.
+     *
+     * @return self
+     */
+    public function setPrivateUploads($private_uploads)
+    {
+        if (is_null($private_uploads)) {
+            throw new \InvalidArgumentException('non-nullable private_uploads cannot be null');
+        }
+        $this->container['private_uploads'] = $private_uploads;
+
+        return $this;
+    }
+
+    /**
+     * Gets fax_quality
+     *
+     * @return int|null
+     */
+    public function getFaxQuality()
+    {
+        return $this->container['fax_quality'];
+    }
+
+    /**
+     * Sets fax_quality
+     *
+     * @param int|null $fax_quality The quality setting used for outgoing faxes.
+     *
+     * @return self
+     */
+    public function setFaxQuality($fax_quality)
+    {
+        if (is_null($fax_quality)) {
+            throw new \InvalidArgumentException('non-nullable fax_quality cannot be null');
+        }
+        $this->container['fax_quality'] = $fax_quality;
+
+        return $this;
+    }
+
+    /**
+     * Gets setting_sms_hide_your_number
+     *
+     * @return int|null
+     */
+    public function getSettingSmsHideYourNumber()
+    {
+        return $this->container['setting_sms_hide_your_number'];
+    }
+
+    /**
+     * Sets setting_sms_hide_your_number
+     *
+     * @param int|null $setting_sms_hide_your_number Flag indicating if your number is hidden on outgoing SMS.
+     *
+     * @return self
+     */
+    public function setSettingSmsHideYourNumber($setting_sms_hide_your_number)
+    {
+        if (is_null($setting_sms_hide_your_number)) {
+            throw new \InvalidArgumentException('non-nullable setting_sms_hide_your_number cannot be null');
+        }
+        $this->container['setting_sms_hide_your_number'] = $setting_sms_hide_your_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets setting_sms_hide_business_name
+     *
+     * @return int|null
+     */
+    public function getSettingSmsHideBusinessName()
+    {
+        return $this->container['setting_sms_hide_business_name'];
+    }
+
+    /**
+     * Sets setting_sms_hide_business_name
+     *
+     * @param int|null $setting_sms_hide_business_name Flag indicating if the business name is hidden on outgoing SMS.
+     *
+     * @return self
+     */
+    public function setSettingSmsHideBusinessName($setting_sms_hide_business_name)
+    {
+        if (is_null($setting_sms_hide_business_name)) {
+            throw new \InvalidArgumentException('non-nullable setting_sms_hide_business_name cannot be null');
+        }
+        $this->container['setting_sms_hide_business_name'] = $setting_sms_hide_business_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets pricing_variant
+     *
+     * @return int|null
+     */
+    public function getPricingVariant()
+    {
+        return $this->container['pricing_variant'];
+    }
+
+    /**
+     * Sets pricing_variant
+     *
+     * @param int|null $pricing_variant The pricing variant applied to the account.
+     *
+     * @return self
+     */
+    public function setPricingVariant($pricing_variant)
+    {
+        if (is_null($pricing_variant)) {
+            throw new \InvalidArgumentException('non-nullable pricing_variant cannot be null');
+        }
+        $this->container['pricing_variant'] = $pricing_variant;
+
+        return $this;
+    }
+
+    /**
+     * Gets on_trial
+     *
+     * @return int|null
+     */
+    public function getOnTrial()
+    {
+        return $this->container['on_trial'];
+    }
+
+    /**
+     * Sets on_trial
+     *
+     * @param int|null $on_trial Flag indicating if the account is currently on a trial.
+     *
+     * @return self
+     */
+    public function setOnTrial($on_trial)
+    {
+        if (is_null($on_trial)) {
+            throw new \InvalidArgumentException('non-nullable on_trial cannot be null');
+        }
+        $this->container['on_trial'] = $on_trial;
+
+        return $this;
+    }
+
+    /**
+     * Gets trial_expiry
+     *
+     * @return string|null
+     */
+    public function getTrialExpiry()
+    {
+        return $this->container['trial_expiry'];
+    }
+
+    /**
+     * Sets trial_expiry
+     *
+     * @param string|null $trial_expiry The date the trial expires, if the account is on a trial.
+     *
+     * @return self
+     */
+    public function setTrialExpiry($trial_expiry)
+    {
+        if (is_null($trial_expiry)) {
+            array_push($this->openAPINullablesSetToNull, 'trial_expiry');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('trial_expiry', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['trial_expiry'] = $trial_expiry;
+
+        return $this;
+    }
+
+    /**
      * Gets _currency
      *
      * @return \ClickSend\Model\Currency|null
@@ -1305,6 +1659,40 @@ class Account implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable _subaccount cannot be null');
         }
         $this->container['_subaccount'] = $_subaccount;
+
+        return $this;
+    }
+
+    /**
+     * Gets _referrer_chosen
+     *
+     * @return \ClickSend\Model\AccountReferrerChosen|null
+     */
+    public function getReferrerChosen()
+    {
+        return $this->container['_referrer_chosen'];
+    }
+
+    /**
+     * Sets _referrer_chosen
+     *
+     * @param \ClickSend\Model\AccountReferrerChosen|null $_referrer_chosen _referrer_chosen
+     *
+     * @return self
+     */
+    public function setReferrerChosen($_referrer_chosen)
+    {
+        if (is_null($_referrer_chosen)) {
+            array_push($this->openAPINullablesSetToNull, '_referrer_chosen');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('_referrer_chosen', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['_referrer_chosen'] = $_referrer_chosen;
 
         return $this;
     }

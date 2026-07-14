@@ -114,4 +114,22 @@ class ContactListTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "_import_in_progress"
+     */
+    public function testPropertyImportInProgress()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "_optout_in_progress"
+     */
+    public function testPropertyOptoutInProgress()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

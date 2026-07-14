@@ -65,8 +65,8 @@ class AlphaTag implements ModelInterface, ArrayAccess, \JsonSerializable
         'status' => 'string',
         'reason' => 'string',
         'countries' => 'string[]',
-        'created_timestamp' => '\DateTime',
-        'updated_timestamp' => '\DateTime'
+        'created_timestamp' => 'string',
+        'updated_timestamp' => 'string'
     ];
 
     /**
@@ -85,8 +85,8 @@ class AlphaTag implements ModelInterface, ArrayAccess, \JsonSerializable
         'status' => null,
         'reason' => null,
         'countries' => null,
-        'created_timestamp' => 'date-time',
-        'updated_timestamp' => 'date-time'
+        'created_timestamp' => null,
+        'updated_timestamp' => null
     ];
 
     /**
@@ -578,7 +578,7 @@ class AlphaTag implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets created_timestamp
      *
-     * @return \DateTime|null
+     * @return string|null
      */
     public function getCreatedTimestamp()
     {
@@ -588,7 +588,7 @@ class AlphaTag implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets created_timestamp
      *
-     * @param \DateTime|null $created_timestamp The timestamp when the record was created.
+     * @param string|null $created_timestamp The timestamp when the record was created. Usually ISO 8601 (e.g. \"2021-05-11T01:00:00.123Z\"), but returned as a plain string rather than a strict date-time since some older records don't include a UTC offset (e.g. \"2024-01-10T10:55:26.818097\").
      *
      * @return self
      */
@@ -605,7 +605,7 @@ class AlphaTag implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets updated_timestamp
      *
-     * @return \DateTime|null
+     * @return string|null
      */
     public function getUpdatedTimestamp()
     {
@@ -615,7 +615,7 @@ class AlphaTag implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updated_timestamp
      *
-     * @param \DateTime|null $updated_timestamp The timestamp when the record was last updated.
+     * @param string|null $updated_timestamp The timestamp when the record was last updated. Usually ISO 8601 (e.g. \"2021-05-11T01:05:00.123Z\"), but returned as a plain string rather than a strict date-time since some older records don't include a UTC offset.
      *
      * @return self
      */

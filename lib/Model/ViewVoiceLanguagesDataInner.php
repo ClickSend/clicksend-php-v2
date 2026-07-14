@@ -59,7 +59,7 @@ class ViewVoiceLanguagesDataInner implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPITypes = [
         'code' => 'string',
         'country' => 'string',
-        'gender' => 'string'
+        'gender' => '\ClickSend\Model\ViewVoiceLanguagesDataInnerGender'
     ];
 
     /**
@@ -360,7 +360,7 @@ class ViewVoiceLanguagesDataInner implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets gender
      *
-     * @return string|null
+     * @return \ClickSend\Model\ViewVoiceLanguagesDataInnerGender|null
      */
     public function getGender()
     {
@@ -370,7 +370,7 @@ class ViewVoiceLanguagesDataInner implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets gender
      *
-     * @param string|null $gender The gender of the language.
+     * @param \ClickSend\Model\ViewVoiceLanguagesDataInnerGender|null $gender gender
      *
      * @return self
      */

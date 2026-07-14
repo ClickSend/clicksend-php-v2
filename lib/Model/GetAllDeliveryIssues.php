@@ -60,7 +60,7 @@ class GetAllDeliveryIssues implements ModelInterface, ArrayAccess, \JsonSerializ
         'http_code' => 'int',
         'response_code' => 'string',
         'response_msg' => 'string',
-        'data' => '\ClickSend\Model\DeliveryIssue[]'
+        'data' => '\ClickSend\Model\GetAllDeliveryIssuesData'
     ];
 
     /**
@@ -394,7 +394,7 @@ class GetAllDeliveryIssues implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets data
      *
-     * @return \ClickSend\Model\DeliveryIssue[]|null
+     * @return \ClickSend\Model\GetAllDeliveryIssuesData|null
      */
     public function getData()
     {
@@ -404,7 +404,7 @@ class GetAllDeliveryIssues implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets data
      *
-     * @param \ClickSend\Model\DeliveryIssue[]|null $data data
+     * @param \ClickSend\Model\GetAllDeliveryIssuesData|null $data data
      *
      * @return self
      */

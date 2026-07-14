@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewStrippedStringRulesDataDataInner
+ * ViewAllowedEmailsDataAllOfDataInner
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \ClickSend\ObjectSerializer;
 
 /**
- * ViewStrippedStringRulesDataDataInner Class Doc Comment
+ * ViewAllowedEmailsDataAllOfDataInner Class Doc Comment
  *
  * @category Class
  * @package  ClickSend
@@ -40,7 +40,7 @@ use \ClickSend\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ViewStrippedStringRulesDataDataInner implements ModelInterface, ArrayAccess, \JsonSerializable
+class ViewAllowedEmailsDataAllOfDataInner implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ViewStrippedStringRulesDataDataInner implements ModelInterface, ArrayAcces
      *
      * @var string
      */
-    protected static $openAPIModelName = 'view_stripped_string_rules_data_data_inner';
+    protected static $openAPIModelName = 'view_allowed_emails_data_allOf_data_inner';
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,14 @@ class ViewStrippedStringRulesDataDataInner implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $openAPITypes = [
-        'rule_id' => 'int',
-        'strip_string' => 'string'
+        'email_address_id' => 'float',
+        'email_address' => 'string',
+        'from' => 'string',
+        'subaccount_id' => 'int',
+        'from_fax' => 'string',
+        'voice' => 'string',
+        'lang' => 'string',
+        '_subaccount_name' => 'string'
     ];
 
     /**
@@ -69,8 +75,14 @@ class ViewStrippedStringRulesDataDataInner implements ModelInterface, ArrayAcces
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'rule_id' => null,
-        'strip_string' => null
+        'email_address_id' => null,
+        'email_address' => null,
+        'from' => null,
+        'subaccount_id' => null,
+        'from_fax' => null,
+        'voice' => null,
+        'lang' => null,
+        '_subaccount_name' => null
     ];
 
     /**
@@ -79,8 +91,14 @@ class ViewStrippedStringRulesDataDataInner implements ModelInterface, ArrayAcces
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'rule_id' => false,
-        'strip_string' => false
+        'email_address_id' => false,
+        'email_address' => false,
+        'from' => false,
+        'subaccount_id' => false,
+        'from_fax' => true,
+        'voice' => false,
+        'lang' => false,
+        '_subaccount_name' => false
     ];
 
     /**
@@ -169,8 +187,14 @@ class ViewStrippedStringRulesDataDataInner implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
-        'rule_id' => 'rule_id',
-        'strip_string' => 'strip_string'
+        'email_address_id' => 'email_address_id',
+        'email_address' => 'email_address',
+        'from' => 'from',
+        'subaccount_id' => 'subaccount_id',
+        'from_fax' => 'from_fax',
+        'voice' => 'voice',
+        'lang' => 'lang',
+        '_subaccount_name' => '_subaccount_name'
     ];
 
     /**
@@ -179,8 +203,14 @@ class ViewStrippedStringRulesDataDataInner implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'rule_id' => 'setRuleId',
-        'strip_string' => 'setStripString'
+        'email_address_id' => 'setEmailAddressId',
+        'email_address' => 'setEmailAddress',
+        'from' => 'setFrom',
+        'subaccount_id' => 'setSubaccountId',
+        'from_fax' => 'setFromFax',
+        'voice' => 'setVoice',
+        'lang' => 'setLang',
+        '_subaccount_name' => 'setSubaccountName'
     ];
 
     /**
@@ -189,8 +219,14 @@ class ViewStrippedStringRulesDataDataInner implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'rule_id' => 'getRuleId',
-        'strip_string' => 'getStripString'
+        'email_address_id' => 'getEmailAddressId',
+        'email_address' => 'getEmailAddress',
+        'from' => 'getFrom',
+        'subaccount_id' => 'getSubaccountId',
+        'from_fax' => 'getFromFax',
+        'voice' => 'getVoice',
+        'lang' => 'getLang',
+        '_subaccount_name' => 'getSubaccountName'
     ];
 
     /**
@@ -250,8 +286,14 @@ class ViewStrippedStringRulesDataDataInner implements ModelInterface, ArrayAcces
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('rule_id', $data ?? [], null);
-        $this->setIfExists('strip_string', $data ?? [], null);
+        $this->setIfExists('email_address_id', $data ?? [], null);
+        $this->setIfExists('email_address', $data ?? [], null);
+        $this->setIfExists('from', $data ?? [], null);
+        $this->setIfExists('subaccount_id', $data ?? [], null);
+        $this->setIfExists('from_fax', $data ?? [], null);
+        $this->setIfExists('voice', $data ?? [], null);
+        $this->setIfExists('lang', $data ?? [], null);
+        $this->setIfExists('_subaccount_name', $data ?? [], null);
     }
 
     /**
@@ -297,55 +339,224 @@ class ViewStrippedStringRulesDataDataInner implements ModelInterface, ArrayAcces
 
 
     /**
-     * Gets rule_id
+     * Gets email_address_id
      *
-     * @return int|null
+     * @return float|null
      */
-    public function getRuleId()
+    public function getEmailAddressId()
     {
-        return $this->container['rule_id'];
+        return $this->container['email_address_id'];
     }
 
     /**
-     * Sets rule_id
+     * Sets email_address_id
      *
-     * @param int|null $rule_id The ID of the rule.
+     * @param float|null $email_address_id The ID of the email address.
      *
      * @return self
      */
-    public function setRuleId($rule_id)
+    public function setEmailAddressId($email_address_id)
     {
-        if (is_null($rule_id)) {
-            throw new \InvalidArgumentException('non-nullable rule_id cannot be null');
+        if (is_null($email_address_id)) {
+            throw new \InvalidArgumentException('non-nullable email_address_id cannot be null');
         }
-        $this->container['rule_id'] = $rule_id;
+        $this->container['email_address_id'] = $email_address_id;
 
         return $this;
     }
 
     /**
-     * Gets strip_string
+     * Gets email_address
      *
      * @return string|null
      */
-    public function getStripString()
+    public function getEmailAddress()
     {
-        return $this->container['strip_string'];
+        return $this->container['email_address'];
     }
 
     /**
-     * Sets strip_string
+     * Sets email_address
      *
-     * @param string|null $strip_string The string to be stripped.
+     * @param string|null $email_address The email address.
      *
      * @return self
      */
-    public function setStripString($strip_string)
+    public function setEmailAddress($email_address)
     {
-        if (is_null($strip_string)) {
-            throw new \InvalidArgumentException('non-nullable strip_string cannot be null');
+        if (is_null($email_address)) {
+            throw new \InvalidArgumentException('non-nullable email_address cannot be null');
         }
-        $this->container['strip_string'] = $strip_string;
+        $this->container['email_address'] = $email_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets from
+     *
+     * @return string|null
+     */
+    public function getFrom()
+    {
+        return $this->container['from'];
+    }
+
+    /**
+     * Sets from
+     *
+     * @param string|null $from The sender.
+     *
+     * @return self
+     */
+    public function setFrom($from)
+    {
+        if (is_null($from)) {
+            throw new \InvalidArgumentException('non-nullable from cannot be null');
+        }
+        $this->container['from'] = $from;
+
+        return $this;
+    }
+
+    /**
+     * Gets subaccount_id
+     *
+     * @return int|null
+     */
+    public function getSubaccountId()
+    {
+        return $this->container['subaccount_id'];
+    }
+
+    /**
+     * Sets subaccount_id
+     *
+     * @param int|null $subaccount_id The ID of the subaccount that owns this email address.
+     *
+     * @return self
+     */
+    public function setSubaccountId($subaccount_id)
+    {
+        if (is_null($subaccount_id)) {
+            throw new \InvalidArgumentException('non-nullable subaccount_id cannot be null');
+        }
+        $this->container['subaccount_id'] = $subaccount_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets from_fax
+     *
+     * @return string|null
+     */
+    public function getFromFax()
+    {
+        return $this->container['from_fax'];
+    }
+
+    /**
+     * Sets from_fax
+     *
+     * @param string|null $from_fax The fax number used as the sender, if applicable.
+     *
+     * @return self
+     */
+    public function setFromFax($from_fax)
+    {
+        if (is_null($from_fax)) {
+            array_push($this->openAPINullablesSetToNull, 'from_fax');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('from_fax', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['from_fax'] = $from_fax;
+
+        return $this;
+    }
+
+    /**
+     * Gets voice
+     *
+     * @return string|null
+     */
+    public function getVoice()
+    {
+        return $this->container['voice'];
+    }
+
+    /**
+     * Sets voice
+     *
+     * @param string|null $voice The voice used when this email address triggers a voice message.
+     *
+     * @return self
+     */
+    public function setVoice($voice)
+    {
+        if (is_null($voice)) {
+            throw new \InvalidArgumentException('non-nullable voice cannot be null');
+        }
+        $this->container['voice'] = $voice;
+
+        return $this;
+    }
+
+    /**
+     * Gets lang
+     *
+     * @return string|null
+     */
+    public function getLang()
+    {
+        return $this->container['lang'];
+    }
+
+    /**
+     * Sets lang
+     *
+     * @param string|null $lang The language used when this email address triggers a voice message.
+     *
+     * @return self
+     */
+    public function setLang($lang)
+    {
+        if (is_null($lang)) {
+            throw new \InvalidArgumentException('non-nullable lang cannot be null');
+        }
+        $this->container['lang'] = $lang;
+
+        return $this;
+    }
+
+    /**
+     * Gets _subaccount_name
+     *
+     * @return string|null
+     */
+    public function getSubaccountName()
+    {
+        return $this->container['_subaccount_name'];
+    }
+
+    /**
+     * Sets _subaccount_name
+     *
+     * @param string|null $_subaccount_name The name of the subaccount that owns this email address.
+     *
+     * @return self
+     */
+    public function setSubaccountName($_subaccount_name)
+    {
+        if (is_null($_subaccount_name)) {
+            throw new \InvalidArgumentException('non-nullable _subaccount_name cannot be null');
+        }
+        $this->container['_subaccount_name'] = $_subaccount_name;
 
         return $this;
     }

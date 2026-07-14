@@ -60,8 +60,7 @@ class ViewAvailableNumbers implements ModelInterface, ArrayAccess, \JsonSerializ
         'http_code' => 'int',
         'response_code' => 'string',
         'response_msg' => 'string',
-        'data' => '\ClickSend\Model\ViewAvailableNumbersData',
-        '_currency' => '\ClickSend\Model\Currency'
+        'data' => '\ClickSend\Model\ViewAvailableNumbersData'
     ];
 
     /**
@@ -75,8 +74,7 @@ class ViewAvailableNumbers implements ModelInterface, ArrayAccess, \JsonSerializ
         'http_code' => null,
         'response_code' => null,
         'response_msg' => null,
-        'data' => null,
-        '_currency' => null
+        'data' => null
     ];
 
     /**
@@ -88,8 +86,7 @@ class ViewAvailableNumbers implements ModelInterface, ArrayAccess, \JsonSerializ
         'http_code' => false,
         'response_code' => false,
         'response_msg' => false,
-        'data' => false,
-        '_currency' => false
+        'data' => false
     ];
 
     /**
@@ -181,8 +178,7 @@ class ViewAvailableNumbers implements ModelInterface, ArrayAccess, \JsonSerializ
         'http_code' => 'http_code',
         'response_code' => 'response_code',
         'response_msg' => 'response_msg',
-        'data' => 'data',
-        '_currency' => '_currency'
+        'data' => 'data'
     ];
 
     /**
@@ -194,8 +190,7 @@ class ViewAvailableNumbers implements ModelInterface, ArrayAccess, \JsonSerializ
         'http_code' => 'setHttpCode',
         'response_code' => 'setResponseCode',
         'response_msg' => 'setResponseMsg',
-        'data' => 'setData',
-        '_currency' => 'setCurrency'
+        'data' => 'setData'
     ];
 
     /**
@@ -207,8 +202,7 @@ class ViewAvailableNumbers implements ModelInterface, ArrayAccess, \JsonSerializ
         'http_code' => 'getHttpCode',
         'response_code' => 'getResponseCode',
         'response_msg' => 'getResponseMsg',
-        'data' => 'getData',
-        '_currency' => 'getCurrency'
+        'data' => 'getData'
     ];
 
     /**
@@ -272,7 +266,6 @@ class ViewAvailableNumbers implements ModelInterface, ArrayAccess, \JsonSerializ
         $this->setIfExists('response_code', $data ?? [], null);
         $this->setIfExists('response_msg', $data ?? [], null);
         $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('_currency', $data ?? [], null);
     }
 
     /**
@@ -421,33 +414,6 @@ class ViewAvailableNumbers implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable data cannot be null');
         }
         $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets _currency
-     *
-     * @return \ClickSend\Model\Currency|null
-     */
-    public function getCurrency()
-    {
-        return $this->container['_currency'];
-    }
-
-    /**
-     * Sets _currency
-     *
-     * @param \ClickSend\Model\Currency|null $_currency _currency
-     *
-     * @return self
-     */
-    public function setCurrency($_currency)
-    {
-        if (is_null($_currency)) {
-            throw new \InvalidArgumentException('non-nullable _currency cannot be null');
-        }
-        $this->container['_currency'] = $_currency;
 
         return $this;
     }

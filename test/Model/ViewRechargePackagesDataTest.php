@@ -89,7 +89,7 @@ class ViewRechargePackagesDataTest extends TestCase
     }
 
     /**
-     * Test attribute "_currency"
+     * Test attribute "currency"
      */
     public function testPropertyCurrency()
     {

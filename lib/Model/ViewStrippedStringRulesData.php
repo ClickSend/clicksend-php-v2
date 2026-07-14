@@ -63,7 +63,9 @@ class ViewStrippedStringRulesData implements ModelInterface, ArrayAccess, \JsonS
         'last_page' => 'int',
         'next_page_url' => 'string',
         'prev_page_url' => 'string',
-        'data' => '\ClickSend\Model\ViewStrippedStringRulesDataDataInner[]'
+        'from' => 'int',
+        'to' => 'int',
+        'data' => '\ClickSend\Model\ViewStrippedStringRulesDataAllOfDataInner[]'
     ];
 
     /**
@@ -80,6 +82,8 @@ class ViewStrippedStringRulesData implements ModelInterface, ArrayAccess, \JsonS
         'last_page' => null,
         'next_page_url' => null,
         'prev_page_url' => null,
+        'from' => null,
+        'to' => null,
         'data' => null
     ];
 
@@ -95,6 +99,8 @@ class ViewStrippedStringRulesData implements ModelInterface, ArrayAccess, \JsonS
         'last_page' => false,
         'next_page_url' => true,
         'prev_page_url' => true,
+        'from' => false,
+        'to' => false,
         'data' => false
     ];
 
@@ -190,6 +196,8 @@ class ViewStrippedStringRulesData implements ModelInterface, ArrayAccess, \JsonS
         'last_page' => 'last_page',
         'next_page_url' => 'next_page_url',
         'prev_page_url' => 'prev_page_url',
+        'from' => 'from',
+        'to' => 'to',
         'data' => 'data'
     ];
 
@@ -205,6 +213,8 @@ class ViewStrippedStringRulesData implements ModelInterface, ArrayAccess, \JsonS
         'last_page' => 'setLastPage',
         'next_page_url' => 'setNextPageUrl',
         'prev_page_url' => 'setPrevPageUrl',
+        'from' => 'setFrom',
+        'to' => 'setTo',
         'data' => 'setData'
     ];
 
@@ -220,6 +230,8 @@ class ViewStrippedStringRulesData implements ModelInterface, ArrayAccess, \JsonS
         'last_page' => 'getLastPage',
         'next_page_url' => 'getNextPageUrl',
         'prev_page_url' => 'getPrevPageUrl',
+        'from' => 'getFrom',
+        'to' => 'getTo',
         'data' => 'getData'
     ];
 
@@ -286,6 +298,8 @@ class ViewStrippedStringRulesData implements ModelInterface, ArrayAccess, \JsonS
         $this->setIfExists('last_page', $data ?? [], null);
         $this->setIfExists('next_page_url', $data ?? [], null);
         $this->setIfExists('prev_page_url', $data ?? [], null);
+        $this->setIfExists('from', $data ?? [], null);
+        $this->setIfExists('to', $data ?? [], null);
         $this->setIfExists('data', $data ?? [], null);
     }
 
@@ -344,7 +358,7 @@ class ViewStrippedStringRulesData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets total
      *
-     * @param int|null $total The total number of records in the response.
+     * @param int|null $total The total number of items available for viewing.
      *
      * @return self
      */
@@ -371,7 +385,7 @@ class ViewStrippedStringRulesData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets per_page
      *
-     * @param int|null $per_page The number of records per page.
+     * @param int|null $per_page The number of items returned per page. This is specified in the limit parameter. You can have 100 items at maximum, and 15 at minimum.
      *
      * @return self
      */
@@ -452,7 +466,7 @@ class ViewStrippedStringRulesData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets next_page_url
      *
-     * @param string|null $next_page_url The URL of the next page of records.
+     * @param string|null $next_page_url A URL of the next page. It will return **null** if there’s no next page.
      *
      * @return self
      */
@@ -486,7 +500,7 @@ class ViewStrippedStringRulesData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets prev_page_url
      *
-     * @param string|null $prev_page_url The URL of the previous page of records.
+     * @param string|null $prev_page_url A URL of the previous page. It will return **null** if there’s no previous page.
      *
      * @return self
      */
@@ -508,9 +522,63 @@ class ViewStrippedStringRulesData implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
+     * Gets from
+     *
+     * @return int|null
+     */
+    public function getFrom()
+    {
+        return $this->container['from'];
+    }
+
+    /**
+     * Sets from
+     *
+     * @param int|null $from The number of the first result in the current page.
+     *
+     * @return self
+     */
+    public function setFrom($from)
+    {
+        if (is_null($from)) {
+            throw new \InvalidArgumentException('non-nullable from cannot be null');
+        }
+        $this->container['from'] = $from;
+
+        return $this;
+    }
+
+    /**
+     * Gets to
+     *
+     * @return int|null
+     */
+    public function getTo()
+    {
+        return $this->container['to'];
+    }
+
+    /**
+     * Sets to
+     *
+     * @param int|null $to The number of the last result in the current page.
+     *
+     * @return self
+     */
+    public function setTo($to)
+    {
+        if (is_null($to)) {
+            throw new \InvalidArgumentException('non-nullable to cannot be null');
+        }
+        $this->container['to'] = $to;
+
+        return $this;
+    }
+
+    /**
      * Gets data
      *
-     * @return \ClickSend\Model\ViewStrippedStringRulesDataDataInner[]|null
+     * @return \ClickSend\Model\ViewStrippedStringRulesDataAllOfDataInner[]|null
      */
     public function getData()
     {
@@ -520,7 +588,7 @@ class ViewStrippedStringRulesData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets data
      *
-     * @param \ClickSend\Model\ViewStrippedStringRulesDataDataInner[]|null $data data
+     * @param \ClickSend\Model\ViewStrippedStringRulesDataAllOfDataInner[]|null $data data
      *
      * @return self
      */

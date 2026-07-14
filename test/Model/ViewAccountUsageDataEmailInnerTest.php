@@ -114,4 +114,13 @@ class ViewAccountUsageDataEmailInnerTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "notes"
+     */
+    public function testPropertyNotes()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

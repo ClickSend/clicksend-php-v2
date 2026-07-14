@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewAllowedEmailsDataInnerTest
+ * ViewAllowedEmailsDataAllOfDataInnerTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace ClickSend\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ViewAllowedEmailsDataInnerTest Class Doc Comment
+ * ViewAllowedEmailsDataAllOfDataInnerTest Class Doc Comment
  *
  * @category    Class
- * @description ViewAllowedEmailsDataInner
+ * @description ViewAllowedEmailsDataAllOfDataInner
  * @package     ClickSend
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ViewAllowedEmailsDataInnerTest extends TestCase
+class ViewAllowedEmailsDataAllOfDataInnerTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class ViewAllowedEmailsDataInnerTest extends TestCase
     }
 
     /**
-     * Test "ViewAllowedEmailsDataInner"
+     * Test "ViewAllowedEmailsDataAllOfDataInner"
      */
-    public function testViewAllowedEmailsDataInner()
+    public function testViewAllowedEmailsDataAllOfDataInner()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -101,6 +101,51 @@ class ViewAllowedEmailsDataInnerTest extends TestCase
      * Test attribute "from"
      */
     public function testPropertyFrom()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "subaccount_id"
+     */
+    public function testPropertySubaccountId()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "from_fax"
+     */
+    public function testPropertyFromFax()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "voice"
+     */
+    public function testPropertyVoice()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "lang"
+     */
+    public function testPropertyLang()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "_subaccount_name"
+     */
+    public function testPropertySubaccountName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

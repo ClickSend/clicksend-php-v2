@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **from** | **int** | The number of the first result in the current page. | [optional]
 **to** | **int** | The number of the last result in the current page. | [optional]
 **data** | [**\ClickSend\Model\ViewYourNumbersDataAllOfDataInner[]**](ViewYourNumbersDataAllOfDataInner.md) |  | [optional]
+**_currency** | [**\ClickSend\Model\Currency**](Currency.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

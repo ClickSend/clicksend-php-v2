@@ -57,16 +57,18 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $openAPITypes = [
-        'date' => 'float',
+        'date' => 'string',
+        'date_added' => 'int',
+        'list_id' => 'string',
         'to' => 'string',
         'to_type' => 'string',
         'body' => 'string',
         'from' => 'string',
         'lang' => 'string',
         'voice' => 'string',
-        'schedule' => 'int',
+        'schedule' => 'string',
         'message_id' => 'string',
-        'message_parts' => 'int',
+        'message_parts' => 'string',
         'message_price' => 'string',
         'custom_string' => 'string',
         'user_id' => 'float',
@@ -74,7 +76,13 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
         'country' => 'string',
         'require_input' => 'float',
         'machine_detection' => 'float',
-        'status' => 'string'
+        'machine_detected' => 'float',
+        'digits' => 'string',
+        'carrier' => 'string',
+        'status_code' => 'string',
+        'status_text' => 'string',
+        'status' => 'string',
+        '_api_username' => 'string'
     ];
 
     /**
@@ -86,6 +94,8 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $openAPIFormats = [
         'date' => null,
+        'date_added' => null,
+        'list_id' => null,
         'to' => null,
         'to_type' => null,
         'body' => null,
@@ -102,7 +112,13 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
         'country' => null,
         'require_input' => null,
         'machine_detection' => null,
-        'status' => null
+        'machine_detected' => null,
+        'digits' => null,
+        'carrier' => null,
+        'status_code' => null,
+        'status_text' => null,
+        'status' => null,
+        '_api_username' => null
     ];
 
     /**
@@ -111,7 +127,9 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'date' => false,
+        'date' => true,
+        'date_added' => false,
+        'list_id' => true,
         'to' => false,
         'to_type' => false,
         'body' => false,
@@ -128,7 +146,13 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
         'country' => false,
         'require_input' => false,
         'machine_detection' => false,
-        'status' => false
+        'machine_detected' => true,
+        'digits' => true,
+        'carrier' => true,
+        'status_code' => true,
+        'status_text' => true,
+        'status' => false,
+        '_api_username' => false
     ];
 
     /**
@@ -218,6 +242,8 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'date' => 'date',
+        'date_added' => 'date_added',
+        'list_id' => 'list_id',
         'to' => 'to',
         'to_type' => 'to_type',
         'body' => 'body',
@@ -234,7 +260,13 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
         'country' => 'country',
         'require_input' => 'require_input',
         'machine_detection' => 'machine_detection',
-        'status' => 'status'
+        'machine_detected' => 'machine_detected',
+        'digits' => 'digits',
+        'carrier' => 'carrier',
+        'status_code' => 'status_code',
+        'status_text' => 'status_text',
+        'status' => 'status',
+        '_api_username' => '_api_username'
     ];
 
     /**
@@ -244,6 +276,8 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'date' => 'setDate',
+        'date_added' => 'setDateAdded',
+        'list_id' => 'setListId',
         'to' => 'setTo',
         'to_type' => 'setToType',
         'body' => 'setBody',
@@ -260,7 +294,13 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
         'country' => 'setCountry',
         'require_input' => 'setRequireInput',
         'machine_detection' => 'setMachineDetection',
-        'status' => 'setStatus'
+        'machine_detected' => 'setMachineDetected',
+        'digits' => 'setDigits',
+        'carrier' => 'setCarrier',
+        'status_code' => 'setStatusCode',
+        'status_text' => 'setStatusText',
+        'status' => 'setStatus',
+        '_api_username' => 'setApiUsername'
     ];
 
     /**
@@ -270,6 +310,8 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'date' => 'getDate',
+        'date_added' => 'getDateAdded',
+        'list_id' => 'getListId',
         'to' => 'getTo',
         'to_type' => 'getToType',
         'body' => 'getBody',
@@ -286,7 +328,13 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
         'country' => 'getCountry',
         'require_input' => 'getRequireInput',
         'machine_detection' => 'getMachineDetection',
-        'status' => 'getStatus'
+        'machine_detected' => 'getMachineDetected',
+        'digits' => 'getDigits',
+        'carrier' => 'getCarrier',
+        'status_code' => 'getStatusCode',
+        'status_text' => 'getStatusText',
+        'status' => 'getStatus',
+        '_api_username' => 'getApiUsername'
     ];
 
     /**
@@ -347,6 +395,8 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('date', $data ?? [], null);
+        $this->setIfExists('date_added', $data ?? [], null);
+        $this->setIfExists('list_id', $data ?? [], null);
         $this->setIfExists('to', $data ?? [], null);
         $this->setIfExists('to_type', $data ?? [], null);
         $this->setIfExists('body', $data ?? [], null);
@@ -363,7 +413,13 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('country', $data ?? [], null);
         $this->setIfExists('require_input', $data ?? [], null);
         $this->setIfExists('machine_detection', $data ?? [], null);
+        $this->setIfExists('machine_detected', $data ?? [], null);
+        $this->setIfExists('digits', $data ?? [], null);
+        $this->setIfExists('carrier', $data ?? [], null);
+        $this->setIfExists('status_code', $data ?? [], null);
+        $this->setIfExists('status_text', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
+        $this->setIfExists('_api_username', $data ?? [], null);
     }
 
     /**
@@ -411,7 +467,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets date
      *
-     * @return float|null
+     * @return string|null
      */
     public function getDate()
     {
@@ -421,16 +477,84 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets date
      *
-     * @param float|null $date The date.
+     * @param string|null $date The date, if applicable. May be null; see also `date_added`.
      *
      * @return self
      */
     public function setDate($date)
     {
         if (is_null($date)) {
-            throw new \InvalidArgumentException('non-nullable date cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'date');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('date', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['date'] = $date;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_added
+     *
+     * @return int|null
+     */
+    public function getDateAdded()
+    {
+        return $this->container['date_added'];
+    }
+
+    /**
+     * Sets date_added
+     *
+     * @param int|null $date_added The Unix timestamp when the message was added.
+     *
+     * @return self
+     */
+    public function setDateAdded($date_added)
+    {
+        if (is_null($date_added)) {
+            throw new \InvalidArgumentException('non-nullable date_added cannot be null');
+        }
+        $this->container['date_added'] = $date_added;
+
+        return $this;
+    }
+
+    /**
+     * Gets list_id
+     *
+     * @return string|null
+     */
+    public function getListId()
+    {
+        return $this->container['list_id'];
+    }
+
+    /**
+     * Sets list_id
+     *
+     * @param string|null $list_id The ID of the list associated with the message, if applicable.
+     *
+     * @return self
+     */
+    public function setListId($list_id)
+    {
+        if (is_null($list_id)) {
+            array_push($this->openAPINullablesSetToNull, 'list_id');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('list_id', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['list_id'] = $list_id;
 
         return $this;
     }
@@ -607,7 +731,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets schedule
      *
-     * @return int|null
+     * @return string|null
      */
     public function getSchedule()
     {
@@ -617,7 +741,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets schedule
      *
-     * @param int|null $schedule The timestamp when the message should be sent.
+     * @param string|null $schedule The timestamp when the message should be sent. Returned as a string since it may be an empty string when no schedule was set.
      *
      * @return self
      */
@@ -661,7 +785,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets message_parts
      *
-     * @return int|null
+     * @return string|null
      */
     public function getMessageParts()
     {
@@ -671,7 +795,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets message_parts
      *
-     * @param int|null $message_parts The number of parts in the message.
+     * @param string|null $message_parts The number of parts in the message.
      *
      * @return self
      */
@@ -875,6 +999,176 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets machine_detected
+     *
+     * @return float|null
+     */
+    public function getMachineDetected()
+    {
+        return $this->container['machine_detected'];
+    }
+
+    /**
+     * Sets machine_detected
+     *
+     * @param float|null $machine_detected Flag indicating if an answering machine was detected.
+     *
+     * @return self
+     */
+    public function setMachineDetected($machine_detected)
+    {
+        if (is_null($machine_detected)) {
+            array_push($this->openAPINullablesSetToNull, 'machine_detected');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('machine_detected', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['machine_detected'] = $machine_detected;
+
+        return $this;
+    }
+
+    /**
+     * Gets digits
+     *
+     * @return string|null
+     */
+    public function getDigits()
+    {
+        return $this->container['digits'];
+    }
+
+    /**
+     * Sets digits
+     *
+     * @param string|null $digits The digits entered by the recipient, if any input was collected.
+     *
+     * @return self
+     */
+    public function setDigits($digits)
+    {
+        if (is_null($digits)) {
+            array_push($this->openAPINullablesSetToNull, 'digits');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('digits', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['digits'] = $digits;
+
+        return $this;
+    }
+
+    /**
+     * Gets carrier
+     *
+     * @return string|null
+     */
+    public function getCarrier()
+    {
+        return $this->container['carrier'];
+    }
+
+    /**
+     * Sets carrier
+     *
+     * @param string|null $carrier The carrier of the recipient's phone number.
+     *
+     * @return self
+     */
+    public function setCarrier($carrier)
+    {
+        if (is_null($carrier)) {
+            array_push($this->openAPINullablesSetToNull, 'carrier');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('carrier', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['carrier'] = $carrier;
+
+        return $this;
+    }
+
+    /**
+     * Gets status_code
+     *
+     * @return string|null
+     */
+    public function getStatusCode()
+    {
+        return $this->container['status_code'];
+    }
+
+    /**
+     * Sets status_code
+     *
+     * @param string|null $status_code The status code of the message.
+     *
+     * @return self
+     */
+    public function setStatusCode($status_code)
+    {
+        if (is_null($status_code)) {
+            array_push($this->openAPINullablesSetToNull, 'status_code');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('status_code', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['status_code'] = $status_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets status_text
+     *
+     * @return string|null
+     */
+    public function getStatusText()
+    {
+        return $this->container['status_text'];
+    }
+
+    /**
+     * Sets status_text
+     *
+     * @param string|null $status_text A human-readable description of the status.
+     *
+     * @return self
+     */
+    public function setStatusText($status_text)
+    {
+        if (is_null($status_text)) {
+            array_push($this->openAPINullablesSetToNull, 'status_text');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('status_text', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['status_text'] = $status_text;
+
+        return $this;
+    }
+
+    /**
      * Gets status
      *
      * @return string|null
@@ -897,6 +1191,33 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable status cannot be null');
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets _api_username
+     *
+     * @return string|null
+     */
+    public function getApiUsername()
+    {
+        return $this->container['_api_username'];
+    }
+
+    /**
+     * Sets _api_username
+     *
+     * @param string|null $_api_username The API username associated with the message.
+     *
+     * @return self
+     */
+    public function setApiUsername($_api_username)
+    {
+        if (is_null($_api_username)) {
+            throw new \InvalidArgumentException('non-nullable _api_username cannot be null');
+        }
+        $this->container['_api_username'] = $_api_username;
 
         return $this;
     }

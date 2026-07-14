@@ -89,6 +89,15 @@ class ViewAccountUsageDataTest extends TestCase
     }
 
     /**
+     * Test attribute "mms"
+     */
+    public function testPropertyMms()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "voice"
      */
     public function testPropertyVoice()
@@ -119,6 +128,24 @@ class ViewAccountUsageDataTest extends TestCase
      * Test attribute "email"
      */
     public function testPropertyEmail()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "email_transactional"
+     */
+    public function testPropertyEmailTransactional()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "postcards"
+     */
+    public function testPropertyPostcards()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -164,6 +191,42 @@ class ViewAccountUsageDataTest extends TestCase
      * Test attribute "email_total"
      */
     public function testPropertyEmailTotal()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "mms_total"
+     */
+    public function testPropertyMmsTotal()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "email_transactional_total"
+     */
+    public function testPropertyEmailTransactionalTotal()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "postcards_total"
+     */
+    public function testPropertyPostcardsTotal()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "_currency"
+     */
+    public function testPropertyCurrency()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

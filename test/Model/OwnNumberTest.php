@@ -161,6 +161,15 @@ class OwnNumberTest extends TestCase
     }
 
     /**
+     * Test attribute "notified_timestamp"
+     */
+    public function testPropertyNotifiedTimestamp()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "is_nearing_expiration"
      */
     public function testPropertyIsNearingExpiration()

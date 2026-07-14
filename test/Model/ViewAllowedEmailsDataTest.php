@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewStrippedStringRulesDataDataInnerTest
+ * ViewAllowedEmailsDataTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace ClickSend\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ViewStrippedStringRulesDataDataInnerTest Class Doc Comment
+ * ViewAllowedEmailsDataTest Class Doc Comment
  *
  * @category    Class
- * @description ViewStrippedStringRulesDataDataInner
+ * @description ViewAllowedEmailsData
  * @package     ClickSend
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ViewStrippedStringRulesDataDataInnerTest extends TestCase
+class ViewAllowedEmailsDataTest extends TestCase
 {
 
     /**
@@ -71,27 +71,90 @@ class ViewStrippedStringRulesDataDataInnerTest extends TestCase
     }
 
     /**
-     * Test "ViewStrippedStringRulesDataDataInner"
+     * Test "ViewAllowedEmailsData"
      */
-    public function testViewStrippedStringRulesDataDataInner()
+    public function testViewAllowedEmailsData()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "rule_id"
+     * Test attribute "total"
      */
-    public function testPropertyRuleId()
+    public function testPropertyTotal()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "strip_string"
+     * Test attribute "per_page"
      */
-    public function testPropertyStripString()
+    public function testPropertyPerPage()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "current_page"
+     */
+    public function testPropertyCurrentPage()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "last_page"
+     */
+    public function testPropertyLastPage()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "next_page_url"
+     */
+    public function testPropertyNextPageUrl()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "prev_page_url"
+     */
+    public function testPropertyPrevPageUrl()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "from"
+     */
+    public function testPropertyFrom()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "to"
+     */
+    public function testPropertyTo()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

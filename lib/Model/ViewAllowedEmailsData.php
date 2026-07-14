@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewAccountUsageDataVoiceInner
+ * ViewAllowedEmailsData
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \ClickSend\ObjectSerializer;
 
 /**
- * ViewAccountUsageDataVoiceInner Class Doc Comment
+ * ViewAllowedEmailsData Class Doc Comment
  *
  * @category Class
  * @package  ClickSend
@@ -40,7 +40,7 @@ use \ClickSend\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ViewAccountUsageDataVoiceInner implements ModelInterface, ArrayAccess, \JsonSerializable
+class ViewAllowedEmailsData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ViewAccountUsageDataVoiceInner implements ModelInterface, ArrayAccess, \Js
      *
      * @var string
      */
-    protected static $openAPIModelName = 'view_account_usage_data_voice_inner';
+    protected static $openAPIModelName = 'view_allowed_emails_data';
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -57,10 +57,15 @@ class ViewAccountUsageDataVoiceInner implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $openAPITypes = [
-        'subaccount_id' => 'int',
-        'username' => 'string',
-        'total_count' => 'string',
-        'total_price' => 'string'
+        'total' => 'int',
+        'per_page' => 'int',
+        'current_page' => 'int',
+        'last_page' => 'int',
+        'next_page_url' => 'string',
+        'prev_page_url' => 'string',
+        'from' => 'int',
+        'to' => 'int',
+        'data' => '\ClickSend\Model\ViewAllowedEmailsDataAllOfDataInner[]'
     ];
 
     /**
@@ -71,10 +76,15 @@ class ViewAccountUsageDataVoiceInner implements ModelInterface, ArrayAccess, \Js
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'subaccount_id' => null,
-        'username' => null,
-        'total_count' => null,
-        'total_price' => null
+        'total' => null,
+        'per_page' => null,
+        'current_page' => null,
+        'last_page' => null,
+        'next_page_url' => null,
+        'prev_page_url' => null,
+        'from' => null,
+        'to' => null,
+        'data' => null
     ];
 
     /**
@@ -83,10 +93,15 @@ class ViewAccountUsageDataVoiceInner implements ModelInterface, ArrayAccess, \Js
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'subaccount_id' => false,
-        'username' => false,
-        'total_count' => false,
-        'total_price' => false
+        'total' => false,
+        'per_page' => false,
+        'current_page' => false,
+        'last_page' => false,
+        'next_page_url' => true,
+        'prev_page_url' => true,
+        'from' => false,
+        'to' => false,
+        'data' => false
     ];
 
     /**
@@ -175,10 +190,15 @@ class ViewAccountUsageDataVoiceInner implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'subaccount_id' => 'subaccount_id',
-        'username' => 'username',
-        'total_count' => 'total_count',
-        'total_price' => 'total_price'
+        'total' => 'total',
+        'per_page' => 'per_page',
+        'current_page' => 'current_page',
+        'last_page' => 'last_page',
+        'next_page_url' => 'next_page_url',
+        'prev_page_url' => 'prev_page_url',
+        'from' => 'from',
+        'to' => 'to',
+        'data' => 'data'
     ];
 
     /**
@@ -187,10 +207,15 @@ class ViewAccountUsageDataVoiceInner implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'subaccount_id' => 'setSubaccountId',
-        'username' => 'setUsername',
-        'total_count' => 'setTotalCount',
-        'total_price' => 'setTotalPrice'
+        'total' => 'setTotal',
+        'per_page' => 'setPerPage',
+        'current_page' => 'setCurrentPage',
+        'last_page' => 'setLastPage',
+        'next_page_url' => 'setNextPageUrl',
+        'prev_page_url' => 'setPrevPageUrl',
+        'from' => 'setFrom',
+        'to' => 'setTo',
+        'data' => 'setData'
     ];
 
     /**
@@ -199,10 +224,15 @@ class ViewAccountUsageDataVoiceInner implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'subaccount_id' => 'getSubaccountId',
-        'username' => 'getUsername',
-        'total_count' => 'getTotalCount',
-        'total_price' => 'getTotalPrice'
+        'total' => 'getTotal',
+        'per_page' => 'getPerPage',
+        'current_page' => 'getCurrentPage',
+        'last_page' => 'getLastPage',
+        'next_page_url' => 'getNextPageUrl',
+        'prev_page_url' => 'getPrevPageUrl',
+        'from' => 'getFrom',
+        'to' => 'getTo',
+        'data' => 'getData'
     ];
 
     /**
@@ -262,10 +292,15 @@ class ViewAccountUsageDataVoiceInner implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('subaccount_id', $data ?? [], null);
-        $this->setIfExists('username', $data ?? [], null);
-        $this->setIfExists('total_count', $data ?? [], null);
-        $this->setIfExists('total_price', $data ?? [], null);
+        $this->setIfExists('total', $data ?? [], null);
+        $this->setIfExists('per_page', $data ?? [], null);
+        $this->setIfExists('current_page', $data ?? [], null);
+        $this->setIfExists('last_page', $data ?? [], null);
+        $this->setIfExists('next_page_url', $data ?? [], null);
+        $this->setIfExists('prev_page_url', $data ?? [], null);
+        $this->setIfExists('from', $data ?? [], null);
+        $this->setIfExists('to', $data ?? [], null);
+        $this->setIfExists('data', $data ?? [], null);
     }
 
     /**
@@ -311,109 +346,258 @@ class ViewAccountUsageDataVoiceInner implements ModelInterface, ArrayAccess, \Js
 
 
     /**
-     * Gets subaccount_id
+     * Gets total
      *
      * @return int|null
      */
-    public function getSubaccountId()
+    public function getTotal()
     {
-        return $this->container['subaccount_id'];
+        return $this->container['total'];
     }
 
     /**
-     * Sets subaccount_id
+     * Sets total
      *
-     * @param int|null $subaccount_id The subaccount identifier.
+     * @param int|null $total The total number of items available for viewing.
      *
      * @return self
      */
-    public function setSubaccountId($subaccount_id)
+    public function setTotal($total)
     {
-        if (is_null($subaccount_id)) {
-            throw new \InvalidArgumentException('non-nullable subaccount_id cannot be null');
+        if (is_null($total)) {
+            throw new \InvalidArgumentException('non-nullable total cannot be null');
         }
-        $this->container['subaccount_id'] = $subaccount_id;
+        $this->container['total'] = $total;
 
         return $this;
     }
 
     /**
-     * Gets username
+     * Gets per_page
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getUsername()
+    public function getPerPage()
     {
-        return $this->container['username'];
+        return $this->container['per_page'];
     }
 
     /**
-     * Sets username
+     * Sets per_page
      *
-     * @param string|null $username The username associated with the subaccount.
+     * @param int|null $per_page The number of items returned per page. This is specified in the limit parameter. You can have 100 items at maximum, and 15 at minimum.
      *
      * @return self
      */
-    public function setUsername($username)
+    public function setPerPage($per_page)
     {
-        if (is_null($username)) {
-            throw new \InvalidArgumentException('non-nullable username cannot be null');
+        if (is_null($per_page)) {
+            throw new \InvalidArgumentException('non-nullable per_page cannot be null');
         }
-        $this->container['username'] = $username;
+        $this->container['per_page'] = $per_page;
 
         return $this;
     }
 
     /**
-     * Gets total_count
+     * Gets current_page
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getTotalCount()
+    public function getCurrentPage()
     {
-        return $this->container['total_count'];
+        return $this->container['current_page'];
     }
 
     /**
-     * Sets total_count
+     * Sets current_page
      *
-     * @param string|null $total_count The total count of voice calls.
+     * @param int|null $current_page The current page number.
      *
      * @return self
      */
-    public function setTotalCount($total_count)
+    public function setCurrentPage($current_page)
     {
-        if (is_null($total_count)) {
-            throw new \InvalidArgumentException('non-nullable total_count cannot be null');
+        if (is_null($current_page)) {
+            throw new \InvalidArgumentException('non-nullable current_page cannot be null');
         }
-        $this->container['total_count'] = $total_count;
+        $this->container['current_page'] = $current_page;
 
         return $this;
     }
 
     /**
-     * Gets total_price
+     * Gets last_page
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getTotalPrice()
+    public function getLastPage()
     {
-        return $this->container['total_price'];
+        return $this->container['last_page'];
     }
 
     /**
-     * Sets total_price
+     * Sets last_page
      *
-     * @param string|null $total_price The total price of voice calls.
+     * @param int|null $last_page The last page number.
      *
      * @return self
      */
-    public function setTotalPrice($total_price)
+    public function setLastPage($last_page)
     {
-        if (is_null($total_price)) {
-            throw new \InvalidArgumentException('non-nullable total_price cannot be null');
+        if (is_null($last_page)) {
+            throw new \InvalidArgumentException('non-nullable last_page cannot be null');
         }
-        $this->container['total_price'] = $total_price;
+        $this->container['last_page'] = $last_page;
+
+        return $this;
+    }
+
+    /**
+     * Gets next_page_url
+     *
+     * @return string|null
+     */
+    public function getNextPageUrl()
+    {
+        return $this->container['next_page_url'];
+    }
+
+    /**
+     * Sets next_page_url
+     *
+     * @param string|null $next_page_url A URL of the next page. It will return **null** if there’s no next page.
+     *
+     * @return self
+     */
+    public function setNextPageUrl($next_page_url)
+    {
+        if (is_null($next_page_url)) {
+            array_push($this->openAPINullablesSetToNull, 'next_page_url');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('next_page_url', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['next_page_url'] = $next_page_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets prev_page_url
+     *
+     * @return string|null
+     */
+    public function getPrevPageUrl()
+    {
+        return $this->container['prev_page_url'];
+    }
+
+    /**
+     * Sets prev_page_url
+     *
+     * @param string|null $prev_page_url A URL of the previous page. It will return **null** if there’s no previous page.
+     *
+     * @return self
+     */
+    public function setPrevPageUrl($prev_page_url)
+    {
+        if (is_null($prev_page_url)) {
+            array_push($this->openAPINullablesSetToNull, 'prev_page_url');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('prev_page_url', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['prev_page_url'] = $prev_page_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets from
+     *
+     * @return int|null
+     */
+    public function getFrom()
+    {
+        return $this->container['from'];
+    }
+
+    /**
+     * Sets from
+     *
+     * @param int|null $from The number of the first result in the current page.
+     *
+     * @return self
+     */
+    public function setFrom($from)
+    {
+        if (is_null($from)) {
+            throw new \InvalidArgumentException('non-nullable from cannot be null');
+        }
+        $this->container['from'] = $from;
+
+        return $this;
+    }
+
+    /**
+     * Gets to
+     *
+     * @return int|null
+     */
+    public function getTo()
+    {
+        return $this->container['to'];
+    }
+
+    /**
+     * Sets to
+     *
+     * @param int|null $to The number of the last result in the current page.
+     *
+     * @return self
+     */
+    public function setTo($to)
+    {
+        if (is_null($to)) {
+            throw new \InvalidArgumentException('non-nullable to cannot be null');
+        }
+        $this->container['to'] = $to;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     *
+     * @return \ClickSend\Model\ViewAllowedEmailsDataAllOfDataInner[]|null
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     *
+     * @param \ClickSend\Model\ViewAllowedEmailsDataAllOfDataInner[]|null $data data
+     *
+     * @return self
+     */
+    public function setData($data)
+    {
+        if (is_null($data)) {
+            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        }
+        $this->container['data'] = $data;
 
         return $this;
     }

@@ -57,10 +57,15 @@ class ViewAllMmsCampaigns implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $openAPITypes = [
-        'http_code' => 'int',
-        'response_code' => 'string',
-        'response_msg' => 'string',
-        'data' => '\ClickSend\Model\ViewAllMmsCampaignsData'
+        'total' => 'int',
+        'per_page' => 'int',
+        'current_page' => 'int',
+        'last_page' => 'int',
+        'next_page_url' => 'string',
+        'prev_page_url' => 'string',
+        'from' => 'int',
+        'to' => 'int',
+        'data' => '\ClickSend\Model\MmsCampaign[]'
     ];
 
     /**
@@ -71,9 +76,14 @@ class ViewAllMmsCampaigns implements ModelInterface, ArrayAccess, \JsonSerializa
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'http_code' => null,
-        'response_code' => null,
-        'response_msg' => null,
+        'total' => null,
+        'per_page' => null,
+        'current_page' => null,
+        'last_page' => null,
+        'next_page_url' => null,
+        'prev_page_url' => null,
+        'from' => null,
+        'to' => null,
         'data' => null
     ];
 
@@ -83,9 +93,14 @@ class ViewAllMmsCampaigns implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'http_code' => false,
-        'response_code' => false,
-        'response_msg' => false,
+        'total' => false,
+        'per_page' => false,
+        'current_page' => false,
+        'last_page' => false,
+        'next_page_url' => true,
+        'prev_page_url' => true,
+        'from' => false,
+        'to' => false,
         'data' => false
     ];
 
@@ -175,9 +190,14 @@ class ViewAllMmsCampaigns implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'http_code' => 'http_code',
-        'response_code' => 'response_code',
-        'response_msg' => 'response_msg',
+        'total' => 'total',
+        'per_page' => 'per_page',
+        'current_page' => 'current_page',
+        'last_page' => 'last_page',
+        'next_page_url' => 'next_page_url',
+        'prev_page_url' => 'prev_page_url',
+        'from' => 'from',
+        'to' => 'to',
         'data' => 'data'
     ];
 
@@ -187,9 +207,14 @@ class ViewAllMmsCampaigns implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'http_code' => 'setHttpCode',
-        'response_code' => 'setResponseCode',
-        'response_msg' => 'setResponseMsg',
+        'total' => 'setTotal',
+        'per_page' => 'setPerPage',
+        'current_page' => 'setCurrentPage',
+        'last_page' => 'setLastPage',
+        'next_page_url' => 'setNextPageUrl',
+        'prev_page_url' => 'setPrevPageUrl',
+        'from' => 'setFrom',
+        'to' => 'setTo',
         'data' => 'setData'
     ];
 
@@ -199,9 +224,14 @@ class ViewAllMmsCampaigns implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'http_code' => 'getHttpCode',
-        'response_code' => 'getResponseCode',
-        'response_msg' => 'getResponseMsg',
+        'total' => 'getTotal',
+        'per_page' => 'getPerPage',
+        'current_page' => 'getCurrentPage',
+        'last_page' => 'getLastPage',
+        'next_page_url' => 'getNextPageUrl',
+        'prev_page_url' => 'getPrevPageUrl',
+        'from' => 'getFrom',
+        'to' => 'getTo',
         'data' => 'getData'
     ];
 
@@ -262,9 +292,14 @@ class ViewAllMmsCampaigns implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('http_code', $data ?? [], null);
-        $this->setIfExists('response_code', $data ?? [], null);
-        $this->setIfExists('response_msg', $data ?? [], null);
+        $this->setIfExists('total', $data ?? [], null);
+        $this->setIfExists('per_page', $data ?? [], null);
+        $this->setIfExists('current_page', $data ?? [], null);
+        $this->setIfExists('last_page', $data ?? [], null);
+        $this->setIfExists('next_page_url', $data ?? [], null);
+        $this->setIfExists('prev_page_url', $data ?? [], null);
+        $this->setIfExists('from', $data ?? [], null);
+        $this->setIfExists('to', $data ?? [], null);
         $this->setIfExists('data', $data ?? [], null);
     }
 
@@ -311,82 +346,231 @@ class ViewAllMmsCampaigns implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets http_code
+     * Gets total
      *
      * @return int|null
      */
-    public function getHttpCode()
+    public function getTotal()
     {
-        return $this->container['http_code'];
+        return $this->container['total'];
     }
 
     /**
-     * Sets http_code
+     * Sets total
      *
-     * @param int|null $http_code The HTTP status code of the response.
+     * @param int|null $total The total number of items available for viewing.
      *
      * @return self
      */
-    public function setHttpCode($http_code)
+    public function setTotal($total)
     {
-        if (is_null($http_code)) {
-            throw new \InvalidArgumentException('non-nullable http_code cannot be null');
+        if (is_null($total)) {
+            throw new \InvalidArgumentException('non-nullable total cannot be null');
         }
-        $this->container['http_code'] = $http_code;
+        $this->container['total'] = $total;
 
         return $this;
     }
 
     /**
-     * Gets response_code
+     * Gets per_page
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getResponseCode()
+    public function getPerPage()
     {
-        return $this->container['response_code'];
+        return $this->container['per_page'];
     }
 
     /**
-     * Sets response_code
+     * Sets per_page
      *
-     * @param string|null $response_code The response code indicating the status of the operation.
+     * @param int|null $per_page The number of items returned per page. This is specified in the limit parameter. You can have 100 items at maximum, and 15 at minimum.
      *
      * @return self
      */
-    public function setResponseCode($response_code)
+    public function setPerPage($per_page)
     {
-        if (is_null($response_code)) {
-            throw new \InvalidArgumentException('non-nullable response_code cannot be null');
+        if (is_null($per_page)) {
+            throw new \InvalidArgumentException('non-nullable per_page cannot be null');
         }
-        $this->container['response_code'] = $response_code;
+        $this->container['per_page'] = $per_page;
 
         return $this;
     }
 
     /**
-     * Gets response_msg
+     * Gets current_page
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getResponseMsg()
+    public function getCurrentPage()
     {
-        return $this->container['response_msg'];
+        return $this->container['current_page'];
     }
 
     /**
-     * Sets response_msg
+     * Sets current_page
      *
-     * @param string|null $response_msg A message describing the outcome of the operation.
+     * @param int|null $current_page The current page number.
      *
      * @return self
      */
-    public function setResponseMsg($response_msg)
+    public function setCurrentPage($current_page)
     {
-        if (is_null($response_msg)) {
-            throw new \InvalidArgumentException('non-nullable response_msg cannot be null');
+        if (is_null($current_page)) {
+            throw new \InvalidArgumentException('non-nullable current_page cannot be null');
         }
-        $this->container['response_msg'] = $response_msg;
+        $this->container['current_page'] = $current_page;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_page
+     *
+     * @return int|null
+     */
+    public function getLastPage()
+    {
+        return $this->container['last_page'];
+    }
+
+    /**
+     * Sets last_page
+     *
+     * @param int|null $last_page The last page number.
+     *
+     * @return self
+     */
+    public function setLastPage($last_page)
+    {
+        if (is_null($last_page)) {
+            throw new \InvalidArgumentException('non-nullable last_page cannot be null');
+        }
+        $this->container['last_page'] = $last_page;
+
+        return $this;
+    }
+
+    /**
+     * Gets next_page_url
+     *
+     * @return string|null
+     */
+    public function getNextPageUrl()
+    {
+        return $this->container['next_page_url'];
+    }
+
+    /**
+     * Sets next_page_url
+     *
+     * @param string|null $next_page_url A URL of the next page. It will return **null** if there’s no next page.
+     *
+     * @return self
+     */
+    public function setNextPageUrl($next_page_url)
+    {
+        if (is_null($next_page_url)) {
+            array_push($this->openAPINullablesSetToNull, 'next_page_url');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('next_page_url', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['next_page_url'] = $next_page_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets prev_page_url
+     *
+     * @return string|null
+     */
+    public function getPrevPageUrl()
+    {
+        return $this->container['prev_page_url'];
+    }
+
+    /**
+     * Sets prev_page_url
+     *
+     * @param string|null $prev_page_url A URL of the previous page. It will return **null** if there’s no previous page.
+     *
+     * @return self
+     */
+    public function setPrevPageUrl($prev_page_url)
+    {
+        if (is_null($prev_page_url)) {
+            array_push($this->openAPINullablesSetToNull, 'prev_page_url');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('prev_page_url', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['prev_page_url'] = $prev_page_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets from
+     *
+     * @return int|null
+     */
+    public function getFrom()
+    {
+        return $this->container['from'];
+    }
+
+    /**
+     * Sets from
+     *
+     * @param int|null $from The number of the first result in the current page.
+     *
+     * @return self
+     */
+    public function setFrom($from)
+    {
+        if (is_null($from)) {
+            throw new \InvalidArgumentException('non-nullable from cannot be null');
+        }
+        $this->container['from'] = $from;
+
+        return $this;
+    }
+
+    /**
+     * Gets to
+     *
+     * @return int|null
+     */
+    public function getTo()
+    {
+        return $this->container['to'];
+    }
+
+    /**
+     * Sets to
+     *
+     * @param int|null $to The number of the last result in the current page.
+     *
+     * @return self
+     */
+    public function setTo($to)
+    {
+        if (is_null($to)) {
+            throw new \InvalidArgumentException('non-nullable to cannot be null');
+        }
+        $this->container['to'] = $to;
 
         return $this;
     }
@@ -394,7 +578,7 @@ class ViewAllMmsCampaigns implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets data
      *
-     * @return \ClickSend\Model\ViewAllMmsCampaignsData|null
+     * @return \ClickSend\Model\MmsCampaign[]|null
      */
     public function getData()
     {
@@ -404,7 +588,7 @@ class ViewAllMmsCampaigns implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets data
      *
-     * @param \ClickSend\Model\ViewAllMmsCampaignsData|null $data data
+     * @param \ClickSend\Model\MmsCampaign[]|null $data data
      *
      * @return self
      */

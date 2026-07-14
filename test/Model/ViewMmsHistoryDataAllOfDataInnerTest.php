@@ -116,6 +116,33 @@ class ViewMmsHistoryDataAllOfDataInnerTest extends TestCase
     }
 
     /**
+     * Test attribute "subject"
+     */
+    public function testPropertySubject()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "priority"
+     */
+    public function testPropertyPriority()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "_media_file_url"
+     */
+    public function testPropertyMediaFileUrl()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "status"
      */
     public function testPropertyStatus()
@@ -137,6 +164,15 @@ class ViewMmsHistoryDataAllOfDataInnerTest extends TestCase
      * Test attribute "schedule"
      */
     public function testPropertySchedule()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "date_added"
+     */
+    public function testPropertyDateAdded()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

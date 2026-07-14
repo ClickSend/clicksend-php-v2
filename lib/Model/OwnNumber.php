@@ -66,6 +66,7 @@ class OwnNumber implements ModelInterface, ArrayAccess, \JsonSerializable
         'label' => 'string',
         'status' => 'string',
         'verified_timestamp' => '\DateTime',
+        'notified_timestamp' => 'string',
         'is_nearing_expiration' => 'bool',
         'created_timestamp' => '\DateTime',
         'updated_timestamp' => '\DateTime'
@@ -88,6 +89,7 @@ class OwnNumber implements ModelInterface, ArrayAccess, \JsonSerializable
         'label' => null,
         'status' => null,
         'verified_timestamp' => 'date-time',
+        'notified_timestamp' => null,
         'is_nearing_expiration' => null,
         'created_timestamp' => 'date-time',
         'updated_timestamp' => 'date-time'
@@ -108,6 +110,7 @@ class OwnNumber implements ModelInterface, ArrayAccess, \JsonSerializable
         'label' => false,
         'status' => false,
         'verified_timestamp' => false,
+        'notified_timestamp' => true,
         'is_nearing_expiration' => false,
         'created_timestamp' => false,
         'updated_timestamp' => false
@@ -208,6 +211,7 @@ class OwnNumber implements ModelInterface, ArrayAccess, \JsonSerializable
         'label' => 'label',
         'status' => 'status',
         'verified_timestamp' => 'verified_timestamp',
+        'notified_timestamp' => 'notified_timestamp',
         'is_nearing_expiration' => 'is_nearing_expiration',
         'created_timestamp' => 'created_timestamp',
         'updated_timestamp' => 'updated_timestamp'
@@ -228,6 +232,7 @@ class OwnNumber implements ModelInterface, ArrayAccess, \JsonSerializable
         'label' => 'setLabel',
         'status' => 'setStatus',
         'verified_timestamp' => 'setVerifiedTimestamp',
+        'notified_timestamp' => 'setNotifiedTimestamp',
         'is_nearing_expiration' => 'setIsNearingExpiration',
         'created_timestamp' => 'setCreatedTimestamp',
         'updated_timestamp' => 'setUpdatedTimestamp'
@@ -248,6 +253,7 @@ class OwnNumber implements ModelInterface, ArrayAccess, \JsonSerializable
         'label' => 'getLabel',
         'status' => 'getStatus',
         'verified_timestamp' => 'getVerifiedTimestamp',
+        'notified_timestamp' => 'getNotifiedTimestamp',
         'is_nearing_expiration' => 'getIsNearingExpiration',
         'created_timestamp' => 'getCreatedTimestamp',
         'updated_timestamp' => 'getUpdatedTimestamp'
@@ -319,6 +325,7 @@ class OwnNumber implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('label', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('verified_timestamp', $data ?? [], null);
+        $this->setIfExists('notified_timestamp', $data ?? [], null);
         $this->setIfExists('is_nearing_expiration', $data ?? [], null);
         $this->setIfExists('created_timestamp', $data ?? [], null);
         $this->setIfExists('updated_timestamp', $data ?? [], null);
@@ -605,6 +612,40 @@ class OwnNumber implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable verified_timestamp cannot be null');
         }
         $this->container['verified_timestamp'] = $verified_timestamp;
+
+        return $this;
+    }
+
+    /**
+     * Gets notified_timestamp
+     *
+     * @return string|null
+     */
+    public function getNotifiedTimestamp()
+    {
+        return $this->container['notified_timestamp'];
+    }
+
+    /**
+     * Sets notified_timestamp
+     *
+     * @param string|null $notified_timestamp The timestamp when the user was last notified about this number, if applicable.
+     *
+     * @return self
+     */
+    public function setNotifiedTimestamp($notified_timestamp)
+    {
+        if (is_null($notified_timestamp)) {
+            array_push($this->openAPINullablesSetToNull, 'notified_timestamp');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('notified_timestamp', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['notified_timestamp'] = $notified_timestamp;
 
         return $this;
     }

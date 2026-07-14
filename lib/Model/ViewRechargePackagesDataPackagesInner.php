@@ -62,10 +62,14 @@ class ViewRechargePackagesDataPackagesInner implements ModelInterface, ArrayAcce
         'price_rate' => 'int',
         'sms_price' => 'float',
         'sms_quantity' => 'float',
+        'price_sms_carrier_fee' => 'string',
         'voice_mobile_price' => 'float',
         'voice_mobile_quantity' => 'float',
         'voice_landline_price' => 'float',
         'voice_landline_quantity' => 'float',
+        'mms_price' => 'float',
+        'mms_quantity' => 'float',
+        'price_mms_carrier_fee' => 'string',
         'fax_price' => 'float',
         'fax_quantity' => 'float',
         'email_price' => 'float',
@@ -97,10 +101,14 @@ class ViewRechargePackagesDataPackagesInner implements ModelInterface, ArrayAcce
         'price_rate' => null,
         'sms_price' => null,
         'sms_quantity' => null,
+        'price_sms_carrier_fee' => null,
         'voice_mobile_price' => null,
         'voice_mobile_quantity' => null,
         'voice_landline_price' => null,
         'voice_landline_quantity' => null,
+        'mms_price' => null,
+        'mms_quantity' => null,
+        'price_mms_carrier_fee' => null,
         'fax_price' => null,
         'fax_quantity' => null,
         'email_price' => null,
@@ -130,10 +138,14 @@ class ViewRechargePackagesDataPackagesInner implements ModelInterface, ArrayAcce
         'price_rate' => false,
         'sms_price' => false,
         'sms_quantity' => false,
+        'price_sms_carrier_fee' => true,
         'voice_mobile_price' => false,
         'voice_mobile_quantity' => false,
         'voice_landline_price' => false,
         'voice_landline_quantity' => false,
+        'mms_price' => false,
+        'mms_quantity' => false,
+        'price_mms_carrier_fee' => true,
         'fax_price' => false,
         'fax_quantity' => false,
         'email_price' => false,
@@ -243,10 +255,14 @@ class ViewRechargePackagesDataPackagesInner implements ModelInterface, ArrayAcce
         'price_rate' => 'price_rate',
         'sms_price' => 'sms_price',
         'sms_quantity' => 'sms_quantity',
+        'price_sms_carrier_fee' => 'price_sms_carrier_fee',
         'voice_mobile_price' => 'voice_mobile_price',
         'voice_mobile_quantity' => 'voice_mobile_quantity',
         'voice_landline_price' => 'voice_landline_price',
         'voice_landline_quantity' => 'voice_landline_quantity',
+        'mms_price' => 'mms_price',
+        'mms_quantity' => 'mms_quantity',
+        'price_mms_carrier_fee' => 'price_mms_carrier_fee',
         'fax_price' => 'fax_price',
         'fax_quantity' => 'fax_quantity',
         'email_price' => 'email_price',
@@ -276,10 +292,14 @@ class ViewRechargePackagesDataPackagesInner implements ModelInterface, ArrayAcce
         'price_rate' => 'setPriceRate',
         'sms_price' => 'setSmsPrice',
         'sms_quantity' => 'setSmsQuantity',
+        'price_sms_carrier_fee' => 'setPriceSmsCarrierFee',
         'voice_mobile_price' => 'setVoiceMobilePrice',
         'voice_mobile_quantity' => 'setVoiceMobileQuantity',
         'voice_landline_price' => 'setVoiceLandlinePrice',
         'voice_landline_quantity' => 'setVoiceLandlineQuantity',
+        'mms_price' => 'setMmsPrice',
+        'mms_quantity' => 'setMmsQuantity',
+        'price_mms_carrier_fee' => 'setPriceMmsCarrierFee',
         'fax_price' => 'setFaxPrice',
         'fax_quantity' => 'setFaxQuantity',
         'email_price' => 'setEmailPrice',
@@ -309,10 +329,14 @@ class ViewRechargePackagesDataPackagesInner implements ModelInterface, ArrayAcce
         'price_rate' => 'getPriceRate',
         'sms_price' => 'getSmsPrice',
         'sms_quantity' => 'getSmsQuantity',
+        'price_sms_carrier_fee' => 'getPriceSmsCarrierFee',
         'voice_mobile_price' => 'getVoiceMobilePrice',
         'voice_mobile_quantity' => 'getVoiceMobileQuantity',
         'voice_landline_price' => 'getVoiceLandlinePrice',
         'voice_landline_quantity' => 'getVoiceLandlineQuantity',
+        'mms_price' => 'getMmsPrice',
+        'mms_quantity' => 'getMmsQuantity',
+        'price_mms_carrier_fee' => 'getPriceMmsCarrierFee',
         'fax_price' => 'getFaxPrice',
         'fax_quantity' => 'getFaxQuantity',
         'email_price' => 'getEmailPrice',
@@ -393,10 +417,14 @@ class ViewRechargePackagesDataPackagesInner implements ModelInterface, ArrayAcce
         $this->setIfExists('price_rate', $data ?? [], null);
         $this->setIfExists('sms_price', $data ?? [], null);
         $this->setIfExists('sms_quantity', $data ?? [], null);
+        $this->setIfExists('price_sms_carrier_fee', $data ?? [], null);
         $this->setIfExists('voice_mobile_price', $data ?? [], null);
         $this->setIfExists('voice_mobile_quantity', $data ?? [], null);
         $this->setIfExists('voice_landline_price', $data ?? [], null);
         $this->setIfExists('voice_landline_quantity', $data ?? [], null);
+        $this->setIfExists('mms_price', $data ?? [], null);
+        $this->setIfExists('mms_quantity', $data ?? [], null);
+        $this->setIfExists('price_mms_carrier_fee', $data ?? [], null);
         $this->setIfExists('fax_price', $data ?? [], null);
         $this->setIfExists('fax_quantity', $data ?? [], null);
         $this->setIfExists('email_price', $data ?? [], null);
@@ -593,6 +621,40 @@ class ViewRechargePackagesDataPackagesInner implements ModelInterface, ArrayAcce
     }
 
     /**
+     * Gets price_sms_carrier_fee
+     *
+     * @return string|null
+     */
+    public function getPriceSmsCarrierFee()
+    {
+        return $this->container['price_sms_carrier_fee'];
+    }
+
+    /**
+     * Sets price_sms_carrier_fee
+     *
+     * @param string|null $price_sms_carrier_fee The carrier fee applied to SMS in this package.
+     *
+     * @return self
+     */
+    public function setPriceSmsCarrierFee($price_sms_carrier_fee)
+    {
+        if (is_null($price_sms_carrier_fee)) {
+            array_push($this->openAPINullablesSetToNull, 'price_sms_carrier_fee');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('price_sms_carrier_fee', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['price_sms_carrier_fee'] = $price_sms_carrier_fee;
+
+        return $this;
+    }
+
+    /**
      * Gets voice_mobile_price
      *
      * @return float|null
@@ -696,6 +758,94 @@ class ViewRechargePackagesDataPackagesInner implements ModelInterface, ArrayAcce
             throw new \InvalidArgumentException('non-nullable voice_landline_quantity cannot be null');
         }
         $this->container['voice_landline_quantity'] = $voice_landline_quantity;
+
+        return $this;
+    }
+
+    /**
+     * Gets mms_price
+     *
+     * @return float|null
+     */
+    public function getMmsPrice()
+    {
+        return $this->container['mms_price'];
+    }
+
+    /**
+     * Sets mms_price
+     *
+     * @param float|null $mms_price The price of the MMS.
+     *
+     * @return self
+     */
+    public function setMmsPrice($mms_price)
+    {
+        if (is_null($mms_price)) {
+            throw new \InvalidArgumentException('non-nullable mms_price cannot be null');
+        }
+        $this->container['mms_price'] = $mms_price;
+
+        return $this;
+    }
+
+    /**
+     * Gets mms_quantity
+     *
+     * @return float|null
+     */
+    public function getMmsQuantity()
+    {
+        return $this->container['mms_quantity'];
+    }
+
+    /**
+     * Sets mms_quantity
+     *
+     * @param float|null $mms_quantity The quantity of the MMS.
+     *
+     * @return self
+     */
+    public function setMmsQuantity($mms_quantity)
+    {
+        if (is_null($mms_quantity)) {
+            throw new \InvalidArgumentException('non-nullable mms_quantity cannot be null');
+        }
+        $this->container['mms_quantity'] = $mms_quantity;
+
+        return $this;
+    }
+
+    /**
+     * Gets price_mms_carrier_fee
+     *
+     * @return string|null
+     */
+    public function getPriceMmsCarrierFee()
+    {
+        return $this->container['price_mms_carrier_fee'];
+    }
+
+    /**
+     * Sets price_mms_carrier_fee
+     *
+     * @param string|null $price_mms_carrier_fee The carrier fee applied to MMS in this package.
+     *
+     * @return self
+     */
+    public function setPriceMmsCarrierFee($price_mms_carrier_fee)
+    {
+        if (is_null($price_mms_carrier_fee)) {
+            array_push($this->openAPINullablesSetToNull, 'price_mms_carrier_fee');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('price_mms_carrier_fee', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['price_mms_carrier_fee'] = $price_mms_carrier_fee;
 
         return $this;
     }

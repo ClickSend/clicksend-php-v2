@@ -116,7 +116,7 @@ class CalculateSmsPriceDataTest extends TestCase
     }
 
     /**
-     * Test attribute "currency"
+     * Test attribute "_currency"
      */
     public function testPropertyCurrency()
     {

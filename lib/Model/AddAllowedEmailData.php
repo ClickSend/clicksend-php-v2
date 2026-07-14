@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewAllowedEmailsDataInner
+ * AddAllowedEmailData
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \ClickSend\ObjectSerializer;
 
 /**
- * ViewAllowedEmailsDataInner Class Doc Comment
+ * AddAllowedEmailData Class Doc Comment
  *
  * @category Class
  * @package  ClickSend
@@ -40,7 +40,7 @@ use \ClickSend\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ViewAllowedEmailsDataInner implements ModelInterface, ArrayAccess, \JsonSerializable
+class AddAllowedEmailData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ViewAllowedEmailsDataInner implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @var string
      */
-    protected static $openAPIModelName = 'view_allowed_emails_data_inner';
+    protected static $openAPIModelName = 'add_allowed_email_data';
 
     /**
      * Array of property to type mappings. Used for (de)serialization

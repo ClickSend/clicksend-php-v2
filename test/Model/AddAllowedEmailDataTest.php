@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewAccountUsageDataVoiceInnerTest
+ * AddAllowedEmailDataTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace ClickSend\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ViewAccountUsageDataVoiceInnerTest Class Doc Comment
+ * AddAllowedEmailDataTest Class Doc Comment
  *
  * @category    Class
- * @description ViewAccountUsageDataVoiceInner
+ * @description AddAllowedEmailData
  * @package     ClickSend
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ViewAccountUsageDataVoiceInnerTest extends TestCase
+class AddAllowedEmailDataTest extends TestCase
 {
 
     /**
@@ -71,45 +71,36 @@ class ViewAccountUsageDataVoiceInnerTest extends TestCase
     }
 
     /**
-     * Test "ViewAccountUsageDataVoiceInner"
+     * Test "AddAllowedEmailData"
      */
-    public function testViewAccountUsageDataVoiceInner()
+    public function testAddAllowedEmailData()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "subaccount_id"
+     * Test attribute "email_address_id"
      */
-    public function testPropertySubaccountId()
+    public function testPropertyEmailAddressId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "username"
+     * Test attribute "email_address"
      */
-    public function testPropertyUsername()
+    public function testPropertyEmailAddress()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "total_count"
+     * Test attribute "from"
      */
-    public function testPropertyTotalCount()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "total_price"
-     */
-    public function testPropertyTotalPrice()
+    public function testPropertyFrom()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

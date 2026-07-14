@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **username** | **string** | The username associated with the subaccount. | [optional]
 **total_count** | **string** | The total count of SMS. | [optional]
 **total_price** | **float** | The total price of SMS. | [optional]
+**notes** | **string** | Optional notes. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

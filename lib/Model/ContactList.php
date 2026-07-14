@@ -60,7 +60,9 @@ class ContactList implements ModelInterface, ArrayAccess, \JsonSerializable
         'list_id' => 'int',
         'list_name' => 'string',
         'list_email_id' => 'string',
-        '_contacts_count' => 'int'
+        '_contacts_count' => 'int',
+        '_import_in_progress' => 'int',
+        '_optout_in_progress' => 'int'
     ];
 
     /**
@@ -74,7 +76,9 @@ class ContactList implements ModelInterface, ArrayAccess, \JsonSerializable
         'list_id' => null,
         'list_name' => null,
         'list_email_id' => null,
-        '_contacts_count' => null
+        '_contacts_count' => null,
+        '_import_in_progress' => null,
+        '_optout_in_progress' => null
     ];
 
     /**
@@ -86,7 +90,9 @@ class ContactList implements ModelInterface, ArrayAccess, \JsonSerializable
         'list_id' => false,
         'list_name' => false,
         'list_email_id' => false,
-        '_contacts_count' => false
+        '_contacts_count' => false,
+        '_import_in_progress' => false,
+        '_optout_in_progress' => false
     ];
 
     /**
@@ -178,7 +184,9 @@ class ContactList implements ModelInterface, ArrayAccess, \JsonSerializable
         'list_id' => 'list_id',
         'list_name' => 'list_name',
         'list_email_id' => 'list_email_id',
-        '_contacts_count' => '_contacts_count'
+        '_contacts_count' => '_contacts_count',
+        '_import_in_progress' => '_import_in_progress',
+        '_optout_in_progress' => '_optout_in_progress'
     ];
 
     /**
@@ -190,7 +198,9 @@ class ContactList implements ModelInterface, ArrayAccess, \JsonSerializable
         'list_id' => 'setListId',
         'list_name' => 'setListName',
         'list_email_id' => 'setListEmailId',
-        '_contacts_count' => 'setContactsCount'
+        '_contacts_count' => 'setContactsCount',
+        '_import_in_progress' => 'setImportInProgress',
+        '_optout_in_progress' => 'setOptoutInProgress'
     ];
 
     /**
@@ -202,7 +212,9 @@ class ContactList implements ModelInterface, ArrayAccess, \JsonSerializable
         'list_id' => 'getListId',
         'list_name' => 'getListName',
         'list_email_id' => 'getListEmailId',
-        '_contacts_count' => 'getContactsCount'
+        '_contacts_count' => 'getContactsCount',
+        '_import_in_progress' => 'getImportInProgress',
+        '_optout_in_progress' => 'getOptoutInProgress'
     ];
 
     /**
@@ -266,6 +278,8 @@ class ContactList implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('list_name', $data ?? [], null);
         $this->setIfExists('list_email_id', $data ?? [], null);
         $this->setIfExists('_contacts_count', $data ?? [], null);
+        $this->setIfExists('_import_in_progress', $data ?? [], null);
+        $this->setIfExists('_optout_in_progress', $data ?? [], null);
     }
 
     /**
@@ -414,6 +428,60 @@ class ContactList implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable _contacts_count cannot be null');
         }
         $this->container['_contacts_count'] = $_contacts_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets _import_in_progress
+     *
+     * @return int|null
+     */
+    public function getImportInProgress()
+    {
+        return $this->container['_import_in_progress'];
+    }
+
+    /**
+     * Sets _import_in_progress
+     *
+     * @param int|null $_import_in_progress Flag indicating if a contact import is currently in progress for this list.
+     *
+     * @return self
+     */
+    public function setImportInProgress($_import_in_progress)
+    {
+        if (is_null($_import_in_progress)) {
+            throw new \InvalidArgumentException('non-nullable _import_in_progress cannot be null');
+        }
+        $this->container['_import_in_progress'] = $_import_in_progress;
+
+        return $this;
+    }
+
+    /**
+     * Gets _optout_in_progress
+     *
+     * @return int|null
+     */
+    public function getOptoutInProgress()
+    {
+        return $this->container['_optout_in_progress'];
+    }
+
+    /**
+     * Sets _optout_in_progress
+     *
+     * @param int|null $_optout_in_progress Flag indicating if an opt-out removal is currently in progress for this list.
+     *
+     * @return self
+     */
+    public function setOptoutInProgress($_optout_in_progress)
+    {
+        if (is_null($_optout_in_progress)) {
+            throw new \InvalidArgumentException('non-nullable _optout_in_progress cannot be null');
+        }
+        $this->container['_optout_in_progress'] = $_optout_in_progress;
 
         return $this;
     }

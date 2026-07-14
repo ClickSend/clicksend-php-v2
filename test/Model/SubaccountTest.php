@@ -143,6 +143,15 @@ class SubaccountTest extends TestCase
     }
 
     /**
+     * Test attribute "access_smpp"
+     */
+    public function testPropertyAccessSmpp()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "access_users"
      */
     public function testPropertyAccessUsers()
@@ -242,9 +251,27 @@ class SubaccountTest extends TestCase
     }
 
     /**
+     * Test attribute "access_global_sending"
+     */
+    public function testPropertyAccessGlobalSending()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "access_mms"
      */
     public function testPropertyAccessMms()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "hide_pricing"
+     */
+    public function testPropertyHidePricing()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -263,6 +290,24 @@ class SubaccountTest extends TestCase
      * Test attribute "notes"
      */
     public function testPropertyNotes()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "is_main"
+     */
+    public function testPropertyIsMain()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "sign_up_type"
+     */
+    public function testPropertySignUpType()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

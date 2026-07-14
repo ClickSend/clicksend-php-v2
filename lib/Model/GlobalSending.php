@@ -62,14 +62,14 @@ class GlobalSending implements ModelInterface, ArrayAccess, \JsonSerializable
         'code' => 'string',
         'region' => 'string',
         'agreed_at' => 'string',
-        'registration_entity' => 'string',
+        'registration_entity' => '\ClickSend\Model\AccountReferrerChosen',
         'registration_status' => '\ClickSend\Model\GlobalSendingRegistrationStatus',
         'jotform_id' => 'string',
         'sms_registration_type' => 'int',
-        'block_registration' => 'int',
-        'block_leads' => 'int',
+        'block_registration' => 'bool',
+        'block_leads' => 'bool',
         'trial_from_address' => 'string',
-        'restricted_sending' => 'int',
+        'restricted_sending' => 'bool',
         'trial_sending' => 'int',
         'trial_sending_description' => 'string',
         'has_regulation_requirements' => 'int',
@@ -553,7 +553,7 @@ class GlobalSending implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets registration_entity
      *
-     * @return string|null
+     * @return \ClickSend\Model\AccountReferrerChosen|null
      */
     public function getRegistrationEntity()
     {
@@ -563,7 +563,7 @@ class GlobalSending implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets registration_entity
      *
-     * @param string|null $registration_entity The entity responsible for the registration.
+     * @param \ClickSend\Model\AccountReferrerChosen|null $registration_entity registration_entity
      *
      * @return self
      */
@@ -668,7 +668,7 @@ class GlobalSending implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets block_registration
      *
-     * @return int|null
+     * @return bool|null
      */
     public function getBlockRegistration()
     {
@@ -678,7 +678,7 @@ class GlobalSending implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_registration
      *
-     * @param int|null $block_registration Indicates if registration is blocked.
+     * @param bool|null $block_registration Indicates if registration is blocked.
      *
      * @return self
      */
@@ -695,7 +695,7 @@ class GlobalSending implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets block_leads
      *
-     * @return int|null
+     * @return bool|null
      */
     public function getBlockLeads()
     {
@@ -705,7 +705,7 @@ class GlobalSending implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets block_leads
      *
-     * @param int|null $block_leads Indicates if leads are blocked.
+     * @param bool|null $block_leads Indicates if leads are blocked.
      *
      * @return self
      */
@@ -749,7 +749,7 @@ class GlobalSending implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets restricted_sending
      *
-     * @return int|null
+     * @return bool|null
      */
     public function getRestrictedSending()
     {
@@ -759,7 +759,7 @@ class GlobalSending implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets restricted_sending
      *
-     * @param int|null $restricted_sending Indicates if sending is restricted.
+     * @param bool|null $restricted_sending Indicates if sending is restricted.
      *
      * @return self
      */

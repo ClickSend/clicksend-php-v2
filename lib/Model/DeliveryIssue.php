@@ -206,7 +206,7 @@ class DeliveryIssue implements ModelInterface, ArrayAccess, \JsonSerializable
         'status' => 'status',
         'date_added' => 'date_added',
         'resolved' => 'resolved',
-        'email_address' => 'email-address'
+        'email_address' => 'email_address'
     ];
 
     /**

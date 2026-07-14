@@ -57,7 +57,7 @@ class Sms implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $openAPITypes = [
-        'date' => 'int',
+        'date' => 'string',
         'to' => 'string',
         'body' => 'string',
         'from' => 'string',
@@ -376,7 +376,7 @@ class Sms implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets date
      *
-     * @return int|null
+     * @return string|null
      */
     public function getDate()
     {
@@ -386,7 +386,7 @@ class Sms implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets date
      *
-     * @param int|null $date The date you sent the message. It is in <a href=\"http://help.clicksend.com/what-is-a-unix-timestamp\" target=\"_blank\">Unix format</a>.
+     * @param string|null $date The date you sent the message. It is in <a href=\"http://help.clicksend.com/what-is-a-unix-timestamp\" target=\"_blank\">Unix format</a>. Returned as a string since it may be an empty string in price-calculation responses where no message has actually been sent yet.
      *
      * @return self
      */

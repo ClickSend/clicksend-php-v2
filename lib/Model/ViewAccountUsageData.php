@@ -58,15 +58,22 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $openAPITypes = [
         'sms' => '\ClickSend\Model\ViewAccountUsageDataSmsInner[]',
-        'voice' => '\ClickSend\Model\ViewAccountUsageDataVoiceInner[]',
-        'fax' => '\ClickSend\Model\ViewAccountUsageDataVoiceInner[]',
-        'post' => '\ClickSend\Model\ViewAccountUsageDataVoiceInner[]',
+        'mms' => '\ClickSend\Model\ViewAccountUsageDataMmsInner[]',
+        'voice' => '\ClickSend\Model\ViewAccountUsageDataMmsInner[]',
+        'fax' => '\ClickSend\Model\ViewAccountUsageDataMmsInner[]',
+        'post' => '\ClickSend\Model\ViewAccountUsageDataMmsInner[]',
         'email' => '\ClickSend\Model\ViewAccountUsageDataEmailInner[]',
+        'email_transactional' => '\ClickSend\Model\ViewAccountUsageDataEmailInner[]',
+        'postcards' => '\ClickSend\Model\ViewAccountUsageDataMmsInner[]',
         'sms_total' => '\ClickSend\Model\ViewAccountUsageDataSmsTotal',
         'voice_total' => '\ClickSend\Model\ViewAccountUsageDataSmsTotal',
         'fax_total' => '\ClickSend\Model\ViewAccountUsageDataSmsTotal',
         'post_total' => '\ClickSend\Model\ViewAccountUsageDataSmsTotal',
-        'email_total' => '\ClickSend\Model\ViewAccountUsageDataEmailTotal'
+        'email_total' => '\ClickSend\Model\ViewAccountUsageDataEmailTotal',
+        'mms_total' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
+        'email_transactional_total' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
+        'postcards_total' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
+        '_currency' => '\ClickSend\Model\Currency'
     ];
 
     /**
@@ -78,15 +85,22 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $openAPIFormats = [
         'sms' => null,
+        'mms' => null,
         'voice' => null,
         'fax' => null,
         'post' => null,
         'email' => null,
+        'email_transactional' => null,
+        'postcards' => null,
         'sms_total' => null,
         'voice_total' => null,
         'fax_total' => null,
         'post_total' => null,
-        'email_total' => null
+        'email_total' => null,
+        'mms_total' => null,
+        'email_transactional_total' => null,
+        'postcards_total' => null,
+        '_currency' => null
     ];
 
     /**
@@ -96,15 +110,22 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static array $openAPINullables = [
         'sms' => false,
+        'mms' => false,
         'voice' => false,
         'fax' => false,
         'post' => false,
         'email' => false,
+        'email_transactional' => false,
+        'postcards' => false,
         'sms_total' => false,
         'voice_total' => false,
         'fax_total' => false,
         'post_total' => false,
-        'email_total' => false
+        'email_total' => false,
+        'mms_total' => false,
+        'email_transactional_total' => false,
+        'postcards_total' => false,
+        '_currency' => false
     ];
 
     /**
@@ -194,15 +215,22 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $attributeMap = [
         'sms' => 'sms',
+        'mms' => 'mms',
         'voice' => 'voice',
         'fax' => 'fax',
         'post' => 'post',
         'email' => 'email',
+        'email_transactional' => 'email_transactional',
+        'postcards' => 'postcards',
         'sms_total' => 'sms_total',
         'voice_total' => 'voice_total',
         'fax_total' => 'fax_total',
         'post_total' => 'post_total',
-        'email_total' => 'email_total'
+        'email_total' => 'email_total',
+        'mms_total' => 'mms_total',
+        'email_transactional_total' => 'email_transactional_total',
+        'postcards_total' => 'postcards_total',
+        '_currency' => '_currency'
     ];
 
     /**
@@ -212,15 +240,22 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $setters = [
         'sms' => 'setSms',
+        'mms' => 'setMms',
         'voice' => 'setVoice',
         'fax' => 'setFax',
         'post' => 'setPost',
         'email' => 'setEmail',
+        'email_transactional' => 'setEmailTransactional',
+        'postcards' => 'setPostcards',
         'sms_total' => 'setSmsTotal',
         'voice_total' => 'setVoiceTotal',
         'fax_total' => 'setFaxTotal',
         'post_total' => 'setPostTotal',
-        'email_total' => 'setEmailTotal'
+        'email_total' => 'setEmailTotal',
+        'mms_total' => 'setMmsTotal',
+        'email_transactional_total' => 'setEmailTransactionalTotal',
+        'postcards_total' => 'setPostcardsTotal',
+        '_currency' => 'setCurrency'
     ];
 
     /**
@@ -230,15 +265,22 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $getters = [
         'sms' => 'getSms',
+        'mms' => 'getMms',
         'voice' => 'getVoice',
         'fax' => 'getFax',
         'post' => 'getPost',
         'email' => 'getEmail',
+        'email_transactional' => 'getEmailTransactional',
+        'postcards' => 'getPostcards',
         'sms_total' => 'getSmsTotal',
         'voice_total' => 'getVoiceTotal',
         'fax_total' => 'getFaxTotal',
         'post_total' => 'getPostTotal',
-        'email_total' => 'getEmailTotal'
+        'email_total' => 'getEmailTotal',
+        'mms_total' => 'getMmsTotal',
+        'email_transactional_total' => 'getEmailTransactionalTotal',
+        'postcards_total' => 'getPostcardsTotal',
+        '_currency' => 'getCurrency'
     ];
 
     /**
@@ -299,15 +341,22 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     public function __construct(?array $data = null)
     {
         $this->setIfExists('sms', $data ?? [], null);
+        $this->setIfExists('mms', $data ?? [], null);
         $this->setIfExists('voice', $data ?? [], null);
         $this->setIfExists('fax', $data ?? [], null);
         $this->setIfExists('post', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
+        $this->setIfExists('email_transactional', $data ?? [], null);
+        $this->setIfExists('postcards', $data ?? [], null);
         $this->setIfExists('sms_total', $data ?? [], null);
         $this->setIfExists('voice_total', $data ?? [], null);
         $this->setIfExists('fax_total', $data ?? [], null);
         $this->setIfExists('post_total', $data ?? [], null);
         $this->setIfExists('email_total', $data ?? [], null);
+        $this->setIfExists('mms_total', $data ?? [], null);
+        $this->setIfExists('email_transactional_total', $data ?? [], null);
+        $this->setIfExists('postcards_total', $data ?? [], null);
+        $this->setIfExists('_currency', $data ?? [], null);
     }
 
     /**
@@ -380,9 +429,36 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
+     * Gets mms
+     *
+     * @return \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null
+     */
+    public function getMms()
+    {
+        return $this->container['mms'];
+    }
+
+    /**
+     * Sets mms
+     *
+     * @param \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null $mms mms
+     *
+     * @return self
+     */
+    public function setMms($mms)
+    {
+        if (is_null($mms)) {
+            throw new \InvalidArgumentException('non-nullable mms cannot be null');
+        }
+        $this->container['mms'] = $mms;
+
+        return $this;
+    }
+
+    /**
      * Gets voice
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataVoiceInner[]|null
+     * @return \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null
      */
     public function getVoice()
     {
@@ -392,7 +468,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets voice
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataVoiceInner[]|null $voice voice
+     * @param \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null $voice voice
      *
      * @return self
      */
@@ -409,7 +485,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets fax
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataVoiceInner[]|null
+     * @return \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null
      */
     public function getFax()
     {
@@ -419,7 +495,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets fax
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataVoiceInner[]|null $fax fax
+     * @param \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null $fax fax
      *
      * @return self
      */
@@ -436,7 +512,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets post
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataVoiceInner[]|null
+     * @return \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null
      */
     public function getPost()
     {
@@ -446,7 +522,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets post
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataVoiceInner[]|null $post post
+     * @param \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null $post post
      *
      * @return self
      */
@@ -483,6 +559,60 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable email cannot be null');
         }
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets email_transactional
+     *
+     * @return \ClickSend\Model\ViewAccountUsageDataEmailInner[]|null
+     */
+    public function getEmailTransactional()
+    {
+        return $this->container['email_transactional'];
+    }
+
+    /**
+     * Sets email_transactional
+     *
+     * @param \ClickSend\Model\ViewAccountUsageDataEmailInner[]|null $email_transactional email_transactional
+     *
+     * @return self
+     */
+    public function setEmailTransactional($email_transactional)
+    {
+        if (is_null($email_transactional)) {
+            throw new \InvalidArgumentException('non-nullable email_transactional cannot be null');
+        }
+        $this->container['email_transactional'] = $email_transactional;
+
+        return $this;
+    }
+
+    /**
+     * Gets postcards
+     *
+     * @return \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null
+     */
+    public function getPostcards()
+    {
+        return $this->container['postcards'];
+    }
+
+    /**
+     * Sets postcards
+     *
+     * @param \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null $postcards postcards
+     *
+     * @return self
+     */
+    public function setPostcards($postcards)
+    {
+        if (is_null($postcards)) {
+            throw new \InvalidArgumentException('non-nullable postcards cannot be null');
+        }
+        $this->container['postcards'] = $postcards;
 
         return $this;
     }
@@ -618,6 +748,114 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable email_total cannot be null');
         }
         $this->container['email_total'] = $email_total;
+
+        return $this;
+    }
+
+    /**
+     * Gets mms_total
+     *
+     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
+     */
+    public function getMmsTotal()
+    {
+        return $this->container['mms_total'];
+    }
+
+    /**
+     * Sets mms_total
+     *
+     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $mms_total mms_total
+     *
+     * @return self
+     */
+    public function setMmsTotal($mms_total)
+    {
+        if (is_null($mms_total)) {
+            throw new \InvalidArgumentException('non-nullable mms_total cannot be null');
+        }
+        $this->container['mms_total'] = $mms_total;
+
+        return $this;
+    }
+
+    /**
+     * Gets email_transactional_total
+     *
+     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
+     */
+    public function getEmailTransactionalTotal()
+    {
+        return $this->container['email_transactional_total'];
+    }
+
+    /**
+     * Sets email_transactional_total
+     *
+     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $email_transactional_total email_transactional_total
+     *
+     * @return self
+     */
+    public function setEmailTransactionalTotal($email_transactional_total)
+    {
+        if (is_null($email_transactional_total)) {
+            throw new \InvalidArgumentException('non-nullable email_transactional_total cannot be null');
+        }
+        $this->container['email_transactional_total'] = $email_transactional_total;
+
+        return $this;
+    }
+
+    /**
+     * Gets postcards_total
+     *
+     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
+     */
+    public function getPostcardsTotal()
+    {
+        return $this->container['postcards_total'];
+    }
+
+    /**
+     * Sets postcards_total
+     *
+     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $postcards_total postcards_total
+     *
+     * @return self
+     */
+    public function setPostcardsTotal($postcards_total)
+    {
+        if (is_null($postcards_total)) {
+            throw new \InvalidArgumentException('non-nullable postcards_total cannot be null');
+        }
+        $this->container['postcards_total'] = $postcards_total;
+
+        return $this;
+    }
+
+    /**
+     * Gets _currency
+     *
+     * @return \ClickSend\Model\Currency|null
+     */
+    public function getCurrency()
+    {
+        return $this->container['_currency'];
+    }
+
+    /**
+     * Sets _currency
+     *
+     * @param \ClickSend\Model\Currency|null $_currency _currency
+     *
+     * @return self
+     */
+    public function setCurrency($_currency)
+    {
+        if (is_null($_currency)) {
+            throw new \InvalidArgumentException('non-nullable _currency cannot be null');
+        }
+        $this->container['_currency'] = $_currency;
 
         return $this;
     }
