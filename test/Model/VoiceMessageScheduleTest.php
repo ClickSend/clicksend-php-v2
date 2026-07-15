@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewAccountUsageDataEmailTotalTest
+ * VoiceMessageScheduleTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace ClickSend\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ViewAccountUsageDataEmailTotalTest Class Doc Comment
+ * VoiceMessageScheduleTest Class Doc Comment
  *
  * @category    Class
- * @description ViewAccountUsageDataEmailTotal
+ * @description The timestamp when the message should be sent, as a &lt;a href&#x3D;\&quot;http://help.clicksend.com/what-is-a-unix-timestamp\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Unix timestamp&lt;/a&gt;. Returned as an empty string when no schedule was set.
  * @package     ClickSend
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ViewAccountUsageDataEmailTotalTest extends TestCase
+class VoiceMessageScheduleTest extends TestCase
 {
 
     /**
@@ -71,27 +71,9 @@ class ViewAccountUsageDataEmailTotalTest extends TestCase
     }
 
     /**
-     * Test "ViewAccountUsageDataEmailTotal"
+     * Test "VoiceMessageSchedule"
      */
-    public function testViewAccountUsageDataEmailTotal()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "count"
-     */
-    public function testPropertyCount()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "price"
-     */
-    public function testPropertyPrice()
+    public function testVoiceMessageSchedule()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

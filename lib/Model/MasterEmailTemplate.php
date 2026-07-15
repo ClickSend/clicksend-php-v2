@@ -59,7 +59,7 @@ class MasterEmailTemplate implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'template_id_master' => 'int',
         'template_name' => 'string',
-        'date_added' => 'string',
+        'date_added' => 'int',
         'body' => 'string',
         'thumbnail' => '\ClickSend\Model\MasterEmailTemplateThumbnail'
     ];
@@ -374,7 +374,7 @@ class MasterEmailTemplate implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets date_added
      *
-     * @return string|null
+     * @return int|null
      */
     public function getDateAdded()
     {
@@ -384,7 +384,7 @@ class MasterEmailTemplate implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets date_added
      *
-     * @param string|null $date_added The date the template was added.
+     * @param int|null $date_added The date the template was added.
      *
      * @return self
      */

@@ -65,9 +65,9 @@ class SmsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
         'list_id' => 'int',
         'from' => 'string',
         'body' => 'string',
-        'schedule' => 'string',
+        'schedule' => 'int',
         'status' => 'string',
-        'date_added' => 'string',
+        'date_added' => 'int',
         'custom_string' => 'string',
         'url_to_shorten' => 'string',
         'unsubscribe_link' => 'int',
@@ -594,7 +594,7 @@ class SmsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets schedule
      *
-     * @return string|null
+     * @return int|null
      */
     public function getSchedule()
     {
@@ -604,7 +604,7 @@ class SmsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets schedule
      *
-     * @param string|null $schedule The scheduled date of the message. It is in <a href=\"http://help.clicksend.com/what-is-a-unix-timestamp\" target=\"_blank\">Unix format</a>.
+     * @param int|null $schedule The scheduled date of the message. It is in <a href=\"http://help.clicksend.com/what-is-a-unix-timestamp\" target=\"_blank\">Unix format</a>.
      *
      * @return self
      */
@@ -648,7 +648,7 @@ class SmsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets date_added
      *
-     * @return string|null
+     * @return int|null
      */
     public function getDateAdded()
     {
@@ -658,7 +658,7 @@ class SmsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets date_added
      *
-     * @param string|null $date_added The date you created the SMS campaign. It is in <a href=\"http://help.clicksend.com/what-is-a-unix-timestamp\" target=\"_blank\">Unix format</a>.
+     * @param int|null $date_added The date you created the SMS campaign. It is in <a href=\"http://help.clicksend.com/what-is-a-unix-timestamp\" target=\"_blank\">Unix format</a>.
      *
      * @return self
      */

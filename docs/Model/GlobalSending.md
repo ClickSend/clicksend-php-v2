@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **name** | **string** | The name of the country. | [optional]
 **code** | **string** | The country code. | [optional]
 **region** | **string** | The region of the country. | [optional]
-**agreed_at** | **string** | The date when the country was agreed upon. | [optional]
+**agreed_at** | **int** | The date when the country was agreed upon. | [optional]
 **registration_entity** | [**\ClickSend\Model\AccountReferrerChosen**](AccountReferrerChosen.md) |  | [optional]
 **registration_status** | [**\ClickSend\Model\GlobalSendingRegistrationStatus**](GlobalSendingRegistrationStatus.md) |  | [optional]
 **jotform_id** | **string** | The ID of the country in JotForm. | [optional]

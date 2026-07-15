@@ -69,7 +69,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
         'error_code' => 'string',
         'error_text' => 'string',
         'message_id' => 'string',
-        'message_parts' => 'string',
+        'message_parts' => 'int',
         'message_price' => 'string',
         'from_email' => 'string',
         'list_id' => 'string',
@@ -798,7 +798,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     /**
      * Gets message_parts
      *
-     * @return string|null
+     * @return int|null
      */
     public function getMessageParts()
     {
@@ -808,7 +808,7 @@ class ViewSmsHistoryDataAllOfDataInner implements ModelInterface, ArrayAccess, \
     /**
      * Sets message_parts
      *
-     * @param string|null $message_parts The number of parts the message was broken into. To look at how many parts your message is broken down into, use the <a href=\"http://smscharactercount.com/\" target=\"_blank\"><strong>SMS Character Count</strong></a>.
+     * @param int|null $message_parts The number of parts the message was broken into. To look at how many parts your message is broken down into, use the <a href=\"http://smscharactercount.com/\" target=\"_blank\"><strong>SMS Character Count</strong></a>.
      *
      * @return self
      */

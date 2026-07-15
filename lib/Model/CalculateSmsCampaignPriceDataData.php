@@ -59,7 +59,7 @@ class CalculateSmsCampaignPriceDataData implements ModelInterface, ArrayAccess, 
     protected static $openAPITypes = [
         'from' => 'string',
         'body' => 'string',
-        'schedule' => 'string'
+        'schedule' => 'int'
     ];
 
     /**
@@ -360,7 +360,7 @@ class CalculateSmsCampaignPriceDataData implements ModelInterface, ArrayAccess, 
     /**
      * Gets schedule
      *
-     * @return string|null
+     * @return int|null
      */
     public function getSchedule()
     {
@@ -370,7 +370,7 @@ class CalculateSmsCampaignPriceDataData implements ModelInterface, ArrayAccess, 
     /**
      * Sets schedule
      *
-     * @param string|null $schedule The schedule timestamp.
+     * @param int|null $schedule The schedule timestamp.
      *
      * @return self
      */

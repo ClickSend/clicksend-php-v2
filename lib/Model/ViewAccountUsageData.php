@@ -58,18 +58,18 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $openAPITypes = [
         'sms' => '\ClickSend\Model\ViewAccountUsageDataSmsInner[]',
-        'mms' => '\ClickSend\Model\ViewAccountUsageDataMmsInner[]',
-        'voice' => '\ClickSend\Model\ViewAccountUsageDataMmsInner[]',
-        'fax' => '\ClickSend\Model\ViewAccountUsageDataMmsInner[]',
-        'post' => '\ClickSend\Model\ViewAccountUsageDataMmsInner[]',
+        'mms' => '\ClickSend\Model\ViewAccountUsageDataSmsInner[]',
+        'voice' => '\ClickSend\Model\ViewAccountUsageDataSmsInner[]',
+        'fax' => '\ClickSend\Model\ViewAccountUsageDataSmsInner[]',
+        'post' => '\ClickSend\Model\ViewAccountUsageDataSmsInner[]',
         'email' => '\ClickSend\Model\ViewAccountUsageDataEmailInner[]',
         'email_transactional' => '\ClickSend\Model\ViewAccountUsageDataEmailInner[]',
-        'postcards' => '\ClickSend\Model\ViewAccountUsageDataMmsInner[]',
-        'sms_total' => '\ClickSend\Model\ViewAccountUsageDataSmsTotal',
-        'voice_total' => '\ClickSend\Model\ViewAccountUsageDataSmsTotal',
-        'fax_total' => '\ClickSend\Model\ViewAccountUsageDataSmsTotal',
-        'post_total' => '\ClickSend\Model\ViewAccountUsageDataSmsTotal',
-        'email_total' => '\ClickSend\Model\ViewAccountUsageDataEmailTotal',
+        'postcards' => '\ClickSend\Model\ViewAccountUsageDataSmsInner[]',
+        'sms_total' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
+        'voice_total' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
+        'fax_total' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
+        'post_total' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
+        'email_total' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
         'mms_total' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
         'email_transactional_total' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
         'postcards_total' => '\ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound',
@@ -431,7 +431,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets mms
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null
+     * @return \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null
      */
     public function getMms()
     {
@@ -441,7 +441,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets mms
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null $mms mms
+     * @param \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null $mms mms
      *
      * @return self
      */
@@ -458,7 +458,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets voice
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null
+     * @return \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null
      */
     public function getVoice()
     {
@@ -468,7 +468,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets voice
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null $voice voice
+     * @param \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null $voice voice
      *
      * @return self
      */
@@ -485,7 +485,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets fax
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null
+     * @return \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null
      */
     public function getFax()
     {
@@ -495,7 +495,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets fax
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null $fax fax
+     * @param \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null $fax fax
      *
      * @return self
      */
@@ -512,7 +512,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets post
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null
+     * @return \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null
      */
     public function getPost()
     {
@@ -522,7 +522,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets post
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null $post post
+     * @param \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null $post post
      *
      * @return self
      */
@@ -593,7 +593,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets postcards
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null
+     * @return \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null
      */
     public function getPostcards()
     {
@@ -603,7 +603,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets postcards
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataMmsInner[]|null $postcards postcards
+     * @param \ClickSend\Model\ViewAccountUsageDataSmsInner[]|null $postcards postcards
      *
      * @return self
      */
@@ -620,7 +620,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets sms_total
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataSmsTotal|null
+     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
      */
     public function getSmsTotal()
     {
@@ -630,7 +630,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets sms_total
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataSmsTotal|null $sms_total sms_total
+     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $sms_total sms_total
      *
      * @return self
      */
@@ -647,7 +647,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets voice_total
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataSmsTotal|null
+     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
      */
     public function getVoiceTotal()
     {
@@ -657,7 +657,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets voice_total
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataSmsTotal|null $voice_total voice_total
+     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $voice_total voice_total
      *
      * @return self
      */
@@ -674,7 +674,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets fax_total
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataSmsTotal|null
+     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
      */
     public function getFaxTotal()
     {
@@ -684,7 +684,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets fax_total
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataSmsTotal|null $fax_total fax_total
+     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $fax_total fax_total
      *
      * @return self
      */
@@ -701,7 +701,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets post_total
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataSmsTotal|null
+     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
      */
     public function getPostTotal()
     {
@@ -711,7 +711,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets post_total
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataSmsTotal|null $post_total post_total
+     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $post_total post_total
      *
      * @return self
      */
@@ -728,7 +728,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets email_total
      *
-     * @return \ClickSend\Model\ViewAccountUsageDataEmailTotal|null
+     * @return \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null
      */
     public function getEmailTotal()
     {
@@ -738,7 +738,7 @@ class ViewAccountUsageData implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets email_total
      *
-     * @param \ClickSend\Model\ViewAccountUsageDataEmailTotal|null $email_total email_total
+     * @param \ClickSend\Model\ViewVoiceStatisticsDataTotalOutbound|null $email_total email_total
      *
      * @return self
      */

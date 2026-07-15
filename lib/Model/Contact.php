@@ -66,8 +66,8 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
         'custom_2' => 'string',
         'custom_3' => 'string',
         'custom_4' => 'string',
-        'date_added' => 'string',
-        'date_updated' => 'string',
+        'date_added' => 'int',
+        'date_updated' => 'int',
         'fax_number' => 'string',
         'organization_name' => 'string',
         'email' => 'string',
@@ -675,7 +675,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets date_added
      *
-     * @return string|null
+     * @return int|null
      */
     public function getDateAdded()
     {
@@ -685,7 +685,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets date_added
      *
-     * @param string|null $date_added The date when the contact was added. Returned as a plain string rather than a strict date-time since the API sometimes returns a raw Unix timestamp (e.g. \"1783997542\") instead of ISO 8601.
+     * @param int|null $date_added The date when the contact was added, as a <a href=\"http://help.clicksend.com/what-is-a-unix-timestamp\" target=\"_blank\">Unix timestamp</a>.
      *
      * @return self
      */
@@ -702,7 +702,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets date_updated
      *
-     * @return string|null
+     * @return int|null
      */
     public function getDateUpdated()
     {
@@ -712,7 +712,7 @@ class Contact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets date_updated
      *
-     * @param string|null $date_updated The date when the contact was last updated. Returned as a plain string rather than a strict date-time since the API sometimes returns a raw Unix timestamp (e.g. \"1783997542\") instead of ISO 8601.
+     * @param int|null $date_updated The date when the contact was last updated, as a <a href=\"http://help.clicksend.com/what-is-a-unix-timestamp\" target=\"_blank\">Unix timestamp</a>.
      *
      * @return self
      */

@@ -58,7 +58,7 @@ class CalculateSmsCampaignPriceData implements ModelInterface, ArrayAccess, \Jso
      */
     protected static $openAPITypes = [
         'total_count' => 'int',
-        'total_price' => 'float',
+        'total_price' => 'string',
         'data' => '\ClickSend\Model\CalculateSmsCampaignPriceDataData',
         '_currency' => '\ClickSend\Model\Currency'
     ];
@@ -340,7 +340,7 @@ class CalculateSmsCampaignPriceData implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets total_price
      *
-     * @return float|null
+     * @return string|null
      */
     public function getTotalPrice()
     {
@@ -350,7 +350,7 @@ class CalculateSmsCampaignPriceData implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets total_price
      *
-     * @param float|null $total_price The total price of the SMS campaign.
+     * @param string|null $total_price The total price of the SMS campaign.
      *
      * @return self
      */

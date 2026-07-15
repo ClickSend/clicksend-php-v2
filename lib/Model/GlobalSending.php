@@ -61,7 +61,7 @@ class GlobalSending implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'code' => 'string',
         'region' => 'string',
-        'agreed_at' => 'string',
+        'agreed_at' => 'int',
         'registration_entity' => '\ClickSend\Model\AccountReferrerChosen',
         'registration_status' => '\ClickSend\Model\GlobalSendingRegistrationStatus',
         'jotform_id' => 'string',
@@ -519,7 +519,7 @@ class GlobalSending implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets agreed_at
      *
-     * @return string|null
+     * @return int|null
      */
     public function getAgreedAt()
     {
@@ -529,7 +529,7 @@ class GlobalSending implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets agreed_at
      *
-     * @param string|null $agreed_at The date when the country was agreed upon.
+     * @param int|null $agreed_at The date when the country was agreed upon.
      *
      * @return self
      */

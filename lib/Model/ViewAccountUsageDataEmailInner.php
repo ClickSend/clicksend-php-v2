@@ -60,7 +60,7 @@ class ViewAccountUsageDataEmailInner implements ModelInterface, ArrayAccess, \Js
         'subaccount_id' => 'int',
         'username' => 'string',
         'total_count' => 'int',
-        'total_price' => 'string',
+        'total_price' => 'float',
         'notes' => 'string'
     ];
 
@@ -401,7 +401,7 @@ class ViewAccountUsageDataEmailInner implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets total_price
      *
-     * @return string|null
+     * @return float|null
      */
     public function getTotalPrice()
     {
@@ -411,7 +411,7 @@ class ViewAccountUsageDataEmailInner implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets total_price
      *
-     * @param string|null $total_price total_price
+     * @param float|null $total_price total_price
      *
      * @return self
      */

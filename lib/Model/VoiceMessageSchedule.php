@@ -1,6 +1,6 @@
 <?php
 /**
- * ViewAccountUsageDataEmailTotal
+ * VoiceMessageSchedule
  *
  * PHP version 8.1
  *
@@ -32,15 +32,16 @@ use \ArrayAccess;
 use \ClickSend\ObjectSerializer;
 
 /**
- * ViewAccountUsageDataEmailTotal Class Doc Comment
+ * VoiceMessageSchedule Class Doc Comment
  *
  * @category Class
+ * @description The timestamp when the message should be sent, as a &lt;a href&#x3D;\&quot;http://help.clicksend.com/what-is-a-unix-timestamp\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Unix timestamp&lt;/a&gt;. Returned as an empty string when no schedule was set.
  * @package  ClickSend
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ViewAccountUsageDataEmailTotal implements ModelInterface, ArrayAccess, \JsonSerializable
+class VoiceMessageSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +50,7 @@ class ViewAccountUsageDataEmailTotal implements ModelInterface, ArrayAccess, \Js
      *
      * @var string
      */
-    protected static $openAPIModelName = 'view_account_usage_data_email_total';
+    protected static $openAPIModelName = 'voice_message_schedule';
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +58,7 @@ class ViewAccountUsageDataEmailTotal implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $openAPITypes = [
-        'count' => 'int',
-        'price' => 'string'
+        
     ];
 
     /**
@@ -69,8 +69,7 @@ class ViewAccountUsageDataEmailTotal implements ModelInterface, ArrayAccess, \Js
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'count' => null,
-        'price' => null
+        
     ];
 
     /**
@@ -79,8 +78,7 @@ class ViewAccountUsageDataEmailTotal implements ModelInterface, ArrayAccess, \Js
      * @var boolean[]
      */
     protected static array $openAPINullables = [
-        'count' => false,
-        'price' => false
+        
     ];
 
     /**
@@ -169,8 +167,7 @@ class ViewAccountUsageDataEmailTotal implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'count' => 'count',
-        'price' => 'price'
+        
     ];
 
     /**
@@ -179,8 +176,7 @@ class ViewAccountUsageDataEmailTotal implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'count' => 'setCount',
-        'price' => 'setPrice'
+        
     ];
 
     /**
@@ -189,8 +185,7 @@ class ViewAccountUsageDataEmailTotal implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'count' => 'getCount',
-        'price' => 'getPrice'
+        
     ];
 
     /**
@@ -250,8 +245,6 @@ class ViewAccountUsageDataEmailTotal implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('count', $data ?? [], null);
-        $this->setIfExists('price', $data ?? [], null);
     }
 
     /**
@@ -295,60 +288,6 @@ class ViewAccountUsageDataEmailTotal implements ModelInterface, ArrayAccess, \Js
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets count
-     *
-     * @return int|null
-     */
-    public function getCount()
-    {
-        return $this->container['count'];
-    }
-
-    /**
-     * Sets count
-     *
-     * @param int|null $count The total count of emails.
-     *
-     * @return self
-     */
-    public function setCount($count)
-    {
-        if (is_null($count)) {
-            throw new \InvalidArgumentException('non-nullable count cannot be null');
-        }
-        $this->container['count'] = $count;
-
-        return $this;
-    }
-
-    /**
-     * Gets price
-     *
-     * @return string|null
-     */
-    public function getPrice()
-    {
-        return $this->container['price'];
-    }
-
-    /**
-     * Sets price
-     *
-     * @param string|null $price The total price of emails.
-     *
-     * @return self
-     */
-    public function setPrice($price)
-    {
-        if (is_null($price)) {
-            throw new \InvalidArgumentException('non-nullable price cannot be null');
-        }
-        $this->container['price'] = $price;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      *
