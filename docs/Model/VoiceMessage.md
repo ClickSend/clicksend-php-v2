@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **voice** | **string** | The voice of the message. | [optional]
 **schedule** | [**\ClickSend\Model\VoiceMessageSchedule**](VoiceMessageSchedule.md) |  | [optional]
 **message_id** | **string** | The ID of the message. | [optional]
-**message_parts** | **int** | The number of parts in the message. | [optional]
+**message_parts** | [**\ClickSend\Model\VoiceMessageSchedule**](VoiceMessageSchedule.md) |  | [optional]
 **message_price** | **string** | The price of the message. | [optional]
 **custom_string** | **string** | The custom string of the message. | [optional]
 **user_id** | **float** | The ID of the user. | [optional]

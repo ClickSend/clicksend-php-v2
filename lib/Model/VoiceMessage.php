@@ -68,7 +68,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
         'voice' => 'string',
         'schedule' => '\ClickSend\Model\VoiceMessageSchedule',
         'message_id' => 'string',
-        'message_parts' => 'int',
+        'message_parts' => '\ClickSend\Model\VoiceMessageSchedule',
         'message_price' => 'string',
         'custom_string' => 'string',
         'user_id' => 'float',
@@ -785,7 +785,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets message_parts
      *
-     * @return int|null
+     * @return \ClickSend\Model\VoiceMessageSchedule|null
      */
     public function getMessageParts()
     {
@@ -795,7 +795,7 @@ class VoiceMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets message_parts
      *
-     * @param int|null $message_parts The number of parts in the message.
+     * @param \ClickSend\Model\VoiceMessageSchedule|null $message_parts message_parts
      *
      * @return self
      */
