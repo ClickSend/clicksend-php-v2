@@ -307,7 +307,7 @@ class SendSmsRequestMessagesInner implements ModelInterface, ArrayAccess, \JsonS
         $this->setIfExists('body', $data ?? [], null);
         $this->setIfExists('to', $data ?? [], null);
         $this->setIfExists('from', $data ?? [], null);
-        $this->setIfExists('source', $data ?? [], null);
+        $this->setIfExists('source', $data ?? [], 'sdk');
         $this->setIfExists('schedule', $data ?? [], null);
         $this->setIfExists('custom_string', $data ?? [], null);
         $this->setIfExists('list_id', $data ?? [], null);
