@@ -274,7 +274,7 @@ class SendVoiceMessageRequestMessagesInner implements ModelInterface, ArrayAcces
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('source', $data ?? [], 'sdk');
+        $this->setIfExists('source', $data ?? [], 'sdk-php');
         $this->setIfExists('body', $data ?? [], null);
         $this->setIfExists('to', $data ?? [], null);
         $this->setIfExists('voice', $data ?? [], null);

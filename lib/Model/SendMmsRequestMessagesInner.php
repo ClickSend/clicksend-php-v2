@@ -274,7 +274,7 @@ class SendMmsRequestMessagesInner implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('source', $data ?? [], 'sdk');
+        $this->setIfExists('source', $data ?? [], 'sdk-php');
         $this->setIfExists('to', $data ?? [], null);
         $this->setIfExists('from', $data ?? [], null);
         $this->setIfExists('subject', $data ?? [], null);
