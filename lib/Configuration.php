@@ -100,7 +100,7 @@ class Configuration
      *
      * @var string
      */
-    protected $userAgent = 'OpenAPI-Generator/1.0.0/PHP';
+    protected $userAgent = 'ClickSend-SDK/6.0.0/php';
 
     /**
      * Debug switch (default set to false)
