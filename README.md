@@ -32,6 +32,8 @@ $sendSmsRequest = new ClickSend\Model\SendSmsRequest([
 ]);
 
 try {
+    // The first argument is the optional content type — pass `null` to use the default.
+    // The request body is the second argument.
     $result = $apiInstance->sendSms(null, $sendSmsRequest);
     print_r($result);
 } catch (Exception $e) {
@@ -66,6 +68,7 @@ $sendMmsRequest = new ClickSend\Model\SendMmsRequest([
 ]);
 
 try {
+    // As with sendSms, the first argument is the optional content type — pass `null`.
     $result = $mmsApi->sendMms(null, $sendMmsRequest);
     print_r($result);
 } catch (Exception $e) {
