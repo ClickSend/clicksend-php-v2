@@ -100,7 +100,7 @@ class Configuration
      *
      * @var string
      */
-    protected $userAgent = 'ClickSend-SDK/6.0.0/php';
+    protected $userAgent = 'ClickSend-SDK/6.0.1/php';
 
     /**
      * Debug switch (default set to false)

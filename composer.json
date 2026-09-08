@@ -1,21 +1,44 @@
 {
     "name": "clicksend/clicksend-php",
-    "description": "You can use the SMS endpoints to send and manage SMS, check the cost of sending SMS, view message history, and more. Integrate them into your system as part of your workflow.  Relevant guides: <a href=\"https://help.clicksend.com/article/h474eseq3a-how-many-characters-can-i-send-in-an-sms\" target=\"_blank\">How many characters can I send in an SMS?</a>, <a href=\"https://help.clicksend.com/article/1hd33n2xns-sms-status-delivery-receipt-expired\" target=\"_blank\">SMS status delivery receipt expired</a>, <a href=\"https://help.clicksend.com/en/articles/42195-unicode-vs-plain-text\" target=\"_blank\">Do you support non-English characters</a>, and <a href=\"https://help.clicksend.com/category/mfdctha7f0-country-specific-features-and-restrictions\" target=\"_blank\">Country Specific Features and Restrictions</a>. <div class=\"info-box\">   <h4><i class=\"fas fa-info-circle\"></i> Note :</h4>   ClickSend is pausing SMS messages containing URLs for new customers. Please remove links from messages to maintain uninterrupted delivery, or <a href=\"https://www.clicksend.com/gb/help/\" target=\"_blank\">contact support</a> to apply for approval for URL messaging. </div>",
+    "description": "Official ClickSend SDK for PHP - send SMS, MMS, voice and email messages, run SMS and MMS campaigns, and manage numbers, contacts, subaccounts and reporting through the ClickSend REST API.",
     "keywords": [
-        "openapitools",
-        "openapi-generator",
-        "openapi",
-        "php",
-        "sdk",
-        "rest",
-        "api"
+        "clicksend",
+        "sms",
+        "sms api",
+        "send sms",
+        "bulk sms",
+        "text message",
+        "texting",
+        "mms",
+        "mms api",
+        "voice",
+        "voice call",
+        "text to speech",
+        "tts",
+        "ivr",
+        "email to sms",
+        "sms campaign",
+        "mms campaign",
+        "url shortening",
+        "number verification",
+        "messaging",
+        "notifications",
+        "otp",
+        "2fa",
+        "transactional sms",
+        "marketing sms",
+        "appointment reminders",
+        "alerts",
+        "rest api",
+        "php"
     ],
-    "homepage": "https://openapi-generator.tech",
+    "homepage": "https://developers.clicksend.com/",
     "license": "MIT",
     "authors": [
         {
-            "name": "OpenAPI",
-            "homepage": "https://openapi-generator.tech"
+            "name": "ClickSend",
+            "email": "support@clicksend.com",
+            "homepage": "https://clicksend.com"
         }
     ],
     "require": {
@@ -31,9 +54,18 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "ClickSend\\" : "lib/" }
+        "psr-4": {
+            "ClickSend\\": "lib/"
+        }
     },
     "autoload-dev": {
-        "psr-4": { "ClickSend\\Test\\" : "test/" }
+        "psr-4": {
+            "ClickSend\\Test\\": "test/"
+        }
+    },
+    "support": {
+        "issues": "https://github.com/ClickSend/clicksend-php-v2/issues",
+        "docs": "https://developers.clicksend.com/docs/rest/v3/",
+        "source": "https://github.com/ClickSend/clicksend-php-v2"
     }
 }
